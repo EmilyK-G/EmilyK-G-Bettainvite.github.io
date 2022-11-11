@@ -10,7 +10,11 @@ import Image from 'next/image';
 import singleapple from '../public/bettainvite-singleapple.png';
 import diamond from '../public/bettainvite-diamond.webp';
 
+import Event from './Event';
+
 import { Dancing_Script } from '@next/font/google';
+import EventDate from './EventDate';
+import EventAttendance from './EventAttendance';
 
 const dancingScript = Dancing_Script();
 
@@ -92,6 +96,33 @@ export default function Home() {
               alt='apple moving'
               className='ml-14 mb-0 h-72 w-auto'
             />
+          </ParallaxLayer>
+
+          <ParallaxLayer 
+            offset={1}
+            speed={0.2}
+            onClick={() => parallax.current.scrollTo(2)}
+            className='flex justify-center items-center p-20'
+          >
+            <Event />
+          </ParallaxLayer>
+
+          <ParallaxLayer 
+            offset={2}
+            speed={0.2}
+            onClick={() => parallax.current.scrollTo(3)}
+            className='flex justify-center items-center p-20'
+          >
+            <EventDate />
+          </ParallaxLayer>
+
+          <ParallaxLayer 
+            offset={3}
+            speed={0.2}
+            onClick={() => parallax.current.scrollTo(0)}
+            className='flex justify-center items-center p-20'
+          >
+            <EventAttendance />
           </ParallaxLayer>
         </Parallax>
   )
