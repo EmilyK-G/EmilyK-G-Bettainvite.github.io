@@ -9,6 +9,7 @@ import './layout.css';
 
 import Image from 'next/image';
 import singleapple from '../public/bettainvite-singleapple.png';
+import diamond from '../public/bettainvite-diamond.webp';
 
 import { Dancing_Script } from '@next/font/google';
 
@@ -40,6 +41,29 @@ export default function RootLayout({
           <ParallaxLayer offset={3} speed={0.5} style={{ backgroundColor: '#982A40' }} />
 
           <ParallaxLayer
+            offset={0}
+            factor={4}
+            speed={0}
+            className='flex flex-col justify-evenly items-center p-20'
+          >
+            <Image
+              src={diamond}
+              alt='diamond separator'
+              className='h-40 w-auto opacity-50'
+            />
+            <Image
+              src={diamond}
+              alt='diamond separator'
+              className='h-40 w-auto opacity-50'
+            />
+            <Image
+              src={diamond}
+              alt='diamond separator'
+              className='h-40 w-auto opacity-50'
+            />
+          </ParallaxLayer>
+
+          <ParallaxLayer
             offset={0.2}
             speed={1}
             className='flex justify-center items-center'
@@ -60,7 +84,7 @@ export default function RootLayout({
             <Image
               src={singleapple}
               alt='another sticky apple'
-              className='apple-2'
+              className='apple-2 h-64 w-auto'
             />
           </ParallaxLayer>
 
@@ -73,7 +97,7 @@ export default function RootLayout({
             <Image
               src={singleapple}
               alt='apple moving'
-              className='ml-20 mb-0'
+              className='ml-14 mb-0 h-72 w-auto'
             />
           </ParallaxLayer>
           
