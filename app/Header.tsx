@@ -2,8 +2,7 @@ import React from 'react';
 import '../styles/globals.css';
 import Image from 'next/image';
 import hborder from '../public/bettainvite-border.png';
-import './header.css';
-
+import '../styles/globals.css';
 
 const Header:React.FC<React.CSSProperties> = ({font}) => {
   return (

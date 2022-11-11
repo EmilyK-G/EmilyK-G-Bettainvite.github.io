@@ -5,7 +5,6 @@ import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax';
 import Header from './Header';
 import { useRef } from 'react';
 import '../styles/globals.css';
-import './layout.css';
 
 import Image from 'next/image';
 import singleapple from '../public/bettainvite-singleapple.png';
