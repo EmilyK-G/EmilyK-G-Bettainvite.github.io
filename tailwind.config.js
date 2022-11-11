@@ -6,7 +6,24 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      'brick': '#983711',
+      'magenta': '#982A40',
+      'violet': '#803462',
+      'darkviolet': '#5B4170',
+      'darknavy': '#39486A',
+      'midnight': '#2F4858',
+      'whitesmoke': '#f5f5f5',
+      'black':'#000000',
+    },
   },
   plugins: [],
+  
+  experimental: {
+    fontLoaders: [
+      { loader: '@next/font/google', options: { subsets: ['latin'] } },
+    ],
+  },
 }
