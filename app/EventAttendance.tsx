@@ -21,7 +21,7 @@ function EventAttendance() {
     <div className='flex flex-col items-center justify-center text-whitesmoke p-10 text-center'>
         <p className="text-9xl">Will you attend?</p>
         <button 
-            className='myBtn w-full mt-10 m-2'
+            className='myBtn w-full mt-10 m-2 text-3xl'
             onClick={e=>handleAccept(e)}
         >
             Yes!
@@ -30,16 +30,16 @@ function EventAttendance() {
             show={acceptModalShow}
             onHide={() => setAcceptModalShow(false)}
         />
-        <RejectModal
-            show={rejectModalShow}
-            onHide={() => setRejectModalShow(false)}
-        />
         <button 
-            className='myBtn w-full m-2'
+            className='myBtn w-full m-2 text-3xl'
             onClick={e=>handleReject(e)}
         >
             No
         </button>
+        <RejectModal
+            show={rejectModalShow}
+            onHide={() => setRejectModalShow(false)}
+        />
     </div>
   )
 }
