@@ -5,7 +5,7 @@ import MyModal from './MyModal';
 
 function EventAttendance() {
 
-    const [acceptModalShow, setAcceptModalShow] = useState<boolean>(true);
+    const [acceptModalShow, setAcceptModalShow] = useState<boolean>(false);
     const [rejectModalShow, setRejectModalShow] = useState<boolean>(false);
 
     const handleAccept = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{

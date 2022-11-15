@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 const AcceptModal= () => {
 
-  const [confirmation, setConfirmation] = useState<string>('Test message')
+  const [confirmation, setConfirmation] = useState<string>('')
 
   const sendConfirmationMessage = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
@@ -15,6 +15,7 @@ const AcceptModal= () => {
       },
       body: JSON.stringify({ message: confirmation }),
     });
+    
     const json = await response.json();
 
     if (response.ok) {
