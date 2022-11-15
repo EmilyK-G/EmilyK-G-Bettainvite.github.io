@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
 import AcceptModal from './AcceptModal';
 import RejectModal from './RejectModal';
+import MyModal from './MyModal';
 
 function EventAttendance() {
 
-    const [acceptModalShow, setAcceptModalShow] = useState<boolean>(false);
+    const [acceptModalShow, setAcceptModalShow] = useState<boolean>(true);
     const [rejectModalShow, setRejectModalShow] = useState<boolean>(false);
 
     const handleAccept = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{
         e.preventDefault();
+        e.stopPropagation();
         setAcceptModalShow(true)
     }
 
     const handleReject = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{
         e.preventDefault();
+        e.stopPropagation();
         setRejectModalShow(true)
     }
 
@@ -26,20 +29,23 @@ function EventAttendance() {
         >
             Yes!
         </button>
-        <AcceptModal
+        <MyModal 
             show={acceptModalShow}
-            onHide={() => setAcceptModalShow(false)}
-        />
+            onClose={() => setAcceptModalShow(false)}>
+                <AcceptModal/>
+        </MyModal>
+        
         <button 
             className='myBtn w-full m-2 text-3xl'
             onClick={e=>handleReject(e)}
         >
             No
         </button>
-        <RejectModal
+        <MyModal 
             show={rejectModalShow}
-            onHide={() => setRejectModalShow(false)}
-        />
+            onClose={() => setRejectModalShow(false)}>
+                <RejectModal/>
+        </MyModal>
     </div>
   )
 }
