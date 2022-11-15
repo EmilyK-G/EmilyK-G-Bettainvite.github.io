@@ -20,7 +20,8 @@ const MyModal = ({show, onClose, children}: ChildProps) => {
         className='fixed inset-0 bg-midnight bg-opacity-75 backdrop-blur-sm
     flex justify-center items-center'
         id='wrapper'
-        onClick={handleClose}>
+        onClick={handleClose}
+        onScroll={()=>console.log('scrolling')}>
         <div className='w-[600px] flex flex-col'>
             <button 
                 className='text-whitesmoke text-4xl place-self-end'

@@ -2,16 +2,19 @@ import React from 'react';
 
 const AcceptModal= () => {
   return (
-    <div className='bg-magenta text-6xl p-20 flex flex-col rounded-lg'>
-      <h2 className='text-slate-500'>Yay! <span>Add your name to the list...</span></h2>
+    <div className='bg-midnight text-6xl p-20 flex flex-col rounded-lg'>
+      <h2>Yay!</h2>
+      <p className='text-2xl'>Please confirm by adding your name to the list...</p>
       <input 
         type="text" 
         maxLength={35}
         autoFocus
         placeholder='Emily Garcia'
-        className='p-5 mt-10 rounded-md enabled:hover:border-gray-400 
+        className='p-5 text-7xl mt-10 h-36 rounded-md enabled:hover:border-gray-400 
         disabled:opacity-75 placeholder:text-slate-500 block bg-transparent
         shadow-sm focus:outline-none focus:border-magenta text-center'/>
+      <p><small className='text-2xl'>There are 10 people on the list</small></p>
+      <button className="myBtn mt-5">Add me!</button>
     </div>  
   )
 }
