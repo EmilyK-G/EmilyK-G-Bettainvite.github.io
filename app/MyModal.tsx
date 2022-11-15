@@ -17,13 +17,13 @@ const MyModal = ({show, onClose, children}: ChildProps) => {
 
   return (
     <div 
-        className='fixed inset-0 bg-darkviolet bg-opacity-25 backdrop-blur-sm
+        className='fixed inset-0 bg-midnight bg-opacity-75 backdrop-blur-sm
     flex justify-center items-center'
         id='wrapper'
         onClick={handleClose}>
         <div className='w-[600px] flex flex-col'>
             <button 
-                className='text-whitesmoke text-xl place-self-end'
+                className='text-whitesmoke text-4xl place-self-end'
                 onClick={(e)=>{e.stopPropagation();onClose()}}>
                 X
             </button>
