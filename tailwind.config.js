@@ -17,6 +17,8 @@ module.exports = {
       'midnight': '#2F4858',
       'whitesmoke': '#f5f5f5',
       'black':'#000000',
+      'error':'#ff0000',
+      'success':'#9acd32',
     },
   },
   plugins: [],
