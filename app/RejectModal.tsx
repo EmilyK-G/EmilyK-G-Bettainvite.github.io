@@ -4,7 +4,7 @@ import React from 'react'
 const RejectModal = () => {
   return (
 
-    <h4 className='bg-midnight text-6xl p-20 flex flex-col rounded-lg'>
+    <h4 className='bg-midnight text-6xl p-20 flex flex-col rounded-lg border-2'>
         No problem, see you next time
     </h4>
 

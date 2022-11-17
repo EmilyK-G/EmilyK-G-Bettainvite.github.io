@@ -8,6 +8,7 @@ interface ChildProps {
 
 const MyModal = ({show, onClose, children}: ChildProps) => {
 
+
     if(!show) return null;
 
     const handleClose = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -18,11 +19,13 @@ const MyModal = ({show, onClose, children}: ChildProps) => {
   return (
     <div 
         className='fixed inset-0 bg-midnight bg-opacity-75 backdrop-blur-sm
-    flex justify-center items-center'
+    flex justify-center items-center bg-fixed'
         id='wrapper'
         onClick={handleClose}
+        onWheel={()=>console.log('weeling')}
         onScroll={()=>console.log('scrolling')}>
-        <div className='w-[600px] flex flex-col'>
+        <div 
+            className='w-[600px] flex flex-col'>
             <button 
                 className='text-whitesmoke text-4xl place-self-end'
                 onClick={(e)=>{e.stopPropagation();onClose()}}>
