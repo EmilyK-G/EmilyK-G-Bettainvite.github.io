@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 interface ChildProps {
     show: boolean;
@@ -8,22 +9,22 @@ interface ChildProps {
 
 const MyModal = ({show, onClose, children}: ChildProps) => {
 
-
     if(!show) return null;
 
-    const handleClose = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const { ref, inView } = useInView();
+
+    const handleClose = (e: React.MouseEvent<HTMLDivElement, MouseEvent>)=>{
         e.stopPropagation();
-        if((e.target as Element).id === 'wrapper') onClose()
+        if((e.target as Element).id === 'wrapper') onClose();
+        console.log(inView)
     }
 
   return (
     <div 
-        className='fixed inset-0 bg-midnight bg-opacity-75 backdrop-blur-sm
-    flex justify-center items-center bg-fixed'
+        className={`fixed inset-0 bg-midnight bg-opacity-75 backdrop-blur-sm
+        flex justify-center items-center bg-fixed`}
         id='wrapper'
-        onClick={handleClose}
-        onWheel={()=>console.log('weeling')}
-        onScroll={()=>console.log('scrolling')}>
+        onClick={handleClose}>
         <div 
             className='w-[600px] flex flex-col'>
             <button 
@@ -31,7 +32,7 @@ const MyModal = ({show, onClose, children}: ChildProps) => {
                 onClick={(e)=>{e.stopPropagation();onClose()}}>
                 X
             </button>
-            <div className='bg-white p-2 rounded'>
+            <div className='bg-white p-2 rounded' ref={ref}>
                 {children}
             </div>
         </div>
