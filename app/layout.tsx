@@ -1,6 +1,9 @@
 import { Dancing_Script } from '@next/font/google';
 
-const dancingScript = Dancing_Script();
+const dancingScript = Dancing_Script({
+  subsets: ['latin'],
+  variable: '--dancing-script',
+});
 
 export default function RootLayout({
   children,
@@ -9,7 +12,7 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang="en" className={dancingScript.className}>
+    <html lang="en" className={`${dancingScript.variable} font-sans`}>
       <body>
         {children}
       </body>

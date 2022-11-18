@@ -4,10 +4,10 @@ import Image from 'next/image';
 import hborder from '../public/bettainvite-border.png';
 import '../styles/globals.css';
 
-const Header:React.FC<React.CSSProperties> = ({font}) => {
+const Header = () => {
   return (
     <header className='p-5 bg-whitesmoke w-2/4 h-96 flex justify-end items-center flex-col'>
-        <p className={'text-6xl mbTitle ' + font}>You are invited</p>
+        <p className='text-6xl mbTitle'>You are invited</p>
         <Image
           src={hborder} 
           alt='header border'

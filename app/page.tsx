@@ -12,11 +12,9 @@ import diamond from '../public/bettainvite-diamond.webp';
 
 import Event from './Event';
 
-import { Dancing_Script } from '@next/font/google';
 import EventDate from './EventDate';
 import EventAttendance from './EventAttendance';
 
-const dancingScript = Dancing_Script();
 
 export default function Home() {
 
@@ -65,7 +63,7 @@ export default function Home() {
             speed={1}
             className='flex justify-center items-center'
           >
-            <Header font={dancingScript.className}/>
+            <Header />
           </ParallaxLayer>
 
           <ParallaxLayer 
