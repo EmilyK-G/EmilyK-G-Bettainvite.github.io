@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { Twilio } from "twilio";
+import { Twilio } from 'twilio';
 
 export default function sendMessage(req: NextApiRequest, res: NextApiResponse) {
     const accountSid = process.env.TWILIO_ACCOUNT_SID;
