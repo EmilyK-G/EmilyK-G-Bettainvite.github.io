@@ -40,11 +40,11 @@ function EventAttendance() {
         >
             Yes!
         </button>
-        <MyModal
-            show={acceptModalShow}
+        {acceptModalShow 
+        && <MyModal
             onClose={() => setAcceptModalShow(false)}>
                 <AcceptModal/>
-        </MyModal>
+        </MyModal>}
         
         <button 
             className='myBtn w-full m-2 text-5xl'
@@ -52,11 +52,11 @@ function EventAttendance() {
         >
             No
         </button>
-        <MyModal 
-            show={rejectModalShow}
+        {rejectModalShow 
+        && <MyModal
             onClose={() => setRejectModalShow(false)}>
                 <RejectModal/>
-        </MyModal>
+        </MyModal>}
     </div>
   )
 }

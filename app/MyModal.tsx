@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface ChildProps {
-    show: boolean;
     onClose: any;
     children: React.ReactNode;
   }
 
-const MyModal = ({show, onClose, children}: ChildProps) => {
+const MyModal = ({onClose, children}: ChildProps) => {
 
-    if(!show) return null;
-
+    const [transitionWrapper, setTransitionWrapper] = useState<string>('opacity-0');
+    
+    useEffect(()=>{
+      setTimeout(() => {
+        setTransitionWrapper('opacity-1');
+      }, 100);
+    }, [])
 
     const handleClose = (e: React.MouseEvent<HTMLDivElement, MouseEvent>)=>{
         e.stopPropagation();
@@ -18,18 +22,18 @@ const MyModal = ({show, onClose, children}: ChildProps) => {
 
   return (
     <div 
-        className={`fixed inset-0 bg-midnight bg-opacity-75 backdrop-blur-sm
-        flex justify-center items-center bg-fixed`}
+        className={`fixed inset-0 bg-midnight ${transitionWrapper} bg-opacity-75 backdrop-blur-sm
+        flex justify-center items-center bg-fixed transition-opacity duration-300 ease-in-out`}
         id='wrapper'
         onClick={handleClose}>
         <div 
-            className='w-[600px] flex flex-col'>
+            className={`w-[600px] flex flex-col`}>
             <button 
                 className='text-whitesmoke text-4xl place-self-end'
                 onClick={(e)=>{e.stopPropagation();onClose()}}>
                 X
             </button>
-            <div className='bg-white p-2 rounded'>
+            <div className={`bg-white p-2 rounded`}>
                 {children}
             </div>
         </div>
