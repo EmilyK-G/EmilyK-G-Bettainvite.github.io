@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
+import React from 'react';
 
 interface ChildProps {
     show: boolean;
@@ -11,12 +10,10 @@ const MyModal = ({show, onClose, children}: ChildProps) => {
 
     if(!show) return null;
 
-    const { ref, inView } = useInView();
 
     const handleClose = (e: React.MouseEvent<HTMLDivElement, MouseEvent>)=>{
         e.stopPropagation();
         if((e.target as Element).id === 'wrapper') onClose();
-        console.log(inView)
     }
 
   return (
@@ -32,7 +29,7 @@ const MyModal = ({show, onClose, children}: ChildProps) => {
                 onClick={(e)=>{e.stopPropagation();onClose()}}>
                 X
             </button>
-            <div className='bg-white p-2 rounded' ref={ref}>
+            <div className='bg-white p-2 rounded'>
                 {children}
             </div>
         </div>
