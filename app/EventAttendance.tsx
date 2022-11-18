@@ -43,7 +43,7 @@ function EventAttendance() {
         {acceptModalShow 
         && <MyModal
             onClose={() => setAcceptModalShow(false)}>
-                <AcceptModal onClose={() => setAcceptModalShow(false)}/>
+                <AcceptModal />
         </MyModal>}
         
         <button 

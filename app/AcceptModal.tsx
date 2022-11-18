@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-const AcceptModal= ({onClose}:any) => {
+const AcceptModal= () => {
 
   const [confirmation, setConfirmation] = useState<string>('');
   const [isSending, setIsSending] = useState<boolean>(false);
@@ -33,9 +33,6 @@ const AcceptModal= ({onClose}:any) => {
       console.log('success');
       setIsSending(false);
       setSuccess(true);
-      setTimeout(() => {
-        onClose()
-      }, 2000);
     } else {
       console.log('there was an error:(');
       setIsSending(false);

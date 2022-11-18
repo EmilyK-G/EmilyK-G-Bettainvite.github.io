@@ -15,9 +15,20 @@ const MyModal = ({onClose, children}: ChildProps) => {
       }, 100);
     }, [])
 
-    const handleClose = (e: React.MouseEvent<HTMLDivElement, MouseEvent>)=>{
+    const handleWrapperClose = (e: React.MouseEvent<HTMLDivElement, MouseEvent>)=>{
         e.stopPropagation();
-        if((e.target as Element).id === 'wrapper') onClose();
+        setTransitionWrapper('opacity-0');
+        setTimeout(() => {
+          if((e.target as Element).id === 'wrapper') onClose();
+        }, 500);
+    }
+
+    const handleClose = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{
+        e.stopPropagation();
+        setTransitionWrapper('opacity-0');
+        setTimeout(() => {
+          onClose();
+        }, 500);
     }
 
   return (
@@ -25,12 +36,12 @@ const MyModal = ({onClose, children}: ChildProps) => {
         className={`fixed inset-0 bg-midnight ${transitionWrapper} bg-opacity-75 backdrop-blur-sm
         flex justify-center items-center bg-fixed transition-opacity duration-300 ease-in-out`}
         id='wrapper'
-        onClick={handleClose}>
+        onClick={handleWrapperClose}>
         <div 
             className="w-10/12 flex flex-col">
             <button 
-                className='text-whitesmoke text-4xl place-self-end'
-                onClick={(e)=>{e.stopPropagation();onClose()}}>
+                className='text-whitesmoke text-5xl place-self-end'
+                onClick={handleClose}>
                 X
             </button>
             <div className={`bg-white p-2 rounded`}>
