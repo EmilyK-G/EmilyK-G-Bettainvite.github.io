@@ -27,7 +27,7 @@ const MyModal = ({onClose, children}: ChildProps) => {
         id='wrapper'
         onClick={handleClose}>
         <div 
-            className={`w-[600px] flex flex-col`}>
+            className="w-10/12 flex flex-col">
             <button 
                 className='text-whitesmoke text-4xl place-self-end'
                 onClick={(e)=>{e.stopPropagation();onClose()}}>
