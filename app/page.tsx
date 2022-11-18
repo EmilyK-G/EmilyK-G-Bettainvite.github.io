@@ -15,6 +15,7 @@ import Event from './Event';
 import EventDate from './EventDate';
 import EventAttendance from './EventAttendance';
 
+import Head from 'next/head';
 
 export default function Home() {
 
@@ -31,6 +32,11 @@ export default function Home() {
  
   return (
         <Parallax ref={parallax} pages={4}>
+          <Head>
+            <title>
+              LightVite
+            </title>
+          </Head>
           <ParallaxLayer
             offset={0}
             speed={0}
