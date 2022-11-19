@@ -55,7 +55,7 @@ function EventAttendance() {
         {rejectModalShow 
         && <MyModal
             onClose={() => setRejectModalShow(false)}>
-                <RejectModal/>
+                <RejectModal />
         </MyModal>}
     </div>
   )

@@ -30,11 +30,9 @@ const AcceptModal= () => {
     const json = await response.json();
 
     if (response.ok) {
-      console.log('success');
       setIsSending(false);
       setSuccess(true);
     } else {
-      console.log('there was an error:(');
       setIsSending(false);
       setError(`Please try again...`);
     }
@@ -57,16 +55,15 @@ const AcceptModal= () => {
         shadow-sm focus:outline-none focus:border-magenta text-center'/>
 
       {error && <div className='text-error font-serif'><p>{`Confirmation failed:(`}</p> <p className='text-3xl'>{error}</p></div>}
-      
+      {success && <div className='text-success'>{`Thank you for confirming, see you later:)`}</div>}
       {isSending 
         ? <p className='mt-5 text-3xl bg-darknavy rounded-md p-3 w-3/6 place-self-center'>Confirming <span className='animate-ping'>...</span></p>
-        : success 
-          ? <div className='text-success'>{`Thank you for confirming, see you later:)`}</div>
-          : <button
-              className="myBtn mt-5 text-7xl" 
-              onClick={e=>sendConfirmationMessage(e)}>
-                Confirm
-            </button>}
+        : <button
+            disabled={success}
+            className="myBtn mt-5 text-7xl" 
+            onClick={e=>sendConfirmationMessage(e)}>
+              Confirm
+          </button>}
     </div>  
   )
 }

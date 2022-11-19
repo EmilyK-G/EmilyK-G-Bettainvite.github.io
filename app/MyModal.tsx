@@ -16,14 +16,18 @@ const MyModal = ({onClose, children}: ChildProps) => {
     }, [])
 
     const handleWrapperClose = (e: React.MouseEvent<HTMLDivElement, MouseEvent>)=>{
+        e.preventDefault();
         e.stopPropagation();
-        setTransitionWrapper('opacity-0');
-        setTimeout(() => {
-          if((e.target as Element).id === 'wrapper') onClose();
-        }, 500);
+        if((e.target as Element).id === 'wrapper') {
+          setTransitionWrapper('opacity-0');
+          setTimeout(() => {
+            onClose();
+          }, 500);
+        }
     }
 
     const handleClose = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{
+        e.preventDefault();
         e.stopPropagation();
         setTransitionWrapper('opacity-0');
         setTimeout(() => {
@@ -39,7 +43,7 @@ const MyModal = ({onClose, children}: ChildProps) => {
         onClick={handleWrapperClose}>
         <div 
             className="w-10/12 flex flex-col">
-            <button 
+            <button
                 className='text-whitesmoke text-5xl place-self-end'
                 onClick={handleClose}>
                 X
