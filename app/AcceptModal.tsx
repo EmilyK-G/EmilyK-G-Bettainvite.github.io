@@ -41,7 +41,7 @@ const AcceptModal= () => {
 
   return (
     <div className='bg-midnight text-4xl p-20 flex flex-col rounded-lg border-2'>
-      <h2 className='text-9xl'>Yay!</h2>
+      <h2 className='keyboard_hide text-9xl'>Yay!</h2>
       <p className='font-serif mt-4'>Please send me your full name to confirm...</p>
       <input 
         type="text" 
@@ -50,7 +50,8 @@ const AcceptModal= () => {
         placeholder='Emily Garcia'
         value={confirmation}
         onChange={(e)=>setConfirmation(e.target.value)}
-        className='p-5 text-8xl my-40 h-36 rounded-md enabled:hover:border-gray-400 
+        id='modal_accept'
+        className='p-5 text-8xl my-40 keyboard_modal_margin h-36 rounded-md enabled:hover:border-gray-400 
         disabled:opacity-75 placeholder:text-whitesmoke placeholder:opacity-30 block bg-transparent
         shadow-sm focus:outline-none focus:border-magenta text-center'/>
 

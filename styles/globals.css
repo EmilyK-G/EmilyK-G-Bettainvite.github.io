@@ -10,7 +10,7 @@
     body {
         height: -webkit-fill-available;
     }
-  }
+}
 
 @layer components {
     .apple-2 {
@@ -36,4 +36,16 @@
         color:#000000;
         background-color:#FFFFFF;
         }
+
+    @media (max-height: 1000px) {
+        .keyboard_hide {
+            display: none;
+        }
+        #modal_accept.keyboard_modal_margin{
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    }
   }
+
+  
