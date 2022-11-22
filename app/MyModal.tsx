@@ -40,7 +40,7 @@ const MyModal = React.forwardRef<HTMLButtonElement, ChildProps>((props, viewRef)
 
   return (
     <div 
-        className={`z-40 fixed inset-0 bg-midnight ${transitionWrapper} bg-opacity-75 backdrop-blur-sm
+        className={`z-40 fixed inset-0 bg-darkchocolate ${transitionWrapper} bg-opacity-75 backdrop-blur-sm
         flex justify-center items-center bg-fixed transition-opacity duration-300 ease-in-out text-whitesmoke text-center`}
         id='wrapper'
         onClick={handleWrapperClose}>

@@ -40,7 +40,7 @@ const AcceptModal= () => {
   
 
   return (
-    <div className='bg-midnight text-4xl p-20 flex flex-col rounded-lg border-2'>
+    <div className='bg-brick text-4xl p-20 flex flex-col rounded-lg border-2'>
       <h2 className='keyboard_hide text-9xl'>Yay!</h2>
       <p className='font-serif mt-4'>Please send me your full name to confirm...</p>
       <input 

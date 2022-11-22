@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/loading.css'
 
-const loading = () => {
+const Loading = () => {
   return (
     <div className="loader_container">
         <p className="text-5xl">Loading...</p>
@@ -15,4 +15,4 @@ const loading = () => {
   )
 }
 
-export default loading
+export default Loading

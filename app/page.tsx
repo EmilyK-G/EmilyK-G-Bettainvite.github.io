@@ -8,7 +8,7 @@ import '../styles/globals.css';
 
 import Image from 'next/image';
 import singleapple from '../public/bettainvite-singleapple.png';
-import diamond from '../public/bettainvite-diamond.webp';
+import icon from '../public/light_icon_transparent.png';
 
 import Event from './Event';
 import EventDate from './EventDate';
@@ -57,7 +57,7 @@ export default function Home() {
           />
           <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundColor: '#2F4858' }} />
           <ParallaxLayer offset={2} speed={0.5} style={{ backgroundColor: '#983711' }} />
-          <ParallaxLayer offset={3} speed={0.5} style={{ backgroundColor: '#982A40' }} />
+          <ParallaxLayer offset={3} speed={0.5} style={{ backgroundColor: '#2F4858' }} />
 
           <ParallaxLayer
             offset={0}
@@ -66,19 +66,19 @@ export default function Home() {
             className='flex flex-col justify-evenly items-center p-20'
           >
             <Image
-              src={diamond}
-              alt='diamond separator'
-              className='h-40 w-auto opacity-50'
+              src={icon}
+              alt='icon separator'
+              className=' h-32 w-auto'
             />
             <Image
-              src={diamond}
-              alt='diamond separator'
-              className='h-40 w-auto opacity-50'
+              src={icon}
+              alt='icon separator'
+              className=' h-32 w-auto'
             />
             <Image
-              src={diamond}
-              alt='diamond separator'
-              className='h-40 w-auto opacity-50'
+              src={icon}
+              alt='icon separator'
+              className=' h-32 w-auto'
             />
           </ParallaxLayer>
 
