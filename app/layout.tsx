@@ -13,7 +13,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${dancingScript.variable} font-sans`}>
-      <body>
+      <body className='mb-0'>
         {children}
       </body>
     </html>

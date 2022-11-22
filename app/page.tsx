@@ -3,7 +3,7 @@
 import '../styles/globals.css';
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax';
 import Header from './Header';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import '../styles/globals.css';
 
 import Image from 'next/image';
@@ -11,15 +11,31 @@ import singleapple from '../public/bettainvite-singleapple.png';
 import diamond from '../public/bettainvite-diamond.webp';
 
 import Event from './Event';
-
 import EventDate from './EventDate';
 import EventAttendance from './EventAttendance';
+import AcceptModal from './AcceptModal';
+import RejectModal from './RejectModal';
+import MyModal from './MyModal';
+import { useInView } from 'react-intersection-observer';
 
 import Head from 'next/head';
 
 export default function Home() {
 
   const parallax = useRef<IParallax>(null!);
+
+  const [acceptModalShow, setAcceptModalShow] = useState<boolean>(false);
+  const [rejectModalShow, setRejectModalShow] = useState<boolean>(false);
+
+  const { ref, inView } = useInView();
+
+  useEffect(()=>{
+        if(!inView){
+            acceptModalShow && setAcceptModalShow(false);
+            rejectModalShow && setRejectModalShow(false)
+        }
+        console.log(inView)
+    },[inView])
  
   return (
         <Parallax ref={parallax} pages={4}>
@@ -99,6 +115,7 @@ export default function Home() {
           >
             <Image
               src={singleapple}
+              priority
               alt='apple moving'
               className={`ml-14 mb-0 h-72 w-auto`}
             />
@@ -128,8 +145,33 @@ export default function Home() {
             onClick={() => {parallax.current.scrollTo(0)}}
             className='flex justify-center items-center p-20'
           >
-            <EventAttendance />
+            <EventAttendance openRejectModal={()=>setRejectModalShow(true)} openAcceptModal={()=>setAcceptModalShow(true)}/>
           </ParallaxLayer>
+
+          
+          {acceptModalShow || rejectModalShow 
+          ? <ParallaxLayer 
+            offset={3}
+            speed={0.5}
+            className='flex justify-start items-end'
+          >
+            {acceptModalShow
+            && <MyModal
+                onClose={() => setAcceptModalShow(false)}
+                inView={inView}
+                ref={ref} >
+                    <AcceptModal />
+            </MyModal>}
+            {rejectModalShow 
+            && <MyModal
+                onClose={() => setRejectModalShow(false)}
+                inView={inView}
+                ref={ref} >
+                    <RejectModal />
+            </MyModal>}
+          </ParallaxLayer>
+          : <></>}
+
         </Parallax>
   )
 }
