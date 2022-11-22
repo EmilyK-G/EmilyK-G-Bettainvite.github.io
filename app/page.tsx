@@ -123,7 +123,7 @@ export default function Home() {
 
           <ParallaxLayer 
             offset={1}
-            speed={0.2}
+            speed={0.4}
             onClick={() => {parallax.current.scrollTo(2)}}
             className='flex justify-center items-center p-20'
           >
@@ -132,7 +132,7 @@ export default function Home() {
 
           <ParallaxLayer 
             offset={2}
-            speed={0.2}
+            speed={0.4}
             onClick={() => {parallax.current.scrollTo(3)}}
             className='flex justify-center items-center p-20'
           >
@@ -141,7 +141,7 @@ export default function Home() {
 
           <ParallaxLayer 
             offset={3}
-            speed={0.2}
+            speed={0.4}
             onClick={() => {parallax.current.scrollTo(0)}}
             className='flex justify-center items-center p-20'
           >
