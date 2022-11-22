@@ -58,12 +58,12 @@ const AcceptModal= () => {
       {error && <div className='text-error font-serif'><p>{`Confirmation failed:(`}</p> <p className='text-3xl'>{error}</p></div>}
       {success && <div className='text-success'>{`Thank you for confirming, see you later:)`}</div>}
       {isSending 
-        ? <p className='mt-5 text-3xl bg-darknavy rounded-md p-3 w-3/6 place-self-center'>Confirming <span className='animate-ping'>...</span></p>
+        ? <p className='mt-5 rounded-md p-3 w-3/6 place-self-center'>Confirming <span className='animate-ping'>...</span></p>
         : <button
             disabled={success}
             className="myBtn mt-5 text-7xl" 
             onClick={e=>sendConfirmationMessage(e)}>
-              Confirm
+              {success ? 'Sent!' : 'Confirm'}
           </button>}
     </div>  
   )
