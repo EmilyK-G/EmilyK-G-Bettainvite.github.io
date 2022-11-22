@@ -3,7 +3,7 @@
 import '../styles/globals.css';
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax';
 import Header from './Header';
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState } from 'react';
 import '../styles/globals.css';
 
 import Image from 'next/image';
@@ -16,7 +16,6 @@ import EventAttendance from './EventAttendance';
 import AcceptModal from './AcceptModal';
 import RejectModal from './RejectModal';
 import MyModal from './MyModal';
-import { useInView } from 'react-intersection-observer';
 
 import Head from 'next/head';
 
@@ -26,16 +25,6 @@ export default function Home() {
 
   const [acceptModalShow, setAcceptModalShow] = useState<boolean>(false);
   const [rejectModalShow, setRejectModalShow] = useState<boolean>(false);
-
-  const { ref, inView } = useInView();
-
-  // useEffect(()=>{
-  //       if(!inView){
-  //           acceptModalShow && setAcceptModalShow(false);
-  //           rejectModalShow && setRejectModalShow(false)
-  //       }
-  //       console.log(inView)
-  //   },[inView])
  
   return (
         <Parallax ref={parallax} pages={4}>
@@ -153,22 +142,18 @@ export default function Home() {
           
           {acceptModalShow || rejectModalShow 
           ? <ParallaxLayer 
-            offset={3}
-            speed={0.5}
+            sticky={{ start: 1, end: 3 }}
+            speed={0}
             className='flex justify-start items-end'
           >
             {acceptModalShow
             && <MyModal
-                onClose={() => setAcceptModalShow(false)}
-                inView={inView}
-                ref={ref} >
+                onClose={() => setAcceptModalShow(false)}>
                     <AcceptModal />
             </MyModal>}
             {rejectModalShow 
             && <MyModal
-                onClose={() => setRejectModalShow(false)}
-                inView={inView}
-                ref={ref} >
+                onClose={() => setRejectModalShow(false)}>
                     <RejectModal />
             </MyModal>}
           </ParallaxLayer>

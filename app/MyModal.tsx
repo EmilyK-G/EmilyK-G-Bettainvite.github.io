@@ -2,15 +2,12 @@ import React, { useEffect, useState } from 'react';
 
 interface ChildProps {
     onClose: any;
-    children: React.ReactNode;
-    inView: boolean
+    children: React.ReactNode
   }
 
-const MyModal = React.forwardRef<HTMLButtonElement, ChildProps>((props, viewRef) => {
+const MyModal = ({onClose, children}:ChildProps) => {
 
     const [transitionWrapper, setTransitionWrapper] = useState<string>('opacity-0');
-
-    const inView = props.inView;
     
     useEffect(()=>{
       setTimeout(() => {
@@ -24,7 +21,7 @@ const MyModal = React.forwardRef<HTMLButtonElement, ChildProps>((props, viewRef)
         if((e.target as Element).id === 'wrapper') {
           setTransitionWrapper('opacity-0');
           setTimeout(() => {
-            props.onClose();
+            onClose();
           }, 500);
         }
     }
@@ -34,7 +31,7 @@ const MyModal = React.forwardRef<HTMLButtonElement, ChildProps>((props, viewRef)
         e.stopPropagation();
         setTransitionWrapper('opacity-0');
         setTimeout(() => {
-          props.onClose();
+          onClose();
         }, 500);
     }
 
@@ -48,16 +45,15 @@ const MyModal = React.forwardRef<HTMLButtonElement, ChildProps>((props, viewRef)
             className="w-10/12 flex flex-col">
             <button
                 className='text-whitesmoke text-5xl place-self-end'
-                onClick={handleClose}
-                ref={viewRef}>
+                onClick={handleClose}>
                 X
             </button>
             <div className={`bg-white p-2 rounded`}>
-                {props.children}
+                {children}
             </div>
         </div>
     </div>
   )
-})
+}
 
 export default MyModal
