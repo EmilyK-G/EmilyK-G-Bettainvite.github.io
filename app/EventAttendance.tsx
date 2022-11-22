@@ -11,12 +11,12 @@ function EventAttendance() {
 
     const { ref, inView } = useInView();
 
-    useEffect(()=>{
-        if(!inView){
-            acceptModalShow && setAcceptModalShow(false);
-            rejectModalShow && setRejectModalShow(false)
-        }
-    },[inView])
+    // useEffect(()=>{
+    //     if(!inView){
+    //         acceptModalShow && setAcceptModalShow(false);
+    //         rejectModalShow && setRejectModalShow(false)
+    //     }
+    // },[inView])
 
     const handleAccept = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{
         e.preventDefault();
