@@ -4,11 +4,11 @@
 
 
 @layer base {
-    html {
+    html, body {
         height: -webkit-fill-available;
-    }
-    body {
-        height: -webkit-fill-available;
+        margin: 0px;
+        overflow-x: hidden;
+        background-color: #983711;
     }
 }
 
