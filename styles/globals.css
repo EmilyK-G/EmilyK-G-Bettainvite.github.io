@@ -37,7 +37,7 @@
         background-color:#FFFFFF;
         }
 
-    @media (max-height: 1000px) {
+    @media (max-height: 1500px) {
         .keyboard_hide {
             display: none;
         }
