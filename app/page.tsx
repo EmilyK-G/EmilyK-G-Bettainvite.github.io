@@ -29,13 +29,13 @@ export default function Home() {
 
   const { ref, inView } = useInView();
 
-  useEffect(()=>{
-        if(!inView){
-            acceptModalShow && setAcceptModalShow(false);
-            rejectModalShow && setRejectModalShow(false)
-        }
-        console.log(inView)
-    },[inView])
+  // useEffect(()=>{
+  //       if(!inView){
+  //           acceptModalShow && setAcceptModalShow(false);
+  //           rejectModalShow && setRejectModalShow(false)
+  //       }
+  //       console.log(inView)
+  //   },[inView])
  
   return (
         <Parallax ref={parallax} pages={4}>
