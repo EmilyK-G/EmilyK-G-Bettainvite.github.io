@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Loading = () => {
+function Loading() {
   return (
     <div className="loader_container">
         <p className="text-5xl">Loading...</p>
