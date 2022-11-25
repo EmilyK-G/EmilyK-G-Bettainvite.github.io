@@ -13,7 +13,7 @@ const About = () => {
             <hr className='mb-10'/>
             <p className='font-mono m-10 font-thin opacity-70'>A <span className='text-6xl'>Foodshare</span> party 
                 is a time to enjoy life and relax with food and frineds. 
-                Each guest brings a special dish and share 
+                Each guest brings a special dish and shares 
                 it with everyone.</p>
         </div>
     
@@ -23,7 +23,7 @@ const About = () => {
             className='h-20 w-20 m-32'
         />
 
-        <p className='font-mono m-10 text-darkchocolate'>Expect between 10-15 guests</p>
+        <p className='font-mono m-10 text-darkchocolate'>Expect abut 20 guests</p>
 
         <Link 
           href="/"
