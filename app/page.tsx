@@ -46,32 +46,9 @@ export default function Home() {
               zIndex: -1 
             }}
           />
-          <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundColor: '#2F4858' }} />
-          <ParallaxLayer offset={2} speed={0.5} style={{ backgroundColor: '#983711' }} />
-          <ParallaxLayer offset={3} speed={0.5} style={{ backgroundColor: '#2F4858' }} />
-
-          <ParallaxLayer
-            offset={0}
-            factor={4}
-            speed={0}
-            className='flex flex-col justify-evenly items-center p-20'
-          >
-            <Image
-              src={icon}
-              alt='icon separator'
-              className=' h-32 w-auto'
-            />
-            <Image
-              src={icon}
-              alt='icon separator'
-              className=' h-32 w-auto'
-            />
-            <Image
-              src={icon}
-              alt='icon separator'
-              className=' h-32 w-auto'
-            />
-          </ParallaxLayer>
+          <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundColor: '#2F4858'}} />
+          <ParallaxLayer offset={2} speed={0.5} style={{ backgroundColor: '#983711'}} />
+          <ParallaxLayer offset={3} speed={0.5} style={{ backgroundColor: '#983711'}} />
 
           <ParallaxLayer
             offset={0.2}
@@ -116,7 +93,12 @@ export default function Home() {
             offset={1}
             speed={0.4}
             onClick={() => {parallax.current.scrollTo(2)}}
-            className='flex justify-center items-center p-20'
+            className='flex justify-center items-center'
+            style={{
+              backgroundImage: 'url(/bettainvite_woman.jpg)',
+              backgroundSize: 'cover',
+              backgroundPosition:'center'
+            }}
           >
             <Event />
           </ParallaxLayer>
@@ -125,7 +107,12 @@ export default function Home() {
             offset={2}
             speed={0.4}
             onClick={() => {parallax.current.scrollTo(3)}}
-            className='flex justify-center items-center p-20'
+            className='flex justify-center items-center'
+            style={{
+              backgroundImage: 'url(/bettainvite_woman.jpg)',
+              backgroundSize: 'cover',
+              backgroundPosition:'center',
+            }}
           >
             <EventDate />
           </ParallaxLayer>
@@ -139,6 +126,28 @@ export default function Home() {
             <EventAttendance openRejectModal={()=>setRejectModalShow(true)} openAcceptModal={()=>setAcceptModalShow(true)}/>
           </ParallaxLayer>
 
+          <ParallaxLayer
+            offset={0}
+            factor={4}
+            speed={0}
+            className='flex flex-col justify-evenly items-center p-20 pointer-events-none'
+          >
+            <Image
+              src={icon}
+              alt='icon separator'
+              className=' h-32 w-auto z-20'
+            />
+            <Image
+              src={icon}
+              alt='icon separator'
+              className=' h-32 w-auto z-20'
+            />
+            <Image
+              src={icon}
+              alt='icon separator'
+              className=' h-32 w-auto z-20'
+            />
+          </ParallaxLayer>
           
           {acceptModalShow || rejectModalShow 
           ? <ParallaxLayer 
