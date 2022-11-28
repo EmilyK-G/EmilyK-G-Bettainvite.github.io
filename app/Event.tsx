@@ -12,8 +12,8 @@ function Event() {
           Details
         </Link>
       </div>
-      <div className='flex flex-col items-center justify-center p-10 bg-midnight bg-opacity-60 w-full'>
-        <p className='text-5xl font-thin m-10'> <small>Hosted by Emily Kimberly</small></p>
+      <div className='flex flex-col items-end justify-center p-10 bg-midnight bg-opacity-60 w-full'>
+        <p className='text-6xl font-thin m-10'> <small className='text-5xl'>Hosted by</small> Emily Kimberly</p>
       </div>
     </div>
     

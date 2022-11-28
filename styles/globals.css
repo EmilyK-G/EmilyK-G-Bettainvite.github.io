@@ -36,7 +36,9 @@
         color:#000000;
         background-color:#FFFFFF;
     }
-
+    .borderPosition{
+        top: 50%;
+    }
 
     .loader_container {
         margin: 0;

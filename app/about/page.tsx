@@ -16,7 +16,7 @@ const About = () => {
                 Each guest brings a special dish and shares 
                 it with everyone.</p>
 
-            <p className='font-mono m-10'>{`Expect <=20 guests`}</p>
+            <p className='font-mono m-10 opacity-70'>{`Expect <=20 guests`}</p>
         </div>
     
         <Image

@@ -6,11 +6,12 @@ import '../styles/globals.css';
 
 const Header = () => {
   return (
-    <div className='p-5 bg-whitesmoke w-2/4 h-96 flex justify-end items-center flex-col'>
-        <p className='text-6xl mbTitle'>You are invited</p>
+    <div className='p-20 text-darkchocolate rounded bg-whitesmoke bg-opacity-95 h-96 flex justify-center items-center flex-col'>
+        <p className='text-8xl'>You are invited</p>
         <Image
           src={hborder} 
-          alt='header border'
+          alt='border'
+          className='absolute borderPosition w-96'
         />
     </div>
   )

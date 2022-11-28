@@ -53,7 +53,7 @@ export default function Home() {
           <ParallaxLayer
             offset={0.2}
             speed={1}
-            className='flex justify-center items-center'
+            className='flex justify-center items-center px-20'
           >
             <Header />
           </ParallaxLayer>
