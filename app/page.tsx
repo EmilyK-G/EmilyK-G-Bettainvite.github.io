@@ -46,7 +46,7 @@ export default function Home() {
               zIndex: -1 
             }}
           />
-          <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundImage:'linear-gradient(to bottom, rgba(47,72,88,1),rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,0.9), rgba(47,72,88,0), rgba(47,72,88,0.5), rgba(47,72,88,1))'}} />
+          <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundImage:'linear-gradient(to bottom, rgba(47,72,88,1),rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,0.3), rgba(47,72,88,0.3), rgba(47,72,88,0.4))'}} />
           <ParallaxLayer offset={2} speed={0.5} style={{ backgroundColor: '#983711'}} />
           <ParallaxLayer offset={3} speed={0.5} style={{ backgroundColor: '#983711'}} />
 
@@ -94,11 +94,6 @@ export default function Home() {
             speed={0.4}
             onClick={() => {parallax.current.scrollTo(2)}}
             className='flex justify-center items-center'
-            // style={{
-            //   backgroundImage: 'url(/bettainvite_woman.jpg)',
-            //   backgroundSize: 'cover',
-            //   backgroundPosition:'center'
-            // }}
           >
             <Event />
           </ParallaxLayer>
