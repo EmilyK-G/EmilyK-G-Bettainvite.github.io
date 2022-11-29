@@ -2,7 +2,7 @@ import React from 'react';
 
 function EventDate() {
   return (
-    <div className='h-full w-full bg-brick bg-opacity-40 flex justify-center items-end'>
+    <div className='h-full w-full bg-brick bg-opacity-40 px-20 flex justify-center items-end'>
       <div className='flex flex-col items-center justify-evenly text-whitesmoke p-20 bg-brick h-full bg-opacity-90 text-center'>
         <h1 className='text-9xl m-10'>Date:</h1>
         <div>
