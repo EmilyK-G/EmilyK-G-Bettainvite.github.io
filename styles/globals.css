@@ -16,9 +16,9 @@
     .icon-2 {
         margin-left: -22px;
     }
-    .icon-moving {
+    /* .icon-moving {
         filter: invert(0%) sepia(2%) saturate(0%) hue-rotate(253deg) brightness(100%) contrast(100%);
-    }
+    } */
     .mbTitle {
         margin-bottom: -70px;
     }

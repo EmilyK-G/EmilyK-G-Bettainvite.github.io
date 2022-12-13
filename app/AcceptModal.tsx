@@ -41,8 +41,10 @@ const AcceptModal= () => {
 
   return (
     <div className='bg-darknavy text-champagne text-6xl p-20 flex flex-col rounded-lg border-2'>
-      <h2 className='keyboard_hide text-9xl'>Genial!</h2>
-      <p className='font-serif mt-4'>Por favor envíame tu nombre para confirmar...</p>
+      {!success && <>
+        <h2 className='keyboard_hide text-9xl'>Genial!</h2>
+        <p className='font-serif mt-4'>Por favor envíame tu nombre para confirmar...</p>
+      </>}
       <input 
         type="text" 
         maxLength={35}
