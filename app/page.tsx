@@ -7,7 +7,10 @@ import { useRef, useState } from 'react';
 import '../styles/globals.css';
 
 import Image from 'next/image';
-import singleapple from '../public/bettainvite-singleapple.png';
+// import singleapple from '../public/bettainvite-singleapple.png';
+import cookingSih from '../public/bettainvite_cooking.png';
+import modelSih from '../public/bettainvite_model.png';
+import yarn from '../public/bettainvite_yarn.png';
 import icon from '../public/light_icon_transparent.png';
 
 import Event from './Event';
@@ -41,15 +44,15 @@ export default function Home() {
             speed={0}
             factor={4}
             style={{
-              backgroundImage: 'url(/bettainvite-leaves.jpg)',
+              backgroundImage: 'url(/bettainvite_pink_background.jpg)',
               backgroundSize: 'cover',
               zIndex: -1 
             }}
           />
           {/* <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundImage:'linear-gradient(to bottom, rgba(47,72,88,1),rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,0.3), rgba(47,72,88,0.3), rgba(47,72,88,0.4))'}} /> */}
-          <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundColor:'#2F4858'}} />
-          <ParallaxLayer offset={2} speed={0.5} style={{ backgroundColor: '#983711', opacity:'0'}} />
-          <ParallaxLayer offset={3} speed={0.5} style={{ backgroundColor: '#983711'}} />
+          <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundColor:'#39486A'}} />
+          <ParallaxLayer offset={2} speed={0.5} style={{ backgroundColor: '#FFB895', opacity:'0'}} />
+          <ParallaxLayer offset={3} speed={0.5} style={{ backgroundColor: '#FFB895', opacity:'90%'}} />
 
           <ParallaxLayer
             offset={0.2}
@@ -66,13 +69,14 @@ export default function Home() {
             className='flex justify-start items-end'
           >
             <Image
-              src={singleapple}
-              alt='sticky apple'
+              src={cookingSih}
+              alt='sticky icon'
+              className='h-80 w-auto'
             />
             <Image
-              src={singleapple}
-              alt='another sticky apple'
-              className='apple-2 h-64 w-auto'
+              src={modelSih}
+              alt='another sticky icon'
+              className='icon-2 h-80 w-auto'
             />
           </ParallaxLayer>
 
@@ -83,10 +87,10 @@ export default function Home() {
             style={{ pointerEvents: 'none' }}
           >
             <Image
-              src={singleapple}
+              src={yarn}
               priority
-              alt='apple moving'
-              className={`ml-14 mb-0 h-72 w-auto`}
+              alt='icon moving'
+              className={`ml-14 mb-0 h-72 w-auto icon-moving`}
             />
           </ParallaxLayer>
 
@@ -96,7 +100,7 @@ export default function Home() {
             onClick={() => {parallax.current.scrollTo(2)}}
             className='flex justify-center items-center'
             style={{
-              backgroundImage: 'url(/bettainvite_woman.jpg)',
+              backgroundImage: 'url(/bettainvite_art.JPG)',
               backgroundSize: 'cover',
               backgroundPosition:'center',
             }}
@@ -109,11 +113,11 @@ export default function Home() {
             speed={0.4}
             onClick={() => {parallax.current.scrollTo(3)}}
             className='flex justify-center items-center'
-            style={{
-              backgroundImage: 'url(/bettainvite_woman.jpg)',
-              backgroundSize: 'cover',
-              backgroundPosition:'center',
-            }}
+            // style={{
+            //   backgroundImage: 'url(/bettainvite_woman.jpg)',
+            //   backgroundSize: 'cover',
+            //   backgroundPosition:'center',
+            // }}
           >
             <EventDate />
           </ParallaxLayer>

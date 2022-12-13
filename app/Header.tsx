@@ -6,8 +6,8 @@ import '../styles/globals.css';
 
 const Header = () => {
   return (
-    <div className='p-20 text-darkchocolate rounded bg-whitesmoke bg-opacity-95 h-96 flex justify-center items-center flex-col'>
-        <p className='text-8xl'>You are invited</p>
+    <div className='p-20 text-darkchocolate rounded-xl bg-whitesmoke bg-opacity-95 h-96 flex justify-center items-center flex-col mix-blend-multiply hover:mix-blend-overlay'>
+        <p className='text-7xl'>Esta es tu invitación</p>
         <Image
           src={hborder} 
           alt='border'

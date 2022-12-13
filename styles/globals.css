@@ -13,8 +13,11 @@
 }
 
 @layer components {
-    .apple-2 {
-        margin-left: -175px;
+    .icon-2 {
+        margin-left: -22px;
+    }
+    .icon-moving {
+        filter: invert(0%) sepia(2%) saturate(0%) hue-rotate(253deg) brightness(100%) contrast(100%);
     }
     .mbTitle {
         margin-bottom: -70px;
@@ -22,19 +25,19 @@
     .myBtn {
         display:inline-block;
         padding:0.35rem 1.2rem;
-        border:0.1em solid #FFFFFF;
+        border:0.1em solid #39486A;
         height: 130px;
         border-radius:1rem;
         box-sizing: border-box;
         text-decoration:none;
         font-weight:300;
-        color:#FFFFFF;
+        color:#39486A;
         text-align:center;
         transition: all 0.2s;
     }
     .myBtn:hover{
         color:#000000;
-        background-color:#FFFFFF;
+        background-color:#39486A;
     }
     .borderPosition{
         top: 50%;

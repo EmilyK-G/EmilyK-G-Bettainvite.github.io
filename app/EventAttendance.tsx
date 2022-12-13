@@ -15,12 +15,12 @@ const EventAttendance = (props: any) => {
     }
 
   return (
-    <div className='flex flex-col items-center justify-center text-whitesmoke p-10 text-center'>
-        <p className="text-9xl">Will you attend?</p>
+    <div className='flex flex-col items-center justify-center text-darknavy p-10 text-center'>
+        <p className="text-9xl">Vas a venir?</p>
         <button
             className='myBtn w-full mt-10 m-2 text-5xl'
             onClick={e=>handleAccept(e)}>
-            Yes!
+            Sí!
         </button>
         
         <button 

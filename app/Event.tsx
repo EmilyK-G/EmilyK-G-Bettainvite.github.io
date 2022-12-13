@@ -2,18 +2,19 @@ import Link from 'next/link';
 
 function Event() {
   return (
-    <div className="flex flex-col items-center justify-between h-full text-whitesmoke bg-midnight bg-opacity-40 text-center">
-      <div className='flex flex-col items-center justify-center p-10 '>
-        <p className='text-6xl m-10'>To my</p>
-        <p className='text-9xl font-thin m-10'>Fall Outdoor <span className="m-5">Foodshare</span></p>
+    <div className="flex flex-col items-center justify-center h-full text-black bg-champagne bg-opacity-60 text-center">
+      <div className='flex flex-col items-center justify-center flex-1 p-10 '>
+        <p className='text-6xl m-10'>Para la</p>
+        <p className='text-9xl font-thin m-10 my-20'>Gran Feria Artesanal</p>
+        <p className='text-6xl font-mono font-thin m-10'>De todo para todos los gustos</p>
         <Link 
           href="/about"
-          className="text-5xl font-mono font-bold underline hover:underline-offset-4 mt-auto">
-          Details
+          className="text-6xl font-mono text-lightolive bg-whitesmoke bg-opacity-50 font-bold underline hover:underline-offset-4 p-10 mt-10">
+          Detalles
         </Link>
       </div>
-      <div className='flex flex-col items-end justify-center p-10 px-32 bg-midnight w-full'>
-        <p className='text-6xl font-thin m-10'> <small className='text-5xl'>Hosted by</small> Emily Kimberly</p>
+      <div className='flex flex-col items-end justify-center p-10 px-32 bg-darknavy text-champagne w-full'>
+        <p className='text-6xl font-thin m-10  ml-60'> <small className='text-5xl'>Organizado por</small> Monica Martínez</p>
       </div>
     </div>
     

@@ -40,14 +40,14 @@ const AcceptModal= () => {
   
 
   return (
-    <div className='bg-brick text-6xl p-20 flex flex-col rounded-lg border-2'>
-      <h2 className='keyboard_hide text-9xl'>Yay!</h2>
-      <p className='font-serif mt-4'>Please send me your full name to confirm...</p>
+    <div className='bg-darknavy text-champagne text-6xl p-20 flex flex-col rounded-lg border-2'>
+      <h2 className='keyboard_hide text-9xl'>Genial!</h2>
+      <p className='font-serif mt-4'>Por favor envíame tu nombre para confirmar...</p>
       <input 
         type="text" 
         maxLength={35}
         autoFocus
-        placeholder='Emily Garcia'
+        placeholder='Tu nombre aquí'
         value={confirmation}
         onChange={(e)=>setConfirmation(e.target.value)}
         id='modal_accept'
@@ -55,15 +55,15 @@ const AcceptModal= () => {
         disabled:opacity-75 placeholder:text-whitesmoke placeholder:opacity-30 block bg-transparent
         shadow-sm focus:outline-none focus:border-magenta text-center'/>
 
-      {error && <div className='text-error font-serif'><p>{`Confirmation failed:(`}</p> <p className='text-3xl'>{error}</p></div>}
-      {success && <div className='text-success'>{`Thank you for confirming, see you later:)`}</div>}
+      {error && <div className='text-error font-serif'><p>{`No se pudo confirmar:(`}</p> <p className='text-3xl'>{error}</p></div>}
+      {success && <div className='text-success'>{`Gracias por confirmar, nos vemos:)`}</div>}
       {isSending 
-        ? <p className='mt-5 rounded-md p-3 w-3/6 place-self-center'>Confirming <span className='animate-ping'>...</span></p>
+        ? <p className='mt-5 rounded-md p-3 w-3/6 place-self-center text-champagne'>Confirmando <span className='animate-ping'>...</span></p>
         : <button
             disabled={success}
-            className="myBtn mt-5 text-7xl" 
+            className="myBtn mt-5 text-7xl bg-salmon" 
             onClick={e=>sendConfirmationMessage(e)}>
-              {success ? 'Sent!' : 'Confirm'}
+              {success ? 'Enviado!' : 'Confirmar'}
           </button>}
     </div>  
   )
