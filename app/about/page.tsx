@@ -22,7 +22,7 @@ const About = () => {
 
         <p className='m-10 opacity-70 text-7xl text-center'>{`Sígueme en instagram ->`} <a className='text-lightolive decoration-1 decoration-solid m-10' href="https://instagram.com/monymar18?igshid=MDM4ZDc5MmU=">monymar18</a> </p>
     
-        <Image
+        <Image 
             src={icon}
             alt='icon separator'
             className='h-20 w-20'
