@@ -16,9 +16,9 @@
     .icon-2 {
         margin-left: -22px;
     }
-    /* .icon-moving {
-        filter: invert(0%) sepia(2%) saturate(0%) hue-rotate(253deg) brightness(100%) contrast(100%);
-    } */
+    .icon-moving {
+        filter: invert(9%) sepia(7%) saturate(5252%) hue-rotate(185deg) brightness(96%) contrast(86%);
+    }
     .mbTitle {
         margin-bottom: -70px;
     }
@@ -58,7 +58,7 @@
         width: 350px;
         height: 350px;
         border-radius: 50%;
-        background: linear-gradient(#7b9fb3, #c6af71, #682323);
+        background: linear-gradient(#7b9fb3, #c6af71, #909700);
         animation: animate 1.2s linear infinite;
     }
     
@@ -76,7 +76,7 @@
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        background: linear-gradient(#7b9fb3, #c6af71, #682323);
+        background: linear-gradient(#7b9fb3, #c6af71, #909700);
     }
     
     .loader span:nth-child(1) {
@@ -102,8 +102,8 @@
         left: 10px;
         right: 10px;
         bottom: 10px;
-        background: #98371179;
-        border: solid #983711 10px;
+        background: #39486A;
+        border: solid #FFFCDB 10px;
         border-radius: 50%;
     }
 
