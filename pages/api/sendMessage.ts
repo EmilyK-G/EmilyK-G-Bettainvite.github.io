@@ -9,7 +9,7 @@ export default function sendMessage(req: NextApiRequest, res: NextApiResponse) {
     const { message } = req.body;
 
   if (accountSid && authToken && myNumber && twilioNumber) {
-
+ 
     const client = new Twilio(accountSid, authToken);
     
     
