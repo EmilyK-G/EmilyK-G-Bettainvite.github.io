@@ -19,6 +19,8 @@ const About = () => {
 
             {/* <p className='font-mono m-10 opacity-70'>{`Expect <=20 guests`}</p> */}
         </div>
+
+        <p className='m-10 opacity-70 text-7xl text-center'>{`Sígueme en instagram ->`} <a className='text-lightolive decoration-1 decoration-solid m-10' href="https://instagram.com/monymar18?igshid=MDM4ZDc5MmU=">monymar18</a> </p>
     
         <Image
             src={icon}
