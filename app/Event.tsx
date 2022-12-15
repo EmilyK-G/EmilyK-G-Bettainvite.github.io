@@ -13,7 +13,7 @@ function Event() {
           Detalles
         </Link>
       </div>
-      <div className='flex flex-col items-end justify-center p-10 px-32 bg-darknavy text-champagne w-full'>
+      <div className='flex flex-col items-end justify-center p-10 px-32 bg-lightolive bg-opacity-50 text-darknavy w-full'>
         <p className='text-6xl font-thin m-10  ml-60'> <small className='text-5xl'>Organizado por</small> Monica Martínez</p>
       </div>
     </div>

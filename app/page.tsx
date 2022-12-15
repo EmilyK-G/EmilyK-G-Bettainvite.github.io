@@ -50,9 +50,9 @@ export default function Home() {
             }}
           />
           {/* <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundImage:'linear-gradient(to bottom, rgba(47,72,88,1),rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,0.3), rgba(47,72,88,0.3), rgba(47,72,88,0.4))'}} /> */}
-          <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundColor:'#39486A'}} />
+          <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundColor:'#909700', opacity:'50%'}} />
           <ParallaxLayer offset={2} speed={0.5} style={{ backgroundColor: '#FFB895', opacity:'0'}} />
-          <ParallaxLayer offset={3} speed={0.5} style={{ backgroundColor: '#FFB895', opacity:'90%'}} />
+          <ParallaxLayer offset={3} speed={0.5} style={{ backgroundColor: '#FFB895', opacity:'80%'}} />
 
           <ParallaxLayer
             offset={0.2}
