@@ -2,8 +2,8 @@ import React from 'react';
 
 function EventDate() {
   return (
-    <div className='h-full w-full bg-salmon bg-opacity-40 px-20 flex justify-center items-end'>
-      <div className='flex flex-col items-center justify-evenly text-darkchocolate p-20 bg-salmon h-full bg-opacity-60 text-center'>
+    <div className='h-full w-full bg-th-primary-dark bg-opacity-40 px-20 flex justify-center items-end'>
+      <div className='flex flex-col items-center justify-evenly text-darkchocolate p-20 bg-th-primary-dark h-full bg-opacity-60 text-center'>
         <h1 className='text-9xl m-10'>Lugar y Fecha:</h1>
         <div>
           <p className='text-8xl m-10 leading-snug'>Domingo 18 de Diciembre</p>

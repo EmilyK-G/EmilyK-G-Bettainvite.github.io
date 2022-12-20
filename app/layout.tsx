@@ -13,13 +13,13 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang="en" className={`${dancingScript.variable} font-sans`}>
-      <head>
-        <title>Bettainvite</title>
-      </head>
-      <body className='mb-0 bg-champagne'>
-        {children}
-      </body>
-    </html>
+      <html lang="en" className={`${dancingScript.variable} font-sans`}>
+        <head>
+          <title>Bettainvite</title>
+        </head>
+        <body className='mb-0 bg-th-primary-light'>
+          {children}
+        </body>
+      </html>
   )
 }

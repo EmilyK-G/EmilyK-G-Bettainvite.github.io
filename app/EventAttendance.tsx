@@ -35,7 +35,7 @@ const EventAttendance = (props: any) => {
             <p>•</p>
         </div>
 
-        <p className='m-10 opacity-70 text-6xl ml-48'>{`Sígueme en instagram ->`} <a className='text-lightolive bg-champagne bg-opacity-20 my-30 py-1 px-5' href="https://instagram.com/monymar18?igshid=MDM4ZDc5MmU=">monymar18</a> </p>
+        <p className='m-10 opacity-70 text-6xl ml-48'>{`Sígueme en instagram ->`} <a className='text-th-primary-medium bg-th-primary-light bg-opacity-20 my-30 py-1 px-5' href="https://instagram.com/monymar18?igshid=MDM4ZDc5MmU=">monymar18</a> </p>
     </div>
   )
 }
