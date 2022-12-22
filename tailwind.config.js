@@ -32,6 +32,8 @@ module.exports = {
       'th-primary-dark': 'var(--primary-dark)',
       'th-primary-medium': 'var(--primary-medium)',
       'th-primary-light': 'var(--primary-light)',
+      'th-accent-light': 'var(--accent-light)',
+      'th-accent-dark': 'var(--accent-dark)',
     },
   },
   plugins: [],

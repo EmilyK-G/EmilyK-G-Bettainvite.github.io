@@ -40,7 +40,7 @@ const AcceptModal= () => {
   
 
   return (
-    <div className='bg-darknavy text-th-primary-light text-6xl p-20 flex flex-col rounded-lg border-2'>
+    <div className='bg-th-primary-medium text-th-primary-light text-6xl p-20 flex flex-col rounded-lg border-2'>
       {!success && <>
         <h2 className='keyboard_hide text-9xl'>Genial!</h2>
         <p className='font-serif mt-4'>Por favor envíame tu nombre para confirmar...</p>
@@ -53,17 +53,17 @@ const AcceptModal= () => {
         value={confirmation}
         onChange={(e)=>setConfirmation(e.target.value)}
         id='modal_accept'
-        className='p-5 text-8xl my-40 keyboard_modal_margin h-36 rounded-md enabled:hover:border-gray-400 
-        disabled:opacity-75 placeholder:text-whitesmoke placeholder:opacity-30 block bg-transparent
-        shadow-sm focus:outline-none focus:border-magenta text-center'/>
+        className='p-5 text-8xl my-40 keyboard_modal_margin h-36 rounded-md enabled:hover:border-th-accent-dark 
+        disabled:opacity-75 placeholder:text-th-accent-light placeholder:opacity-30 block bg-transparent
+        shadow-sm focus:outline-none focus:border-th-accent-light text-center'/>
 
       {error && <div className='text-error font-serif'><p>{`No se pudo confirmar:(`}</p> <p className='text-3xl'>{error}</p></div>}
       {success && <div className='text-success'>{`Gracias por confirmar, nos vemos:)`}</div>}
       {isSending 
-        ? <p className='mt-5 rounded-md p-3 w-3/6 place-self-center text-th-primary-light'>Confirmando <span className='animate-ping'>...</span></p>
+        ? <p className='mt-5 rounded-md p-3 w-3/6 place-self-center text-th-accent-light'>Confirmando <span className='animate-ping'>...</span></p>
         : <button
             disabled={success}
-            className="myBtn mt-5 text-7xl bg-th-primary-dark" 
+            className="myBtn mt-5 text-7xl bg-th-primary-light" 
             onClick={e=>sendConfirmationMessage(e)}>
               {success ? 'Enviado!' : 'Confirmar'}
           </button>}

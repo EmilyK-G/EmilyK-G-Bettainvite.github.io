@@ -15,7 +15,7 @@ const EventAttendance = (props: any) => {
     }
 
   return (
-    <div className='flex flex-col items-center justify-end text-darknavy p-10 text-center h-full'>
+    <div className='flex flex-col items-center justify-end text-th-accent-light p-10 text-center h-full'>
         <p className="text-9xl">Vas a venir?</p>
         <button
             className='myBtn w-full mt-10 m-2 text-5xl'
