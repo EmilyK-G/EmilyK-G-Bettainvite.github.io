@@ -1,14 +1,14 @@
 "use client"
 
 import { ThemeProvider } from 'next-themes';
+import { useTheme } from 'next-themes';
 import '../styles/globals.css';
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax';
 import Header from './Header';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import '../styles/globals.css';
 
 import Image from 'next/image';
-// import singleapple from '../public/bettainvite-singleapple.png';
 import cookingSih from '../public/bettainvite_cooking.png';
 import modelSih from '../public/bettainvite_model.png';
 import yarn from '../public/bettainvite_yarn.png';
@@ -32,8 +32,14 @@ export default function Home() {
   const [acceptModalShow, setAcceptModalShow] = useState<boolean>(false);
   const [rejectModalShow, setRejectModalShow] = useState<boolean>(false);
  
+  const [mounted, setMounted] = useState<boolean>(false);
+
+  // When mounted on client, now we can show the UI
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null
+
   return (
-    
     <ThemeProvider>
       <Parallax ref={parallax} pages={4}>
         <Head>
@@ -49,7 +55,7 @@ export default function Home() {
           speed={0}
           factor={4}
           style={{
-            backgroundImage: 'url(/bettainvite_pink_background.jpg)',
+            backgroundImage: `var(--background-image)`,
             backgroundSize: 'cover',
             zIndex: -1 
           }}

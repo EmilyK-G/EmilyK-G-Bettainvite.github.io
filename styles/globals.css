@@ -5,6 +5,7 @@
 :root {
     --background: theme('colors.whitesmoke');
     --background-secondary: theme('colors.darkchocolate');
+    --background-image: url(../public/bettainvite-default-background.png);
   
     --primary-dark: theme('colors.darkchocolate');
     --primary-medium: theme('colors.darknavy');
@@ -13,14 +14,17 @@
   
   [data-theme='fall'] {
     --background: theme('colors.brick');
-    --background-secondary: theme('colors.midnight');
+    --background-image: url(../public/bettainvite-leaves.jpg);
   
     --primary-dark: theme('colors.midnight');
     --primary-medium: theme('colors.brick');
-    --primary-light: theme('colors.whitesmoke');
+    --primary-light: theme('colors.tan');
   }
   
   [data-theme='delicate'] {
+    --background: theme('colors.salmon');
+    --background-image: url(../public/bettainvite_pink_background.jpg);
+
     --primary-dark: theme('colors.salmon');
     --primary-medium: theme('colors.lightolive');
     --primary-light: theme('colors.champagne');
