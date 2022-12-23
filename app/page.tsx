@@ -9,9 +9,6 @@ import { useRef, useState, useEffect } from 'react';
 import '../styles/globals.css';
 
 import Image from 'next/image';
-import cookingSih from '../public/bettainvite_cooking.png';
-import modelSih from '../public/bettainvite_model.png';
-import yarn from '../public/bettainvite_yarn.png';
 import icon from '../public/light_icon_transparent.png';
 
 import Event from './Event';
@@ -59,6 +56,7 @@ export default function Home() {
             backgroundSize: 'cover',
             zIndex: -1 
           }}
+          
         />
         {/* <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundImage:'linear-gradient(to bottom, rgba(47,72,88,1),rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,0.3), rgba(47,72,88,0.3), rgba(47,72,88,0.4))'}} /> */}
         <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundColor:'var(--primary-medium)', opacity:'1'}} />
@@ -109,6 +107,7 @@ export default function Home() {
               backgroundSize: 'cover'
             }}
             className='ml-14 mb-0 h-80 w-80'
+            onLoadedData={()=>console.log('loading image')}
           ></div>
         </ParallaxLayer>
 
