@@ -79,16 +79,28 @@ export default function Home() {
           onClick={() => {parallax.current.scrollTo(1)}}
           className='flex justify-start items-end'
         >
-          <Image
-            src={cookingSih}
-            alt='sticky icon'
-            className='h-80 w-auto'
-          />
-          <Image
+          <div
+            style={{
+              backgroundImage: 'var(--static-1)',
+              backgroundSize: 'cover'
+            }}
+            className='h-80 w-80'
+          >
+          </div>
+
+          <div
+            style={{
+              backgroundImage: 'var(--static-1)',
+              backgroundSize: 'cover'
+            }}
+            className='icon-2 h-80 w-80'
+          ></div>
+          
+          {/* <Image
             src={modelSih}
             alt='another sticky icon'
             className='icon-2 h-80 w-auto'
-          />
+          /> */}
         </ParallaxLayer>
 
         <ParallaxLayer 
@@ -97,12 +109,13 @@ export default function Home() {
           className='flex justify-start items-end z-10'
           style={{ pointerEvents: 'none' }}
         >
-          <Image
-            src={yarn}
-            priority
-            alt='icon moving'
-            className={`ml-14 mb-0 h-72 w-auto icon-moving`}
-          />
+          <div
+            style={{
+              backgroundImage: 'var(--static-1)',
+              backgroundSize: 'cover'
+            }}
+            className='ml-14 mb-0 h-80 w-80'
+          ></div>
         </ParallaxLayer>
 
         <ParallaxLayer 

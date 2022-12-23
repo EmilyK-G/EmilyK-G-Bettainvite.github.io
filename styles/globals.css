@@ -6,6 +6,8 @@
     --background: theme('colors.whitesmoke');
     --background-secondary: theme('colors.darkchocolate');
     --background-image: url(../public/bettainvite-default-background.png);
+
+    --static-1: url(../public/light_icon_transparent.png);
   
     --primary-dark: theme('colors.darkchocolate');
     --primary-medium: theme('colors.darknavy');
@@ -18,6 +20,8 @@
   [data-theme='fall'] {
     --background: theme('colors.brick');
     --background-image: url(../public/bettainvite-leaves.jpg);
+
+    --static-1: url(../public/bettainvite-singleapple.png);
   
     --primary-dark: theme('colors.midnight');
     --primary-medium: theme('colors.brick');
@@ -30,6 +34,8 @@
   [data-theme='delicate'] {
     --background: theme('colors.salmon');
     --background-image: url(../public/bettainvite_pink_background.jpg);
+
+    --static-1: url(../public/bettainvite_yarn.png);
 
     --primary-dark: theme('colors.lightolive');
     --primary-medium: theme('colors.salmon');
@@ -62,10 +68,7 @@
 
 @layer components {
     .icon-2 {
-        margin-left: -22px;
-    }
-    .icon-moving {
-        filter: invert(9%) sepia(7%) saturate(5252%) hue-rotate(185deg) brightness(96%) contrast(86%);
+        margin-left: -150px;
     }
     .mbTitle {
         margin-bottom: -70px;
