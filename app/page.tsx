@@ -95,12 +95,6 @@ export default function Home() {
             }}
             className='icon-2 h-80 w-80'
           ></div>
-          
-          {/* <Image
-            src={modelSih}
-            alt='another sticky icon'
-            className='icon-2 h-80 w-auto'
-          /> */}
         </ParallaxLayer>
 
         <ParallaxLayer 
@@ -150,7 +144,7 @@ export default function Home() {
           offset={3}
           speed={0.4}
           onClick={() => {parallax.current.scrollTo(0)}}
-          className='flex justify-center items-center p-20'
+          className='flex flex-col justify-center items-center p-20'
         >
           <EventAttendance openRejectModal={()=>setRejectModalShow(true)} openAcceptModal={()=>setAcceptModalShow(true)}/>
           <Themes/>

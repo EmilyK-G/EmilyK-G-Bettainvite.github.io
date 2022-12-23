@@ -15,7 +15,7 @@ const EventAttendance = (props: any) => {
     }
 
   return (
-    <div className='flex flex-col items-center justify-end text-th-accent-light p-10 text-center h-full'>
+    <div className='flex flex-col items-center justify-center text-th-accent-light p-10 text-center h-full'>
         <p className="text-9xl">Vas a venir?</p>
         <button
             className='myBtn w-full mt-10 m-2 text-5xl'
@@ -34,8 +34,6 @@ const EventAttendance = (props: any) => {
             <p>•</p>
             <p>•</p>
         </div>
-
-        <p className='m-10 opacity-70 text-6xl ml-48'>{`Sígueme en instagram ->`} <a className='text-th-primary-medium bg-th-primary-light bg-opacity-20 my-30 py-1 px-5' href="https://instagram.com/monymar18?igshid=MDM4ZDc5MmU=">monymar18</a> </p>
     </div>
   )
 }
