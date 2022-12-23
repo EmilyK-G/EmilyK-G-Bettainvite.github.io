@@ -21,9 +21,6 @@ const Themes = () => {
 
     return (
         <div className="p-8 flex justify-between items-center font-bold text-xl bg-th-background-secondary text-th-primary-dark" onClick={e=>{e.stopPropagation(); e.preventDefault()}}>
-          <span>
-            The current theme is: <strong>{theme}</strong>
-          </span>
           <div>
             <label htmlFor="theme-select" className="sr-only mr-2">
               Choose theme:
