@@ -82,7 +82,7 @@ export default function Home() {
               backgroundImage: 'var(--static-1)',
               backgroundSize: 'cover'
             }}
-            className='h-80 w-80'
+            className='h-64 w-64'
           >
           </div>
 
@@ -91,7 +91,7 @@ export default function Home() {
               backgroundImage: 'var(--static-1)',
               backgroundSize: 'cover'
             }}
-            className='icon-2 h-80 w-80'
+            className='icon-2 h-64 w-64'
           ></div>
         </ParallaxLayer>
 
@@ -106,7 +106,7 @@ export default function Home() {
               backgroundImage: 'var(--static-1)',
               backgroundSize: 'cover'
             }}
-            className='ml-14 mb-0 h-80 w-80'
+            className='ml-14 mb-0 h-64 w-64'
             onLoadedData={()=>console.log('loading image')}
           ></div>
         </ParallaxLayer>
