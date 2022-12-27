@@ -7,7 +7,7 @@
     --background-secondary: theme('colors.darkchocolate');
     --background-image: url(../public/bettainvite-default-background.png);
 
-    --static-1: url(../public/light_icon_transparent.png);
+    --static-1: url(../public/bettainvite-sphere.png);
   
     --primary-dark: theme('colors.darkchocolate');
     --primary-medium: theme('colors.darknavy');
