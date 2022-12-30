@@ -83,7 +83,7 @@ export default function Home() {
               backgroundImage: 'var(--static-1)',
               backgroundSize: 'cover'
             }}
-            className='h-64 w-64'
+            className='h-64 w-64 mb-5'
           >
           </div>
 
@@ -92,7 +92,7 @@ export default function Home() {
               backgroundImage: 'var(--static-1)',
               backgroundSize: 'cover'
             }}
-            className='icon-2 h-64 w-64'
+            className='icon-2 h-64 w-64 mb-5'
           ></div>
         </ParallaxLayer>
 
@@ -107,7 +107,7 @@ export default function Home() {
               backgroundImage: 'var(--static-1)',
               backgroundSize: 'cover'
             }}
-            className='ml-14 mb-0 h-64 w-64'
+            className='ml-14 mb-2 h-64 w-64'
             onLoadedData={()=>console.log('loading image')}
           ></div>
         </ParallaxLayer>
@@ -117,11 +117,6 @@ export default function Home() {
           speed={0.4}
           onClick={() => {parallax.current.scrollTo(2)}}
           className='flex justify-center items-center'
-          style={{
-            backgroundImage: 'url(/bettainvite_art.JPG)',
-            backgroundSize: 'cover',
-            backgroundPosition:'center',
-          }}
         >
           <Event />
         </ParallaxLayer>

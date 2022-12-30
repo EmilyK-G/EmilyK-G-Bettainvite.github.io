@@ -6,7 +6,8 @@ import { useTheme } from 'next-themes';
 const myThemes = [
     { name: 'Default' },
     { name: 'Fall', },
-    { name: 'Delicate'}
+    { name: 'Delicate'},
+    { name: 'Lavender'}
     ]
 
 const Themes = () => {

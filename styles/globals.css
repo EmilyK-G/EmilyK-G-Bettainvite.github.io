@@ -5,9 +5,9 @@
 :root {
     --background: theme('colors.whitesmoke');
     --background-secondary: theme('colors.darkchocolate');
-    --background-image: url(../public/bettainvite-default-background.png);
+    --background-image: url(../public/backgrounds/bettainvite-default-background.png);
 
-    --static-1: url(../public/bettainvite-sphere.png);
+    --static-1: url(../public/icons/bettainvite-flower-icon.png);
   
     --primary-dark: theme('colors.darkchocolate');
     --primary-medium: theme('colors.darknavy');
@@ -19,9 +19,9 @@
   
   [data-theme='fall'] {
     --background: theme('colors.brick');
-    --background-image: url(../public/bettainvite-leaves.jpg);
+    --background-image: url(../public/backgrounds/bettainvite-leaves.jpg);
 
-    --static-1: url(../public/bettainvite-singleapple.png);
+    --static-1: url(../public/icons/bettainvite-singleapple.png);
   
     --primary-dark: theme('colors.midnight');
     --primary-medium: theme('colors.brick');
@@ -33,13 +33,27 @@
   
   [data-theme='delicate'] {
     --background: theme('colors.salmon');
-    --background-image: url(../public/bettainvite_pink_background.jpg);
+    --background-image: url(../public/backgrounds/bettainvite_pink_background.jpg);
 
-    --static-1: url(../public/bettainvite_yarn.png);
+    --static-1: url(../public/icons/yarn-ball-icon.png);
 
     --primary-dark: theme('colors.lightolive');
     --primary-medium: theme('colors.salmon');
     --primary-light: theme('colors.champagne');
+
+    --accent-dark: theme('colors.darkchocolate');
+    --accent-light: theme('colors.whitesmoke');
+  }
+
+  [data-theme='lavender'] {
+    --background: theme('colors.salmon');
+    --background-image: url(../public/backgrounds/bettainvite-bgr-lavender-1.jpg);
+
+    --static-1: url(../public/icons/bettainvite_model.png);
+
+    --primary-dark: theme('colors.intenseviolet');
+    --primary-medium: theme('colors.mateblue');
+    --primary-light: theme('colors.lightgray');
 
     --accent-dark: theme('colors.darkchocolate');
     --accent-light: theme('colors.whitesmoke');

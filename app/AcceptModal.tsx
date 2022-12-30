@@ -43,7 +43,7 @@ const AcceptModal= () => {
     <div className='bg-th-primary-medium text-th-primary-light text-6xl p-20 flex flex-col rounded-lg border-2'>
       {!success && <>
         <h2 className='keyboard_hide text-9xl'>Genial!</h2>
-        <p className='font-serif mt-4'>Por favor envíame tu nombre para confirmar...</p>
+        <p className='font-serif mt-4'>Send me your name to confirm...</p>
       </>}
       <input 
         type="text" 
@@ -60,12 +60,12 @@ const AcceptModal= () => {
       {error && <div className='text-error font-serif'><p>{`No se pudo confirmar:(`}</p> <p className='text-3xl'>{error}</p></div>}
       {success && <div className='text-success'>{`Gracias por confirmar, nos vemos:)`}</div>}
       {isSending 
-        ? <p className='mt-5 rounded-md p-3 w-3/6 place-self-center text-th-accent-light'>Confirmando <span className='animate-ping'>...</span></p>
+        ? <p className='mt-5 rounded-md p-3 w-3/6 place-self-center text-th-accent-light'>Confirming <span className='animate-ping'>...</span></p>
         : <button
             disabled={success}
             className="myBtn mt-5 text-7xl bg-th-primary-light" 
             onClick={e=>sendConfirmationMessage(e)}>
-              {success ? 'Enviado!' : 'Confirmar'}
+              {success ? 'Sent!' : 'Confirm'}
           </button>}
     </div>  
   )

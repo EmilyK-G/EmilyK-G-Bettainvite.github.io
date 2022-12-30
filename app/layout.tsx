@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
       <html lang="en" className={`${dancingScript.variable} font-sans`}>
         <head>
-          <title>Bettainvite</title>
+          <title>Lightvite</title>
         </head>
         <body className='mb-0 bg-th-primary-light'>
           {children}
