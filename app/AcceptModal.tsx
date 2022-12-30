@@ -42,14 +42,14 @@ const AcceptModal= () => {
   return (
     <div className='bg-th-primary-medium text-th-primary-light text-6xl p-20 flex flex-col rounded-lg border-2'>
       {!success && <>
-        <h2 className='keyboard_hide text-9xl'>Genial!</h2>
+        <h2 className='keyboard_hide text-9xl'>Awesome!</h2>
         <p className='font-serif mt-4'>Send me your name to confirm...</p>
       </>}
       <input 
         type="text" 
         maxLength={35}
         autoFocus
-        placeholder='Tu nombre aquí'
+        placeholder='Your name here'
         value={confirmation}
         onChange={(e)=>setConfirmation(e.target.value)}
         id='modal_accept'
@@ -57,8 +57,8 @@ const AcceptModal= () => {
         disabled:opacity-75 placeholder:text-th-accent-light placeholder:opacity-30 block bg-transparent
         shadow-sm focus:outline-none focus:border-th-accent-light text-center'/>
 
-      {error && <div className='text-error font-serif'><p>{`No se pudo confirmar:(`}</p> <p className='text-3xl'>{error}</p></div>}
-      {success && <div className='text-success'>{`Gracias por confirmar, nos vemos:)`}</div>}
+      {error && <div className='text-error font-serif'><p>{`Confirmation didn't go through:(`}</p> <p className='text-3xl'>{error}</p></div>}
+      {success && <div className='text-success'>{`Thanks, see you soon!:)`}</div>}
       {isSending 
         ? <p className='mt-5 rounded-md p-3 w-3/6 place-self-center text-th-accent-light'>Confirming <span className='animate-ping'>...</span></p>
         : <button
