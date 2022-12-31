@@ -63,7 +63,7 @@ const AcceptModal= () => {
         ? <p className='mt-5 rounded-md p-3 w-3/6 place-self-center text-th-accent-light'>Confirming <span className='animate-ping'>...</span></p>
         : <button
             disabled={success}
-            className="myBtn mt-5 text-7xl bg-th-primary-light" 
+            className="myBtn mt-5 text-7xl bg-th-primary-light text-th-accent-dark" 
             onClick={e=>sendConfirmationMessage(e)}>
               {success ? 'Sent!' : 'Confirm'}
           </button>}
