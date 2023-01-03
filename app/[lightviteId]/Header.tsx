@@ -1,8 +1,6 @@
 import React from 'react';
-import '../styles/globals.css';
 import Image from 'next/image';
-import hborder from '../public/bettainvite-border.png';
-import '../styles/globals.css';
+import hborder from '../../public/bettainvite-border.png';
 
 const Header = () => {
   return (

@@ -7,7 +7,7 @@ function Event() {
         <p className='text-6xl m-10'>To our</p>
         <p className='text-9xl font-thin m-10 my-20'>Wedding Fashion Show</p>
         <Link 
-          href="/about"
+          href="/[lightviteId]/about"
           className=" text-6xl font-mono text-th-primary-medium bg-whitesmoke bg-opacity-30 font-bold underline hover:underline-offset-4 p-10 mt-10">
           Details
         </Link>

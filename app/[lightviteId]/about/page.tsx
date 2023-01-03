@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import icon from '../../public/light_icon_transparent.png';
+import icon from '../../../public/light_icon_transparent.png';
 import Link from 'next/link';
 
 const About = () => {
@@ -28,7 +28,7 @@ const About = () => {
         />
 
         <Link 
-          href="/"
+          href="/[lightviteId]"
           className="text-4xl mt-20 font-mono font-bold text-success">
           Back to the invitation
         </Link>
