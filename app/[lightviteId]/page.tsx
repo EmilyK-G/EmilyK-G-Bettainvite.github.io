@@ -18,8 +18,13 @@ import MyModal from './MyModal';
 import Head from 'next/head';
 import Themes from './Themes';
 
+type HomeProps = {
+  params: {
+    lightviteId: string
+  }
+}
 
-export default function Home() {
+export default function Home({ params: {lightviteId} }: HomeProps) {
 
   const parallax = useRef<IParallax>(null!);
 
@@ -130,6 +135,7 @@ export default function Home() {
           // }}
         >
           <EventDate />
+          <p>{lightviteId}</p>
         </ParallaxLayer>
 
         <ParallaxLayer 
