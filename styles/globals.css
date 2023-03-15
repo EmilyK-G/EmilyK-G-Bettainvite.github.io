@@ -58,6 +58,20 @@
     --accent-dark: theme('colors.darkchocolate');
     --accent-light: theme('colors.whitesmoke');
   }
+
+  [data-theme='cherryblossom'] {
+    --background: theme('colors.matecherry');
+    --background-image: url(../public/backgrounds/blossom-bgr-bettainvite-edit.png);
+
+    --static-1: url(../public/icons/blossom-icon-bettainvite-big.png);
+  
+    --primary-dark: theme('colors.darkbrown');
+    --primary-medium: theme('colors.matecherry');
+    --primary-light: theme('colors.lightpink');
+
+    --accent-dark: theme('colors.black');
+    --accent-light: theme('colors.pinkishwhite');
+  }
   /* for reference */
   /* [data-theme='pink'] {
     --background: theme('colors.gray.900');

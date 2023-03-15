@@ -7,7 +7,8 @@ const myThemes = [
     { name: 'Default' },
     { name: 'Fall', },
     { name: 'Delicate'},
-    { name: 'Lavender'}
+    { name: 'Lavender'},
+    { name: 'CherryBlossom'}
     ]
 
 const Themes = () => {

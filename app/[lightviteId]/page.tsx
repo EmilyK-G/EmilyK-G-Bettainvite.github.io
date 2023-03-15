@@ -56,7 +56,7 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
           style={{
             backgroundImage: `var(--background-image)`,
             backgroundSize: 'contain',
-            backgroundRepeat:'repeat-y',
+            backgroundRepeat:'no-repeat',
             zIndex: -1 
           }}
           
@@ -83,7 +83,8 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
           <div
             style={{
               backgroundImage: 'var(--static-1)',
-              backgroundSize: 'cover'
+              backgroundSize: 'cover',
+              backgroundPosition:'center'
             }}
             className='h-64 w-64 mb-5'
           >
@@ -92,7 +93,8 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
           <div
             style={{
               backgroundImage: 'var(--static-1)',
-              backgroundSize: 'cover'
+              backgroundSize: 'cover',
+              backgroundPosition:'center'
             }}
             className='icon-2 h-64 w-64 mb-5'
           ></div>
@@ -107,7 +109,8 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
           <div
             style={{
               backgroundImage: 'var(--static-1)',
-              backgroundSize: 'cover'
+              backgroundSize: 'cover',
+              backgroundPosition:'center'
             }}
             className='ml-14 mb-2 h-64 w-64'
             onLoadedData={()=>console.log('loading image')}
