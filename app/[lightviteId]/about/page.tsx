@@ -10,11 +10,13 @@ const About = () => {
     <div className='text-5xl m-20 mt-0 flex flex-col content-between items-center h-screen'>
         <div className='text-darkchocolate p-20 flex-1 flex flex-col items-center justify-evenly'>
             <div>
-              <p className='text-9xl font-thin'>Please bring...</p>
+              <p className='text-9xl font-thin'>Peak Bloom is officially predicted for March 22 - 25, 2023!</p>
               <hr className='mb-5'/>
             </div>
-            <p className='font-mono font-thin opacity-70'>For the <span className='text-6xl'>Fashion Show</span> you will need to bring
-            your wedding attire. If you have more than one, feel free to bring them all.</p>
+            <p className='font-mono font-thin opacity-70'><span className='text-6xl'>Peak Bloom</span> is when 70% of the blossoms open on the Yoshino cherry trees 
+            around the Tidal Basin in Washington, DC. This highly anticipated date is predicted by the 
+            National Park Service at our press conference. <span className='text-6xl'>Peak Bloom</span> is officially predicted to be between March 22 – 25, 2023! 
+            </p>
 
             {/* <p className='font-mono m-10 opacity-70'>{`Expect <=20 guests`}</p> */}
         </div>

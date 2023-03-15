@@ -6,10 +6,10 @@ function EventDate() {
       <div className='flex flex-col items-center justify-evenly text-darkchocolate p-20 bg-th-primary-light h-full bg-opacity-95 text-center'>
         <h1 className='text-9xl m-10'>Date & Time</h1>
         <div>
-          <p className='text-8xl m-10 leading-snug'>Friday, December 30th</p>
-          <p className='text-5xl m-30 font-mono'><span className='text-6xl'>8:00PM</span> to <span className='text-6xl'>10:00PM</span></p>
+          <p className='text-8xl m-10 leading-snug'>Saturday, April 15th 2023</p>
+          <p className='text-5xl m-30 font-mono'><span className='text-6xl'>3:00PM</span></p>
         </div>
-        <p className="text-5xl font-mono font-thin">144 Crowell St. Hempstead, NY 11550</p>
+        <p className="text-5xl font-mono font-thin">Central Park, New York</p>
       </div>
     </div>
   )
