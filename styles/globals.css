@@ -95,9 +95,6 @@
 }
 
 @layer components {
-    .icon-2 {
-        margin-left: -150px;
-    }
     .mbTitle {
         margin-bottom: -70px;
     }

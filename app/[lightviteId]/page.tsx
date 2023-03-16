@@ -91,7 +91,7 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
           offset={0}
           speed={0.2}
           onClick={() => {parallax.current.scrollTo(1)}}
-          className='flex justify-start items-end'
+          className='flex justify-start laptop:justify-center items-end'
         >
           <div
             style={{
@@ -99,7 +99,7 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
               backgroundSize: 'cover',
               backgroundPosition:'center'
             }}
-            className='h-64 w-64 mb-5'
+            className='h-64 laptop:h-36 w-64 laptop:w-36 mb-5 laptop:mb-0'
           >
           </div>
 
@@ -109,14 +109,14 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
               backgroundSize: 'cover',
               backgroundPosition:'center'
             }}
-            className='icon-2 h-64 w-64 mb-5'
+            className='ml-[-150px] laptop:ml-0 h-64 laptop:h-36 w-64 laptop:w-36 mb-5 laptop:mb-0'
           ></div>
         </ParallaxLayer>
 
         <ParallaxLayer 
           offset={0}
           speed={-1} 
-          className='flex justify-start items-end z-10'
+          className='flex justify-start laptop:justify-center items-end z-10'
           style={{ pointerEvents: 'none' }}
         >
           <div
@@ -125,7 +125,7 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
               backgroundSize: 'cover',
               backgroundPosition:'center'
             }}
-            className='ml-14 mb-2 h-64 w-64'
+            className='ml-14 laptop:ml-[-0.5rem] mb-2 laptop:mb-[-0.8rem] h-64 laptop:h-36 w-64 laptop:w-36'
             onLoadedData={()=>console.log('loading image')}
           ></div>
         </ParallaxLayer>
@@ -172,17 +172,17 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
           <Image
             src={icon}
             alt='icon separator'
-            className=' h-32 w-auto z-20'
+            className=' h-32 w-auto z-20 laptop:hidden'
           />
           <Image
             src={icon}
             alt='icon separator'
-            className=' h-32 w-auto z-20'
+            className=' h-32 w-auto z-20 laptop:hidden'
           />
           <Image
             src={icon}
             alt='icon separator'
-            className=' h-32 w-auto z-20'
+            className=' h-32 w-auto z-20 laptop:hidden'
           />
         </ParallaxLayer>
         
