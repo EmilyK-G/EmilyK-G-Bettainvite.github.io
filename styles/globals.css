@@ -118,9 +118,6 @@
         color:#000000;
         background-color:var(--primary-light);
     }
-    .borderPosition{
-        top: 50%;
-    }
 
     .loader_container {
         margin: 0;

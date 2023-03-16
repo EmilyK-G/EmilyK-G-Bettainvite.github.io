@@ -37,8 +37,8 @@ const About = ({params: {lightviteId}}:AboutProps) => {
 
         <Link 
           href={"/" + lightviteId}
-          className="text-4xl mt-20 font-mono font-bold text-success">
-          Back to the invitation
+          className="text-4xl mt-20 pb-10 font-mono font-bold text-success">
+          {`<- Go Back`}
         </Link>
         
     </div>

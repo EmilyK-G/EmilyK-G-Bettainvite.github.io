@@ -4,12 +4,12 @@ import hborder from '../../public/bettainvite-border.png';
 
 const Header = () => {
   return (
-    <div className='p-20 text-darkchocolate rounded-xl bg-th-accent-light bg-opacity-80 h-96 flex justify-center items-center flex-col mix-blend-multiply hover:mix-blend-overlay'>
-        <p className='text-7xl'>You are invited</p>
+    <div className='laptop:w-full p-20 laptop:px-0 rounded-xl laptop:rounded-none bg-th-accent-light laptop:bg-th-primary-medium h-96 tablet:h-40 flex justify-center items-center flex-col mix-blend-multiply hover:mix-blend-overlay laptop:border-y-2 laptop:border-whitesmoke'>
+        <p className='text-7xl laptop:text-6xl text-darkchocolate laptop:text-th-accent-light'>You are invited</p>
         <Image
           src={hborder} 
           alt='border'
-          className='absolute borderPosition w-96'
+          className='absolute top-2/4 w-96 tablet:w-52'
         />
     </div>
   )
