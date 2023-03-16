@@ -1,13 +1,14 @@
 import Link from 'next/link';
 
-function Event() {
+
+function Event(props:any) {
   return (
     <div className="flex flex-col items-center justify-center h-full text-th-primary-dark bg-th-primary-light bg-opacity-60 text-center">
       <div className='flex flex-col items-center justify-center flex-1 p-10 '>
         <p className='text-6xl m-10'>To the National</p>
         <p className='text-9xl font-thin m-10 my-20'>Cherry Blossom Festival</p>
         <Link 
-          href="/[lightviteId]/about"
+          href={"/" + props.lightviteId + "/about"}
           className=" text-6xl font-mono text-th-primary-medium bg-whitesmoke bg-opacity-30 font-bold underline hover:underline-offset-4 p-10 mt-10">
           Details
         </Link>

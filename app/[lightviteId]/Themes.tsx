@@ -11,11 +11,15 @@ const myThemes = [
     { name: 'CherryBlossom'}
     ]
 
-const Themes = () => {
+const Themes = (props: any) => {
     
     const [mounted, setMounted] = useState<boolean>(false)
     const { theme, setTheme } = useTheme()
-    
+
+    useEffect(()=>{
+      setTheme(props.defaultTheme);
+      console.log(props.defaultTheme)
+    }, [])
     // When mounted on client, now we can show the UI
     useEffect(() => setMounted(true), [])
     

@@ -17,6 +17,7 @@ import MyModal from './MyModal';
 
 import Head from 'next/head';
 import Themes from './Themes';
+import { eventsList } from '../Invites/events';
 
 type HomeProps = {
   params: {
@@ -30,13 +31,25 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
 
   const [acceptModalShow, setAcceptModalShow] = useState<boolean>(false);
   const [rejectModalShow, setRejectModalShow] = useState<boolean>(false);
+  const [defaultTheme, setDefaultTheme] = useState<string>('default');
+  const [isInvite, setIsInvite] = useState<null|boolean>(null);
  
   const [mounted, setMounted] = useState<boolean>(false);
+
+  useEffect(()=>{
+    eventsList.map((eve)=>{
+      if (lightviteId === eve.name){
+        setIsInvite(true);
+        return setDefaultTheme(eve.theme)
+      }
+    })
+  },[])
 
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null
+  if (!isInvite) return null
 
   return (
     <ThemeProvider>
@@ -123,7 +136,7 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
           onClick={() => {parallax.current.scrollTo(2)}}
           className='flex justify-center items-center'
         >
-          <Event />
+          <Event lightviteId={lightviteId}/>
         </ParallaxLayer>
 
         <ParallaxLayer 
@@ -138,7 +151,6 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
           // }}
         >
           <EventDate />
-          <p>{lightviteId}</p>
         </ParallaxLayer>
 
         <ParallaxLayer 
@@ -148,7 +160,7 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
           className='flex flex-col justify-center items-center p-20'
         >
           <EventAttendance openRejectModal={()=>setRejectModalShow(true)} openAcceptModal={()=>setAcceptModalShow(true)}/>
-          <Themes/>
+          <Themes defaultTheme={defaultTheme}/>
         </ParallaxLayer>
 
         <ParallaxLayer
