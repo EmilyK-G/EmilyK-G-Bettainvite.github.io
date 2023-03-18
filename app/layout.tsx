@@ -15,6 +15,7 @@ export default function RootLayout({
   return (
       <html lang="en" className={`${dancingScript.variable} font-sans`}>
         <head>
+          <meta http-equiv="ScreenOrientation" content="autoRotate:disabled"></meta>
           <title>Lightvite</title>
         </head>
         <body className='mb-0 bg-th-primary-medium'>
