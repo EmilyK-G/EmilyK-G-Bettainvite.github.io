@@ -158,7 +158,7 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
           offset={3}
           speed={0.4}
           onClick={() => {parallax.current.scrollTo(0)}}
-          className='flex flex-col justify-center items-center p-20'
+          className='flex flex-col laptop:flex-row justify-center items-center p-20'
         >
           <EventAttendance openRejectModal={()=>setRejectModalShow(true)} openAcceptModal={()=>setAcceptModalShow(true)}/>
           <Themes defaultTheme={defaultTheme}/>
