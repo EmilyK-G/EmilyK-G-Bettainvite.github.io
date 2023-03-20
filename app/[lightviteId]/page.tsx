@@ -49,7 +49,12 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null
-  if (!isInvite) return null
+  if (!isInvite) return (
+    <div className="flex justify-center items-center">
+      <p>{`Oops, this isn't an invite :)`}</p>
+      <p>If you received a link, try clciking it. Or check your spelling</p>
+    </div>
+  )
 
   return (
     <ThemeProvider>
@@ -57,7 +62,6 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
         <Head>
           <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <meta http-equiv="ScreenOrientation" content="autoRotate:disabled"/>
           <link rel="apple-touch-icon" href="%PUBLIC_URL%/light_icon_transparent.png" />
           <title>
             LightVite
@@ -76,14 +80,14 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
           
         />
         {/* <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundImage:'linear-gradient(to bottom, rgba(47,72,88,1),rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,0.3), rgba(47,72,88,0.3), rgba(47,72,88,0.4))'}} /> */}
-        <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} className='bg-th-primary-medium opacity-100 laptop:bg-transparent' />
+        <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} className='bg-th-primary-medium opacity-100 landscape:bg-transparent' />
         <ParallaxLayer offset={2} speed={0.5} style={{ backgroundColor: 'var(--primary-dark)', opacity:'0'}} />
         <ParallaxLayer offset={3} speed={0.5} style={{ backgroundColor: 'var(--primary-dark)', opacity:'1'}} />
 
         <ParallaxLayer
           offset={0.2}
           speed={1}
-          className='flex justify-center items-center px-20 laptop:px-0'
+          className='flex justify-center items-center px-20 landscape:px-0'
         >
           <Header />
         </ParallaxLayer>
@@ -92,7 +96,7 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
           offset={0}
           speed={0.2}
           onClick={() => {parallax.current.scrollTo(1)}}
-          className='flex justify-start laptop:justify-center items-end'
+          className='flex justify-start landscape:justify-center items-end'
         >
           <div
             style={{
@@ -100,7 +104,7 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
               backgroundSize: 'cover',
               backgroundPosition:'center'
             }}
-            className='h-64 laptop:h-36 w-64 laptop:w-36 mb-5 laptop:mb-0'
+            className='h-64 landscape:h-36 w-64 landscape:w-36 mb-5 landscape:mb-0'
           >
           </div>
 
@@ -110,14 +114,14 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
               backgroundSize: 'cover',
               backgroundPosition:'center'
             }}
-            className='ml-[-150px] laptop:ml-0 h-64 laptop:h-36 w-64 laptop:w-36 mb-5 laptop:mb-0'
+            className='ml-[-150px] landscape:ml-0 h-64 landscape:h-36 w-64 landscape:w-36 mb-5 landscape:mb-0'
           ></div>
         </ParallaxLayer>
 
         <ParallaxLayer 
           offset={0}
           speed={-1} 
-          className='flex justify-start laptop:justify-center items-end z-10'
+          className='flex justify-start landscape:justify-center items-end z-10'
           style={{ pointerEvents: 'none' }}
         >
           <div
@@ -126,7 +130,7 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
               backgroundSize: 'cover',
               backgroundPosition:'center'
             }}
-            className='ml-14 laptop:ml-[-0.5rem] mb-2 laptop:mb-[-0.8rem] h-64 laptop:h-36 w-64 laptop:w-36'
+            className='ml-14 landscape:ml-[-0.5rem] mb-2 landscape:mb-[-0.8rem] h-64 landscape:h-36 w-64 landscape:w-36'
             onLoadedData={()=>console.log('loading image')}
           ></div>
         </ParallaxLayer>
@@ -158,7 +162,7 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
           offset={3}
           speed={0.4}
           onClick={() => {parallax.current.scrollTo(0)}}
-          className='flex flex-col laptop:flex-row justify-center items-center p-20'
+          className='flex flex-col landscape:flex-row justify-center items-center p-20'
         >
           <EventAttendance openRejectModal={()=>setRejectModalShow(true)} openAcceptModal={()=>setAcceptModalShow(true)}/>
           <Themes defaultTheme={defaultTheme}/>
@@ -173,17 +177,17 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
           <Image
             src={icon}
             alt='icon separator'
-            className=' h-32 w-auto z-20 laptop:hidden'
+            className=' h-32 w-auto z-20 landscape:hidden'
           />
           <Image
             src={icon}
             alt='icon separator'
-            className=' h-32 w-auto z-20 laptop:hidden'
+            className=' h-32 w-auto z-20 landscape:hidden'
           />
           <Image
             src={icon}
             alt='icon separator'
-            className=' h-32 w-auto z-20 laptop:hidden'
+            className=' h-32 w-auto z-20 landscape:hidden'
           />
         </ParallaxLayer>
         
