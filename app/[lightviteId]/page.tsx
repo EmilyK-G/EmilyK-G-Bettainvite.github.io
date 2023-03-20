@@ -57,6 +57,7 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
         <Head>
           <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta http-equiv="ScreenOrientation" content="autoRotate:disabled"/>
           <link rel="apple-touch-icon" href="%PUBLIC_URL%/light_icon_transparent.png" />
           <title>
             LightVite
