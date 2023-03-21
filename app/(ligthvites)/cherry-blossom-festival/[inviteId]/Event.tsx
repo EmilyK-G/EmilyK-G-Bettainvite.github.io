@@ -8,7 +8,7 @@ function Event(props:any) {
         <p className='text-6xl landscape:text-4xl m-10'>To the National</p>
         <p className='text-9xl landscape:text-8xl font-thin m-10 my-20 laptop:my-12 landscape:my-0'>Cherry Blossom Festival</p>
         <Link 
-          href={"/" + props.lightviteId + "/about"}
+          href={"/" + props.eventName + "/" + props.lightviteId + "/about"}
           className=" text-6xl tablet:text-3xl font-mono text-th-primary-medium bg-whitesmoke laptop:bg-transparent bg-opacity-30 font-bold underline hover:underline-offset-4 p-10 tablet:p-8 landscape:p-0 mt-10">
           Details
         </Link>

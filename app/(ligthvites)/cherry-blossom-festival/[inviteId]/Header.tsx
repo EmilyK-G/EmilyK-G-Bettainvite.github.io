@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import hborder from '../../public/bettainvite-border.png';
+import hborder from '../../../../public/bettainvite-border.png';
 
 const Header = () => {
   return (

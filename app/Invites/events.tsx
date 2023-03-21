@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+"use client"
 
 const eventsList = [
     {
@@ -27,18 +27,5 @@ const eventsList = [
         theme: 'default'
     }
 ]
-
-const events = () => {
-    
-    useEffect(() => {
-        eventsList.map((eve)=>{
-            console.log(eve)
-        })
-    }, [])
-    
-  return (
-    <div>events</div>
-  )
-}
 
 export {eventsList}

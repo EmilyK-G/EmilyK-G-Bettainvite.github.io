@@ -6,26 +6,26 @@ import Header from './Header';
 import { useRef, useState, useEffect } from 'react';
 
 import Image from 'next/image';
-import icon from '../../public/light_icon_transparent.png';
+import icon from '../../../../public/light_icon_transparent.png';
 
 import Event from './Event';
 import EventDate from './EventDate';
 import EventAttendance from './EventAttendance';
-import AcceptModal from './AcceptModal';
-import RejectModal from './RejectModal';
-import MyModal from './MyModal';
+import AcceptModal from '../../AcceptModal';
+import RejectModal from '../../RejectModal';
+import MyModal from '../../MyModal';
 
 import Head from 'next/head';
-import Themes from './Themes';
-import { eventsList } from '../Invites/events';
+import Themes from '../../Themes';
+import { eventsList } from '../../../Invites/events';
 
 type HomeProps = {
   params: {
-    lightviteId: string
+    inviteId: string
   }
 }
 
-export default function Home({ params: {lightviteId} }: HomeProps) {
+export default function Home({ params: {inviteId} }: HomeProps) {
 
   const parallax = useRef<IParallax>(null!);
 
@@ -33,13 +33,16 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
   const [rejectModalShow, setRejectModalShow] = useState<boolean>(false);
   const [defaultTheme, setDefaultTheme] = useState<string>('default');
   const [isInvite, setIsInvite] = useState<null|boolean>(null);
+  const [eventName, setEventName] = useState<null|string>(null);
  
   const [mounted, setMounted] = useState<boolean>(false);
 
   useEffect(()=>{
+
     eventsList.map((eve)=>{
-      if (lightviteId === eve.name){
+      if (inviteId === eve.eventId){
         setIsInvite(true);
+        setEventName(eve.name);
         return setDefaultTheme(eve.theme)
       }
     })
@@ -50,7 +53,7 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
 
   if (!mounted) return null
   if (!isInvite) return (
-    <div className="flex justify-center items-center">
+    <div className="flex flex-col justify-center items-center text-3xl h-screen">
       <p>{`Oops, this isn't an invite :)`}</p>
       <p>If you received a link, try clciking it. Or check your spelling</p>
     </div>
@@ -141,7 +144,7 @@ export default function Home({ params: {lightviteId} }: HomeProps) {
           onClick={() => {parallax.current.scrollTo(2)}}
           className='flex justify-center items-center'
         >
-          <Event lightviteId={lightviteId}/>
+          <Event lightviteId={inviteId} eventName={eventName}/>
         </ParallaxLayer>
 
         <ParallaxLayer 

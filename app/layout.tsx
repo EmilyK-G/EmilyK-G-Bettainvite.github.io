@@ -18,7 +18,7 @@ export default function RootLayout({
           <title>Lightvite</title>
         </head>
         <body className='mb-0 bg-th-primary-medium'>
-          {children}
+            {children}
         </body>
       </html>
   )
