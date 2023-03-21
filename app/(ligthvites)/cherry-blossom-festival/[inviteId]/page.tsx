@@ -168,7 +168,7 @@ export default function Home({ params: {inviteId} }: HomeProps) {
           className='flex flex-col landscape:flex-row justify-center items-center p-20'
         >
           <EventAttendance openRejectModal={()=>setRejectModalShow(true)} openAcceptModal={()=>setAcceptModalShow(true)}/>
-          <Themes defaultTheme={defaultTheme}/>
+          {/* <Themes defaultTheme={defaultTheme}/> */}
         </ParallaxLayer>
 
         <ParallaxLayer
