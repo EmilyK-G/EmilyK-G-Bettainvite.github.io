@@ -99,7 +99,7 @@ export default function Home({ params: {inviteId} }: HomeProps) {
           offset={0}
           speed={0.2}
           onClick={() => {parallax.current.scrollTo(1)}}
-          className='flex justify-start landscape:justify-center items-end'
+          className='flex justify-start laptop:justify-center items-end'
         >
           <div
             style={{
@@ -124,7 +124,7 @@ export default function Home({ params: {inviteId} }: HomeProps) {
         <ParallaxLayer 
           offset={0}
           speed={-1} 
-          className='flex justify-start landscape:justify-center items-end z-10'
+          className='flex justify-start laptop:justify-center items-end z-10'
           style={{ pointerEvents: 'none' }}
         >
           <div
@@ -133,7 +133,7 @@ export default function Home({ params: {inviteId} }: HomeProps) {
               backgroundSize: 'cover',
               backgroundPosition:'center'
             }}
-            className='ml-14 landscape:ml-[-0.5rem] mb-2 landscape:mb-[-0.8rem] h-64 landscape:h-36 w-64 landscape:w-36'
+            className='ml-14 laptop:ml-[-0.5rem] mb-2 landscape:mb-[-0.8rem] h-64 landscape:h-36 w-64 landscape:w-36'
             onLoadedData={()=>console.log('loading image')}
           ></div>
         </ParallaxLayer>
