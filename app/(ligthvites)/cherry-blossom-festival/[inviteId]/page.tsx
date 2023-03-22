@@ -41,9 +41,11 @@ export default function Home({ params: {inviteId} }: HomeProps) {
 
     eventsList.map((eve)=>{
       if (inviteId === eve.eventId){
+        console.log(eve.eventId)
         setIsInvite(true);
         setEventName(eve.name);
-        return setDefaultTheme(eve.theme)
+        setDefaultTheme(eve.theme)
+        return 
       }
     })
   },[])
@@ -55,7 +57,7 @@ export default function Home({ params: {inviteId} }: HomeProps) {
   if (!isInvite) return (
     <div className="flex flex-col justify-center items-center text-3xl h-screen">
       <p>{`Oops, this isn't an invite :)`}</p>
-      <p>If you received a link, try clciking it. Or check your spelling</p>
+      <p className='text-3xl'>If you received a link, try clciking it. Or check your spelling</p>
     </div>
   )
 
