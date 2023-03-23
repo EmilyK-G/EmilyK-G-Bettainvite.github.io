@@ -48,7 +48,7 @@ export default function Home({ params: {inviteId} }: HomeProps) {
         setIsInvite(true);
         setEventName(eve.name);
         setDefaultTheme(eve.theme)
-        setTheme(eve.theme)
+        // setTheme(eve.theme)
         return 
       }
     })
