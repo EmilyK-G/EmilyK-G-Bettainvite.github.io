@@ -28,7 +28,7 @@ const eventsList = [
     },
     {
         eventId:'006',
-        name: 'eldersParty',
+        name: 'elders-party',
         theme: 'suits'
     }
 ]

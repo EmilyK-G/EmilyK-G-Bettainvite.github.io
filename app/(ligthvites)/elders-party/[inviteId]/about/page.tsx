@@ -18,7 +18,7 @@ const About = () => {
                 un refugio contra la tormenta de lluvia <span className='text-6xl'>-Isaías 32:1-20"</span></p>
               <hr className='mt-5 mb-10'/>
             </div>
-            <p className='font-mono font-thin opacity-70 text-5xl landscape:text-3xl'>Nuestros queridos<span className='text-4xl'>ancianos</span>
+            <div className='font-mono font-thin opacity-70 text-5xl landscape:text-3xl'>Nuestros queridos<span className='text-4xl'>ancianos</span>
             nos cuidan y nos enseñan con el ejemplo:
             <ul>
               <li>Fortalecen su amistad con Jehová y ayudan a su familia a que haga lo mismo.</li>
@@ -29,7 +29,7 @@ const About = () => {
             <small className='text-lg opacity-50'>
               <Link href={'https://www.jw.org/es/biblioteca/libros/disfrute-vida-para-siempre/seccion-2/leccion-20/'}>Referencia</Link>
             </small>
-            </p>
+            </div>
         </div>
     
         <Image 

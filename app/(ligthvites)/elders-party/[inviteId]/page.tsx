@@ -17,6 +17,7 @@ import MyModal from '../../MyModal';
 
 import Head from 'next/head';
 import Themes from '../../Themes';
+import { useTheme } from 'next-themes';
 import { eventsList } from '../../../Invites/events';
 
 type HomeProps = {
@@ -31,20 +32,23 @@ export default function Home({ params: {inviteId} }: HomeProps) {
 
   const [acceptModalShow, setAcceptModalShow] = useState<boolean>(false);
   const [rejectModalShow, setRejectModalShow] = useState<boolean>(false);
+
   const [defaultTheme, setDefaultTheme] = useState<string>('default');
+  
+  const { theme, setTheme } = useTheme()
   const [isInvite, setIsInvite] = useState<null|boolean>(null);
   const [eventName, setEventName] = useState<null|string>(null);
  
   const [mounted, setMounted] = useState<boolean>(false);
 
   useEffect(()=>{
-
     eventsList.map((eve)=>{
       if (inviteId === eve.eventId){
-        console.log(eve.eventId)
+        console.log(eve.theme)
         setIsInvite(true);
         setEventName(eve.name);
         setDefaultTheme(eve.theme)
+        setTheme(eve.theme)
         return 
       }
     })
