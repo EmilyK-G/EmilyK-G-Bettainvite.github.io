@@ -56,8 +56,8 @@ export default function Home({ params: {inviteId} }: HomeProps) {
   if (!mounted) return null
   if (!isInvite) return (
     <div className="flex flex-col justify-center items-center text-3xl h-screen">
-      <p>{`Oops, this isn't an invite :)`}</p>
-      <p className='text-3xl'>If you received a link, try clciking it. Or check your spelling</p>
+      <p>{`Oops, esta no es la invitación :)`}</p>
+      <p className='text-3xl'>Si reciviste un enlace úsalo o chequea la dirección web</p>
     </div>
   )
 

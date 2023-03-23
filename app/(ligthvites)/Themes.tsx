@@ -8,7 +8,8 @@ const myThemes = [
     { name: 'Fall', },
     { name: 'Delicate'},
     { name: 'Lavender'},
-    { name: 'CherryBlossom'}
+    { name: 'CherryBlossom'},
+    { name: 'Suits'}
     ]
 
 const Themes = (props: any) => {

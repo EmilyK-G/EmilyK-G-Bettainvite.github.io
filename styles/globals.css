@@ -72,6 +72,20 @@
     --accent-dark: theme('colors.black');
     --accent-light: theme('colors.pinkishwhite');
   }
+
+  [data-theme='suits'] {
+    --background: theme('colors.matecherry');
+    --background-image: url(../public/backgrounds/elders-party-bgr.png);
+
+    --static-1: url(../public/icons/blossom-icon-bettainvite-big.png);
+  
+    --primary-dark: theme('colors.darkbrown');
+    --primary-medium: theme('colors.matecherry');
+    --primary-light: theme('colors.lightpink');
+
+    --accent-dark: theme('colors.black');
+    --accent-light: theme('colors.pinkishwhite');
+  }
   /* for reference */
   /* [data-theme='pink'] {
     --background: theme('colors.gray.900');
