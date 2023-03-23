@@ -42,8 +42,8 @@ const AcceptModal= () => {
   return (
     <div className='bg-th-primary-medium text-th-primary-light text-6xl p-20 landscape:px-1 landscape:pt-1 landscape:pb-10 flex flex-col rounded-lg border-2 laptop:border-none'>
       {!success && <>
-        <h2 className='keyboard_hide text-9xl landscape:hidden'>Awesome!</h2>
-        <p className='font-serif mt-4 landscape:hidden'>Send your name to confirm...</p>
+        <h2 className='keyboard_hide text-9xl'>Awesome!</h2>
+        <p className='font-serif mt-4 landscape:text-lg'>Send your name to accept the invite...</p>
       </>}
       <input 
         type="text" 
@@ -63,7 +63,7 @@ const AcceptModal= () => {
         ? <p className='mt-5 rounded-md p-3 w-3/6 place-self-center text-th-accent-light'>Confirming <span className='animate-ping'>...</span></p>
         : <button
             disabled={success}
-            className="myBtn landscape:h-20 landscape:w-1/3 landscape:self-center laptop:border-none mt-5 text-7xl landscape:text-5xl laptop:text-3xl bg-th-primary-light text-th-accent-dark" 
+            className="myBtn landscape:h-20 landscape:w-1/3 landscape:self-center laptop:border-none mt-5 text-7xl landscape:text-4xl laptop:text-3xl bg-th-primary-light text-th-accent-dark" 
             onClick={e=>sendConfirmationMessage(e)}>
               {success ? 'Sent!' : 'Confirm'}
           </button>}
