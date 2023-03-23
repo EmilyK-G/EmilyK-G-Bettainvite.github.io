@@ -41,9 +41,10 @@ const AcceptModal= () => {
 
   return (
     <div className='bg-th-primary-medium text-th-primary-light text-6xl p-20 landscape:px-1 landscape:pt-1 landscape:pb-10 flex flex-col rounded-lg border-2 laptop:border-none'>
+      <div className='landscape:hidden laptop:landscape:contents'>
       {!success && <>
         <h2 className='keyboard_hide text-9xl'>Awesome!</h2>
-        <p className='font-serif mt-4 landscape:text-lg'>Send your name to accept the invite...</p>
+        <p className='font-serif mt-4 laptop:text-lg'>Send your name to accept the invite...</p>
       </>}
       <input 
         type="text" 
@@ -53,7 +54,7 @@ const AcceptModal= () => {
         value={confirmation}
         onChange={(e)=>setConfirmation(e.target.value)}
         id='modal_accept'
-        className='p-5 text-8xl laptop:text-5xl my-40 keyboard_modal_margin h-36 rounded-md enabled:hover:border-th-accent-dark 
+        className='p-5 text-8xl w-full laptop:text-5xl my-40 keyboard_modal_margin h-36 rounded-md enabled:hover:border-th-accent-dark 
         disabled:opacity-75 placeholder:text-th-accent-light placeholder:opacity-30 block bg-transparent
         shadow-sm focus:outline-none focus:border-th-accent-light text-center'/>
 
@@ -63,10 +64,17 @@ const AcceptModal= () => {
         ? <p className='mt-5 rounded-md p-3 w-3/6 place-self-center text-th-accent-light'>Confirming <span className='animate-ping'>...</span></p>
         : <button
             disabled={success}
-            className="myBtn landscape:h-20 landscape:w-1/3 landscape:self-center laptop:border-none mt-5 text-7xl landscape:text-4xl laptop:text-3xl bg-th-primary-light text-th-accent-dark" 
+            className="myBtn laptop:h-14 laptop:rounded-sm laptop:w-1/3 laptop:border-none laptop:self-center mt-5 text-7xl laptop:text-3xl bg-th-primary-light text-th-accent-dark" 
             onClick={e=>sendConfirmationMessage(e)}>
               {success ? 'Sent!' : 'Confirm'}
           </button>}
+    </div>
+    <div className=' portrait:hidden laptop:hidden text-3xl mt-10'>
+      <p>
+        This experience is designed to be viewed in portrait. Please rotate your
+        device to view.
+      </p>
+    </div>
     </div>
   )
 }
