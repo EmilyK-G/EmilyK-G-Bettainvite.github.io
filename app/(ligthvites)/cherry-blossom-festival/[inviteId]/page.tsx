@@ -198,7 +198,7 @@ export default function Home({ params: {inviteId} }: HomeProps) {
         
         {acceptModalShow || rejectModalShow 
         ? <ParallaxLayer 
-          sticky={{ start: 1, end: 3 }}
+          sticky={{ start: 0, end: 3 }}
           speed={0}
           className='flex justify-start items-end'
         >
