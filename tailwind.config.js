@@ -18,6 +18,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
+      'chocolate': '#4a1800',
       'darkchocolate': '#190c0a',
       'whitesmoke': '#f5f5f5',
       'brick': '#983711',
@@ -36,7 +37,9 @@ module.exports = {
       'matecherry':'#691c31',
       'lightpink':'#edcddd',
       'darkbrown':'#2d1e17',
+      'mustard':'#B78A00',
       'pinkishwhite':'#ebe9ed',
+      'lightcyan':'#E6EFFF',
       'th-primary-dark': 'var(--primary-dark)',
       'th-primary-medium': 'var(--primary-medium)',
       'th-primary-light': 'var(--primary-light)',

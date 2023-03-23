@@ -74,17 +74,17 @@
   }
 
   [data-theme='suits'] {
-    --background: theme('colors.matecherry');
+    --background: theme('colors.chocolate');
     --background-image: url(../public/backgrounds/elders-party-bgr.png);
 
-    --static-1: url(../public/icons/blossom-icon-bettainvite-big.png);
+    --static-1: url(../public/icons/books-icon.png);
   
-    --primary-dark: theme('colors.darkbrown');
-    --primary-medium: theme('colors.matecherry');
-    --primary-light: theme('colors.lightpink');
+    --primary-dark: theme('colors.midnight');
+    --primary-medium: theme('colors.chocolate');
+    --primary-light: theme('colors.mustard');
 
     --accent-dark: theme('colors.black');
-    --accent-light: theme('colors.pinkishwhite');
+    --accent-light: theme('colors.lightcyan');
   }
   /* for reference */
   /* [data-theme='pink'] {
