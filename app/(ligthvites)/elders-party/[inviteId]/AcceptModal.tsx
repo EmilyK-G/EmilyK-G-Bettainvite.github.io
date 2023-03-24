@@ -50,7 +50,7 @@ const AcceptModal= () => {
         type="text" 
         maxLength={35}
         autoFocus
-        placeholder='Your name here'
+        placeholder='Nombre completo'
         value={confirmation}
         onChange={(e)=>setConfirmation(e.target.value)}
         id='modal_accept'
