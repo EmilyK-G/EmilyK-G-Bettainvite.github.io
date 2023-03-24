@@ -62,7 +62,7 @@ export default function Home({ params: {inviteId} }: HomeProps) {
   )
 
   return (
-    <ThemeProvider>
+    <ThemeProvider forcedTheme='cherryblossom'>
       <Parallax ref={parallax} pages={4}>
         <Head>
           <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
