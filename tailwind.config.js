@@ -40,6 +40,7 @@ module.exports = {
       'lightpink':'#edcddd',
       'darkbrown':'#2d1e17',
       'burntorange':'#673301',
+      'mustard':'#D5A418',
       'pinkishwhite':'#ebe9ed',
       'lightcyan':'#E6EFFF',
       'th-primary-dark': 'var(--primary-dark)',
