@@ -4,7 +4,7 @@ import hborder from '../../../../public/bettainvite-border.png';
 
 const Header = () => {
   return (
-    <div className='landscape:w-full p-20 landscape:px-0 rounded-xl landscape:rounded-none bg-champagne landscape:bg-th-primary-medium h-96 laptop:h-40 flex justify-center items-center flex-col mix-blend-multiply hover:mix-blend-overlay landscape:border-y-2 landscape:border-whitesmoke'>
+    <div className='landscape:w-full p-20 landscape:px-0 rounded-xl landscape:rounded-none bg-champagne landscape:bg-th-primary-medium h-40 flex justify-center items-center flex-col mix-blend-multiply hover:mix-blend-overlay landscape:border-y-2 landscape:border-whitesmoke'>
         <p className='text-7xl landscape:text-6xl text-darkchocolate landscape:text-th-accent-light'>Estás invitado</p>
         <Image
           src={hborder} 
