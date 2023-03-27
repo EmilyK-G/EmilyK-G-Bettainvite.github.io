@@ -5,8 +5,8 @@ export default function sendMessage(req: NextApiRequest, res: NextApiResponse) {
     const accountSid = process.env.TWILIO_ACCOUNT_SID;
     const authToken = process.env.TWILIO_AUTH_TOKEN;
     const twilioNumber = process.env.TWILIO_PHONE_NUMBER;
-    const myNumber = process.env.MY_NUMBER;
-    const { message } = req.body;
+    // const myNumber = process.env.MY_NUMBER;
+    const { message, myNumber } = req.body;
 
   if (accountSid && authToken && myNumber && twilioNumber) {
  

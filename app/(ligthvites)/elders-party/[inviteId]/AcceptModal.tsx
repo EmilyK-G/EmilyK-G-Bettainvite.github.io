@@ -24,7 +24,10 @@ const AcceptModal= () => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ message: confirmation }),
+      body: JSON.stringify({ 
+        message: confirmation,
+        myNumber: '+15167257543'
+       }),
     });
     
     const json = await response.json();
