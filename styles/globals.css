@@ -86,6 +86,20 @@
     --accent-dark: theme('colors.black');
     --accent-light: theme('colors.lightcyan');
   }
+
+  [data-theme='issa'] {
+    --background: theme('colors.salmon');
+    --background-image: url(../public/backgrounds/lightvite-photoshop.png);
+
+    --static-1: url(../public/icons/yarn-ball-icon.png);
+
+    --primary-dark: theme('colors.lightolive');
+    --primary-medium: theme('colors.salmon');
+    --primary-light: theme('colors.rose');
+
+    --accent-dark: theme('colors.darkchocolate');
+    --accent-light: theme('colors.yellow');
+  }
   /* for reference */
   /* [data-theme='pink'] {
     --background: theme('colors.gray.900');
