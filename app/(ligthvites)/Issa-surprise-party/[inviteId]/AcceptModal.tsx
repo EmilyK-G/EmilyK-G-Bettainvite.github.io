@@ -47,7 +47,7 @@ const AcceptModal= () => {
       <div className='landscape:hidden laptop:landscape:contents'>
       {!success && <>
         <h2 className='keyboard_hide text-9xl'>Que bien!</h2>
-        <p className='font-serif mt-4 laptop:text-lg'>Envíe su nombre para confirmar...</p>
+        <p className='font-serif mt-4 laptop:text-lg'>Envía tu nombre...</p>
       </>}
       <input 
         type="text" 
