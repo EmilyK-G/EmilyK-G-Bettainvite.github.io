@@ -88,17 +88,17 @@
   }
 
   [data-theme='issa'] {
-    --background: theme('colors.salmon');
+    --background: theme('colors.tan');
     --background-image: url(../public/backgrounds/lightvite-photoshop.png);
 
-    --static-1: url(../public/icons/yarn-ball-icon.png);
+    --static-1: url(../public/icons/issa-icon.png);
 
-    --primary-dark: theme('colors.lightolive');
-    --primary-medium: theme('colors.salmon');
-    --primary-light: theme('colors.rose');
+    --primary-dark: theme('colors.chocolate');
+    --primary-medium: theme('colors.tan');
+    --primary-light: theme('colors.ivory');
 
     --accent-dark: theme('colors.darkchocolate');
-    --accent-light: theme('colors.yellow');
+    --accent-light: theme('colors.champagne');
   }
   /* for reference */
   /* [data-theme='pink'] {

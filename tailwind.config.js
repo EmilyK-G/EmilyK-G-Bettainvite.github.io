@@ -43,6 +43,7 @@ module.exports = {
       'burntorange':'#673301',
       'mustard':'#D5A418',
       'yellow':'#F9F871',
+      'ivory':'#FEEBD6',
       'pinkishwhite':'#ebe9ed',
       'lightcyan':'#E6EFFF',
       'th-primary-dark': 'var(--primary-dark)',

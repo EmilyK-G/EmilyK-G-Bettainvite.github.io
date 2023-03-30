@@ -6,7 +6,7 @@ interface headProps {
 
 const head: FC<headProps> = ({ params: {inviteId} }: headProps) => {
     return <>
-        <title>Fiesta para los Ancianos</title>
+        <title>Issauris</title>
     </>
 }
 

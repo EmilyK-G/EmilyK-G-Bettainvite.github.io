@@ -16,8 +16,6 @@ import RejectModal from './RejectModal';
 import MyModal from '../../MyModal';
 
 import Head from 'next/head';
-import Themes from '../../Themes';
-import { useTheme } from 'next-themes';
 import { eventsList } from '../../../Invites/events';
 
 type HomeProps = {
@@ -33,9 +31,6 @@ export default function Home({ params: {inviteId} }: HomeProps) {
   const [acceptModalShow, setAcceptModalShow] = useState<boolean>(false);
   const [rejectModalShow, setRejectModalShow] = useState<boolean>(false);
 
-  const [defaultTheme, setDefaultTheme] = useState<string>('default');
-  
-  const { theme, setTheme } = useTheme()
   const [isInvite, setIsInvite] = useState<null|boolean>(null);
   const [eventName, setEventName] = useState<null|string>(null);
  
@@ -47,8 +42,6 @@ export default function Home({ params: {inviteId} }: HomeProps) {
         console.log(eve.theme)
         setIsInvite(true);
         setEventName(eve.name);
-        setDefaultTheme(eve.theme)
-        setTheme('suits')
         return 
       }
     })
@@ -66,7 +59,7 @@ export default function Home({ params: {inviteId} }: HomeProps) {
   )
 
   return (
-    <ThemeProvider forcedTheme='suits'>
+    <ThemeProvider forcedTheme='issa'>
       <Parallax ref={parallax} pages={4}>
         <Head>
           <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -113,7 +106,7 @@ export default function Home({ params: {inviteId} }: HomeProps) {
               backgroundSize: 'cover',
               backgroundPosition:'center'
             }}
-            className='h-64 landscape:h-36 w-64 landscape:w-36 mb-5 landscape:mb-0'
+            className='h-64 landscape:h-36 w-64 landscape:w-36 mb-5 landscape:mb-0 rotate-45'
           >
           </div>
 
@@ -123,7 +116,7 @@ export default function Home({ params: {inviteId} }: HomeProps) {
               backgroundSize: 'cover',
               backgroundPosition:'center'
             }}
-            className='ml-[-150px] landscape:ml-0 h-64 landscape:h-36 w-64 landscape:w-36 mb-5 landscape:mb-0'
+            className='ml-[-150px] landscape:ml-0 h-64 landscape:h-36 w-64 landscape:w-36 mb-5 landscape:mb-0 rotate-180'
           ></div>
         </ParallaxLayer>
 
