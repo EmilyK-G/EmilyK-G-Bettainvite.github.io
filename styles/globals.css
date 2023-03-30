@@ -93,7 +93,7 @@
 
     --static-1: url(../public/icons/issa-icon.png);
 
-    --primary-dark: theme('colors.chocolate');
+    --primary-dark: theme('colors.rosebrown');
     --primary-medium: theme('colors.tan');
     --primary-light: theme('colors.ivory');
 

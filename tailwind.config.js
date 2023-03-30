@@ -18,6 +18,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
+      'rosebrown':'#574141',
       'chocolate': '#4a1800',
       'darkchocolate': '#190c0a',
       'whitesmoke': '#f5f5f5',
