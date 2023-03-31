@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const AcceptModal= () => {
 
@@ -9,13 +9,48 @@ const AcceptModal= () => {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<boolean>(false);
 
+  useEffect(()=>{
+
+    const confirmed = localStorage.getItem('accepted');
+
+    console.log(confirmed)
+
+    if (!confirmed) return;
+
+    const expDate = JSON.parse(confirmed).expDate;
+
+    const value = JSON.parse(confirmed).value;
+
+    const name = JSON.parse(confirmed).name;
+
+    if (value === 'false') {
+      setSuccess(false)
+      console.log(value, 'false')
+    }
+    if (value === 'true') {
+      const expired = (new Date()).getTime() > expDate;
+     
+      if (expired) {
+        localStorage.removeItem('accepted');
+        setSuccess(false);
+        return
+      }
+      if(name){
+        setConfirmation(name)
+      }
+      setSuccess(true)
+    }
+  }, [])
+
   const sendConfirmationMessage = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+
     e.preventDefault();
 
     setError(null);
-    setSuccess(false);
 
-    if(confirmation.length <= 5 ) return setError('Escriba su nombre completo')
+    const date = new Date().setDate(new Date().getDate() + 5);
+
+    if(confirmation.length <= 6 ) return setError('Escribe tu nombre completo')
 
     setIsSending(true);
 
@@ -35,6 +70,11 @@ const AcceptModal= () => {
     if (response.ok) {
       setIsSending(false);
       setSuccess(true);
+      localStorage.setItem('accepted', JSON.stringify({
+        value: 'true',
+        name: confirmation,
+        expDate: date
+      }) )
     } else {
       setIsSending(false);
       setError(`Please try again...`);
@@ -44,7 +84,7 @@ const AcceptModal= () => {
 
   return (
     <div className='bg-th-primary-medium text-th-primary-light text-6xl p-20 landscape:px-1 landscape:pt-1 landscape:pb-10 flex flex-col rounded-lg border-2 laptop:border-none'>
-      <div className='landscape:hidden laptop:landscape:contents'>
+      <div className='flex flex-col landscape:hidden laptop:landscape:contents'>
       {!success && <>
         <h2 className='keyboard_hide text-9xl'>Que bien!</h2>
         <p className='font-serif mt-4 laptop:text-lg'>Envía tu nombre...</p>
@@ -64,12 +104,12 @@ const AcceptModal= () => {
       {error && <div className='text-error font-serif text-2xl'><p>{`No se pudo confirmar:(`}</p> <p className='mt-2 text-3xl'>{error}</p></div>}
       {success && <div className='text-success'>{`Gracias! Nos vemos pronto:)`}</div>}
       {isSending 
-        ? <p className='mt-5 rounded-md p-3 w-3/6 place-self-center self-center text-th-accent-light'>Confirmando <span className='animate-ping'>...</span></p>
+        ? <p className='mt-5 rounded-md p-3 w-2/3 self-center text-th-accent-light text-6xl'>Confirmando <span className='animate-ping'>...</span></p>
         : <button
             disabled={success}
-            className="myBtn laptop:h-14 laptop:rounded-sm laptop:w-1/3 laptop:border-none laptop:self-center mt-5 text-7xl laptop:text-3xl bg-th-primary-light text-th-accent-dark" 
+            className={"myBtn laptop:h-14 laptop:rounded-sm laptop:w-1/3 laptop:border-none laptop:self-center mt-5 text-7xl laptop:text-3xl bg-th-primary-light text-th-accent-dark" + (success ? " hidden":"")} 
             onClick={e=>sendConfirmationMessage(e)}>
-              {success ? 'Enviado!' : 'Confirmar'}
+              Confirmar
           </button>}
     </div>
     <div className=' portrait:hidden laptop:hidden text-3xl mt-10'>
