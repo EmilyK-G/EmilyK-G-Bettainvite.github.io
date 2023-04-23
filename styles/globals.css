@@ -86,6 +86,20 @@
     --accent-dark: theme('colors.black');
     --accent-light: theme('colors.lightcyan');
   }
+/* Fix colors for SAGE theme */
+  [data-theme='sage'] {
+    --background: theme('colors.chocolate');
+    --background-image: url(../public/backgrounds/sage-bgr.jpg);
+
+    --static-1: url(../public/icons/book-icon-1.png);
+  
+    --primary-dark: theme('colors.burntorange');
+    --primary-medium: theme('colors.chocolate');
+    --primary-light: theme('colors.champagne');
+
+    --accent-dark: theme('colors.black');
+    --accent-light: theme('colors.lightcyan');
+  }
 
   [data-theme='issa'] {
     --background: theme('colors.tan');
