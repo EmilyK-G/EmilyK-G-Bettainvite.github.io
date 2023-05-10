@@ -9,7 +9,10 @@ const myThemes = [
     { name: 'Delicate'},
     { name: 'Lavender'},
     { name: 'CherryBlossom'},
-    { name: 'Suits'}
+    { name: 'Suits'},
+    { name: 'Issa'},
+    { name: 'Sage'},
+    { name: 'Band'}
     ]
 
 const Themes = (props: any) => {

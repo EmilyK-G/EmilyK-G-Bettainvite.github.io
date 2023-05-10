@@ -13,10 +13,10 @@ import EventDate from './EventDate';
 import EventAttendance from './EventAttendance';
 import AcceptModal from './AcceptModal';
 import RejectModal from './RejectModal';
-import MyModal from '../../MyModal';
+import MyModal from '../../../MyModal';
 
 import Head from 'next/head';
-import Themes from '../../Themes';
+import Themes from '../../../Themes';
 import { eventsList } from '../../../Invites/events';
 
 type HomeProps = {

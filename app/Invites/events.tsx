@@ -35,6 +35,11 @@ const eventsList = [
         eventId:'007',
         name: 'Issa-surprise-party',
         theme: 'issa'
+    },
+    {
+        eventId:'008',
+        name: 'TheBand',
+        theme: 'band'
     }
 ]
 

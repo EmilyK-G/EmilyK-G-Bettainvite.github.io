@@ -114,6 +114,20 @@
     --accent-dark: theme('colors.darkchocolate');
     --accent-light: theme('colors.champagne');
   }
+
+  [data-theme='band'] {
+    --background: theme('colors.blue');
+    --background-image: url(../public/backgrounds/neon-guitar-portrait-bgr.png);
+
+    --static-1: url(../public/icons/bettainvite-sphere.png);
+
+    --primary-dark: theme('colors.black');
+    --primary-medium: theme('colors.blue');
+    --primary-light: theme('colors.lightcyan');
+
+    --accent-dark: theme('colors.darkchocolate');
+    --accent-light: theme('colors.lightgray');
+  }
   /* for reference */
   /* [data-theme='pink'] {
     --background: theme('colors.gray.900');
