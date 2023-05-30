@@ -9,6 +9,7 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
     './app/[lightviteId]/page.tsx',
     './app/[bettacardId]/page.tsx',
+    './app/[themeId]/page.tsx'
   ],
   theme: {
     extend: {
