@@ -5,7 +5,7 @@
 :root {
     --background: theme('colors.whitesmoke');
     --background-secondary: theme('colors.darkchocolate');
-    --background-image: url(../public/backgrounds/bettainvite-default-background.png);
+    --background-image: url(../public/backgrounds/bettainvite-default.jpg);
 
     --static-1: url(../public/icons/bettainvite-flower-icon.png);
   

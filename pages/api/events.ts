@@ -1,11 +1,11 @@
-"use client"
+//NOT IN USE
 
 export const eventsList = [
     {
         eventId:'000',
         name: 'default',
         theme: 'default',
-        bgr: 'bettainvite-default.jpg'
+        bgr: 'blossom-bgr-bettainvite-edit.png'
     },
     {
         eventId:'001',
