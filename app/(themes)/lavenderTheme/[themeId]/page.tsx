@@ -86,6 +86,7 @@ export default function Home({ params: {themeId} }: HomeProps) {
         <ParallaxLayer
           offset={0.3}
           speed={1}
+          onClick={() => {parallax.current.scrollTo(1)}}
           className='flex justify-center items-center px-20 landscape:px-0'
         >
           <Header />
@@ -93,9 +94,9 @@ export default function Home({ params: {themeId} }: HomeProps) {
 
         <ParallaxLayer 
           offset={0}
-          speed={-1} 
-          onClick={() => {parallax.current.scrollTo(1)}}
+          speed={-1}
           className='flex justify-center items-end z-10'
+          style={{ pointerEvents: 'none' }}
         >
           <div
             style={{

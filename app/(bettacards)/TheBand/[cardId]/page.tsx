@@ -17,6 +17,7 @@ import MyModal from '../../../MyModal';
 
 import Head from 'next/head';
 import { eventsList } from '../../../Invites/events';
+import Background from '../../../(themes)/sageTheme/[themeId]/background';
 
 type HomeProps = {
   params: {
@@ -69,15 +70,14 @@ export default function Home({ params: {cardId} }: HomeProps) {
         <ParallaxLayer
           offset={0}
           speed={0}
-          factor={4.5}
+          factor={4}
           style={{
-            backgroundImage: `var(--background-image)`,
-            backgroundSize: 'contain',
-            backgroundRepeat:'repeat',
-            zIndex: -1 
+            height: '100vh',
+            zIndex:'-1'
           }}
-          
-        />
+        >
+            <Background />
+          </ParallaxLayer>
         {/* <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundImage:'linear-gradient(to bottom, midnight,rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,0.3), rgba(47,72,88,0.3), rgba(47,72,88,0.4))'}} /> */}
         <ParallaxLayer offset={0.8} factor={0.2} speed={0.5} className='bg-th-primary-dark opacity-100 landscape:bg-transparent' />
         <ParallaxLayer offset={2} speed={0.5} style={{ backgroundColor: 'var(--primary-dark)', opacity:'0'}} />
@@ -85,7 +85,8 @@ export default function Home({ params: {cardId} }: HomeProps) {
 
         <ParallaxLayer
           offset={0.3}
-          speed={1}
+          speed={1} 
+          onClick={() => {parallax.current.scrollTo(1)}}
           className='flex justify-center items-center px-20 landscape:px-0'
         >
           <Header />
@@ -93,10 +94,9 @@ export default function Home({ params: {cardId} }: HomeProps) {
 
         <ParallaxLayer 
           offset={0}
-          speed={-1} 
-          onClick={() => {parallax.current.scrollTo(1)}}
+          speed={-1}
           className='flex justify-center items-end z-10'
-          // style={{ pointerEvents: 'none' }}
+          style={{ pointerEvents: 'none' }}
         >
           <div
             style={{
