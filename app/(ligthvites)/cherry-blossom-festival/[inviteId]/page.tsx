@@ -31,7 +31,7 @@ export default function Home({ params: {inviteId} }: HomeProps) {
 
   const [acceptModalShow, setAcceptModalShow] = useState<boolean>(false);
   const [rejectModalShow, setRejectModalShow] = useState<boolean>(false);
-  const [defaultTheme, setDefaultTheme] = useState<string>('default');
+  // const [defaultTheme, setDefaultTheme] = useState<string>('default');
   const [isInvite, setIsInvite] = useState<null|boolean>(null);
   const [eventName, setEventName] = useState<null|string>(null);
  
@@ -44,7 +44,7 @@ export default function Home({ params: {inviteId} }: HomeProps) {
         console.log(eve.eventId)
         setIsInvite(true);
         setEventName(eve.name);
-        setDefaultTheme(eve.theme)
+        // setDefaultTheme(eve.theme)
         return 
       }
     })
@@ -68,9 +68,6 @@ export default function Home({ params: {inviteId} }: HomeProps) {
           <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <link rel="apple-touch-icon" href="%PUBLIC_URL%/light_icon_transparent.png" />
-          <title>
-            LightVite
-          </title>
         </Head>
         <ParallaxLayer
           offset={0}
