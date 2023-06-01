@@ -50,7 +50,7 @@ const AcceptModal= () => {
 
     const date = new Date().setDate(new Date().getDate() + 5);
 
-    if(confirmation.length <= 6 ) return setError('Please enter your full name')
+    if(confirmation.length <= 6 ) return setError('Please enter a valid email')
 
     setIsSending(true);
 
@@ -83,33 +83,33 @@ const AcceptModal= () => {
   
 
   return (
-    <div className='bg-th-primary-medium text-th-primary-light text-6xl p-20 landscape:px-1 landscape:pt-1 landscape:pb-10 flex flex-col rounded-lg border-2 laptop:border-none'>
+    <div className='bg-th-primary-medium text-th-primary-light text-4xl p-20 landscape:px-1 landscape:pt-1 landscape:pb-10 flex flex-col rounded-lg border-2 laptop:border-none'>
       <div className='flex flex-col landscape:hidden laptop:landscape:contents'>
       {!success && <>
-        <h2 className='keyboard_hide text-9xl'>Cool!</h2>
-        <p className='font-serif mt-4 laptop:text-lg'>Insert your name...</p>
+        <h2 className='keyboard_hide text-9xl'>Cool</h2>
+        <p className='font-serif mt-8 laptop:text-lg'>Insert your email and we'll contact you</p>
       </>}
       <input 
         type="text" 
-        maxLength={35}
+        maxLength={100}
         autoFocus
-        placeholder='Full name'
+        placeholder='your_email@mail.com'
         value={confirmation}
         onChange={(e)=>setConfirmation(e.target.value)}
         id='modal_accept'
-        className='p-5 text-8xl w-full laptop:text-5xl my-40 keyboard_modal_margin h-36 rounded-md enabled:hover:border-th-accent-dark 
+        className='p-5 text-5xl font-mono w-full laptop:text-5xl my-32 keyboard_modal_margin h-36 rounded-md enabled:hover:border-th-accent-dark 
         disabled:opacity-75 placeholder:text-th-accent-light placeholder:opacity-30 block bg-transparent
         shadow-sm focus:outline-none focus:border-th-accent-light text-center'/>
 
       {error && <div className='text-error font-serif text-2xl'><p>{`No se pudo confirmar:(`}</p> <p className='mt-2 text-3xl'>{error}</p></div>}
-      {success && <div className='text-success'>{`Thanks!:)`}</div>}
+      {success && <div className='text-success'>{`Thanks! We'll be in touch soon`}</div>}
       {isSending 
-        ? <p className='mt-5 rounded-md p-3 w-2/3 self-center text-th-accent-light text-6xl'>Confirming <span className='animate-ping'>...</span></p>
+        ? <p className='mt-5 rounded-md p-3 w-2/3 self-center text-th-accent-light text-6xl'>Sending <span className='animate-ping'>...</span></p>
         : <button
             disabled={success}
             className={"myBtn laptop:h-14 laptop:rounded-sm laptop:w-1/3 laptop:border-none laptop:self-center mt-5 text-7xl laptop:text-3xl bg-th-primary-light text-th-accent-dark" + (success ? " hidden":"")} 
             onClick={e=>sendConfirmationMessage(e)}>
-              Confirm
+              Send
           </button>}
     </div>
     <div className=' portrait:hidden laptop:hidden text-3xl mt-10'>

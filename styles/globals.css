@@ -117,7 +117,7 @@
 
   [data-theme='band'] {
     --background: theme('colors.blue');
-    --background-image: url(../public/backgrounds/neon-guitar-portrait-bgr.png);
+    --background-image: url(../public/backgrounds/band-bgr.png);
 
     --static-1: url(../public/icons/bettainvite-sphere.png);
 

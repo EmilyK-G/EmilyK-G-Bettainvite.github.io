@@ -15,25 +15,18 @@ const EventAttendance = (props: any) => {
     }
 
   return (
-    <div className='flex flex-col items-center justify-center text-th-accent-light p-10 text-center h-full'>
-        <p className="text-9xl landscape:text-3xl">Are you coming?</p>
-        <div className='text-9xl landscape:hidden'>
-            <p>•</p>
-            <p>•</p>
-            <p>•</p>
+    <div className='flex flex-col items-center justify-around text-th-accent-light p-10 text-center h-full'>
+        <p className="text-8xl landscape:text-3xl">Contact us</p>
+        <div className='text-6xl h-3/6 flex flex-col justify-around font-mono'>
+            <p>theband_email@gmail.com</p>
+            <p>+1 516 678 2345</p>
+            <p className='text-9xl landscape:hidden'>•</p>
         </div>
         <div className='hidden text-5xl landscape:flex space-x-2'>...</div>
         <button
             className='myBtn w-full landscape:w-80 mt-10 m-2 text-5xl landscape:text-xl landscape:h-14'
             onClick={e=>handleAccept(e)}>
-            Yeah!
-        </button>
-        
-        <button 
-            className='myBtn w-full landscape:w-80 m-2 text-5xl landscape:text-xl landscape:h-14'
-            onClick={e=>handleReject(e)}
-        >
-            No
+            Ask something
         </button>
     </div>
   )

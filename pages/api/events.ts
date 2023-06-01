@@ -53,6 +53,6 @@ export const eventsList = [
         eventId:'008',
         name: 'TheBand',
         theme: 'band',
-        bgr: 'neon-guitar-portrait-bgr.png'
+        bgr: 'band-bgr.png'
     }
 ]
