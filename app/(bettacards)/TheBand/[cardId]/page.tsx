@@ -17,7 +17,7 @@ import MyModal from '../../../MyModal';
 
 import Head from 'next/head';
 import { eventsList } from '../../../Invites/events';
-import Background from '../../../(themes)/sageTheme/[themeId]/background';
+import Background from './background';
 
 type HomeProps = {
   params: {

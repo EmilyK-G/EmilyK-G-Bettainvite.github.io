@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import bgr from '../../../../public/backgrounds/default-bgr-photoshop.png';
+import bgr from '../../../../public/backgrounds/neon-guitar-portrait-bgr.png';
 
 const Background = () => {
   return (
