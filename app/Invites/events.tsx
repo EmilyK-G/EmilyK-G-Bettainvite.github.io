@@ -5,7 +5,7 @@ export const eventsList = [
         eventId:'000',
         name: 'default',
         theme: 'default',
-        bgr: 'bettainvite-default.jpg'
+        bgr: 'default-bgr-photoshop.png'
     },
     {
         eventId:'001',
