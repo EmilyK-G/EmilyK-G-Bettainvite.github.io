@@ -190,6 +190,11 @@
         background: linear-gradient(var(--primary-medium), var(--primary-light), var(--primary-dark));
         animation: animate 1.2s linear infinite;
     }
+
+    .websitesListItem {
+      -webkit-box-shadow: inset 0px 0px 15px 0px #232323; 
+      box-shadow: inset 0px 0px 15px 0px #232323;
+    }
     
     @keyframes animate {
         0% {
