@@ -1,10 +1,7 @@
 "use client"
 
 import React from 'react';
-import Image from 'next/image';
-import icon from '../../../../../public/light_icon_transparent.png';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
 
 const About = () => {
 
@@ -24,17 +21,11 @@ const About = () => {
               <p>Any questions, please send me a text message to +1 516-725-7543, or email me: <span className=' font-light'>emilikimberly1@gmail.com</span></p>
             </div>
         </div>
-    
-        <Image 
-            src={icon}
-            alt='icon separator'
-            className='h-20 w-20 landscape:hidden'
-        />
 
         <button 
           onClick={()=> router.back()}
-          className="text-4xl landscape:text-3xl mt-20 landscape:mt-0 pb-10 font-mono font-bold text-yellow landscape:self-end">
-          {`...back`}
+          className="text-4xl landscape:text-3xl mt-20 landscape:mt-0 pb-10 font-mono font-bold text-gray underline landscape:self-end">
+          {`back`}
         </button>
         
     </div>

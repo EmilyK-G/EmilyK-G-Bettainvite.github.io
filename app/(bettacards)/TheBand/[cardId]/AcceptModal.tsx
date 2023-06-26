@@ -87,7 +87,7 @@ const AcceptModal= () => {
       <div className='flex flex-col landscape:hidden laptop:landscape:contents'>
       {!success && <>
         <h2 className='keyboard_hide text-9xl'>Cool</h2>
-        <p className='font-serif mt-8 laptop:text-lg'>Insert your email and we'll contact you</p>
+        <p className='font-serif mt-8 laptop:text-lg'>send us your email and we'll contact you shortly</p>
       </>}
       <input 
         type="text" 
