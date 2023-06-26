@@ -119,7 +119,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
           speed={1}
           onClick={() => {parallax.current.scrollTo(3)}}
         >
-          <video className=' h-[36rem] w-96 object-cover my-20 mx-10 rounded-lg' muted autoPlay loop>
+          <video className=' h-[36rem] w-96 object-cover my-20 mx-10 rounded-lg' muted autoPlay loop controls>
             <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
           </video>
         </ParallaxLayer>
@@ -128,7 +128,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
           speed={2}
           onClick={() => {parallax.current.scrollTo(3)}}
         >
-          <video className=' h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg' muted autoPlay loop>
+          <video className=' h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg' muted autoPlay loop controls>
             <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
           </video>
         </ParallaxLayer>
@@ -137,7 +137,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
           speed={3}
           onClick={() => {parallax.current.scrollTo(3)}}
         >
-          <video className=' h-[36rem] w-96 object-cover my-20 mx-10 rounded-lg' muted autoPlay loop>
+          <video className=' h-[36rem] w-96 object-cover my-20 mx-10 rounded-lg' muted autoPlay loop controls>
             <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
           </video>
         </ParallaxLayer>
@@ -146,7 +146,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
           speed={4}
           onClick={() => {parallax.current.scrollTo(3)}}
         >
-          <video className=' h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg' muted autoPlay loop>
+          <video className=' h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg' muted autoPlay loop controls>
             <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
           </video>
         </ParallaxLayer>
