@@ -6,8 +6,8 @@ interface headProps {
 
 const head: FC<headProps> = ({ params: {cardId} }: headProps) => {
     return <>
-        <title>The Band</title>
         <meta httpEquiv='ScreenOrientation' content='autoRotate:disabled'/>
+        <title>The Band</title>
     </>
 }
 
