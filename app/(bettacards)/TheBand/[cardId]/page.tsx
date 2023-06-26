@@ -62,12 +62,6 @@ export default function Home({ params: {cardId} }: HomeProps) {
       <div className=' h-screen w-screen hidden landscape:flex'><LandscapeScreen /></div>
       
       <Parallax ref={parallax} pages={4} className='landscape:hidden'>
-        <Head>
-          <meta httpEquiv='ScreenOrientation' content='autoRotate:disabled'/>
-          <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <link rel="apple-touch-icon" href="%PUBLIC_URL%/light_icon_transparent.png" />
-        </Head>
         <ParallaxLayer
           offset={0}
           speed={0}
