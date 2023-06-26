@@ -17,9 +17,9 @@ const EventAttendance = (props: any) => {
   return (
     <div className='flex flex-col items-center justify-around text-th-accent-light p-10 text-center h-full'>
         <p className="text-8xl landscape:text-3xl">Contact us</p>
-        <div className='text-6xl h-3/6 flex flex-col justify-around font-mono'>
-            <p>theband_email@gmail.com</p>
-            <p>+1 516 678 2345</p>
+        <div className='h-3/6 flex flex-col justify-evenly font-mono'>
+            <p className='text-4xl'>theband_email@gmail.com</p>
+            <p className='text-5xl'>+1 516 678 2345</p>
             <p className='text-9xl landscape:hidden'>•</p>
         </div>
         <div className='hidden text-5xl landscape:flex space-x-2'>...</div>
