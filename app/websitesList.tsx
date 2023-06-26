@@ -10,7 +10,7 @@ const WebsitesList = ({event}:eventProps) => {
   return (
             <Link 
               href={"/" + event.name + "/" + event.eventId} 
-              className="flex flex-col items-center justify-center w-full h-44 my-1 border-spacing-10 border-y-2 border-lightgray border-opacity-20 relative z-20">
+              className="flex flex-col items-center justify-center w-full h-44 border-spacing-5 border-y-2 border-lightgray border-opacity-5 relative z-20">
                 <Image 
                     src={`/backgrounds/`+ event.bgr}
                     alt='image'
