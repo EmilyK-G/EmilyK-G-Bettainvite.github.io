@@ -10,7 +10,7 @@ function Event(props:any) {
           href={"/" + props.eventName + "/" + props.bettacardId + "/about"}
           onClick={(e)=> e.stopPropagation()}
           className="text-6xl tablet:text-3xl font-mono text-th-accent-light bg-whitesmoke laptop:bg-transparent bg-opacity-5 font-bold underline hover:underline-offset-4 p-10 tablet:p-8 landscape:p-0 mt-10 landscape:mt-2 z-20">
-          Detalles
+          More
         </Link>
       </div>
     </div>

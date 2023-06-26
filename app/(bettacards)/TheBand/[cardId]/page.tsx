@@ -14,6 +14,7 @@ import MyModal from '../../../MyModal';
 import Head from 'next/head';
 import { eventsList } from '../../../Invites/events';
 import Background from './background';
+import LandscapeScreen from '../../../LandscapeScreen';
 
 type HomeProps = {
   params: {
@@ -57,7 +58,10 @@ export default function Home({ params: {cardId} }: HomeProps) {
 
   return (
     <ThemeProvider forcedTheme='band'>
-      <Parallax ref={parallax} pages={4}>
+
+      <div className=' h-screen w-screen hidden landscape:flex'><LandscapeScreen /></div>
+      
+      <Parallax ref={parallax} pages={4} className='landscape:hidden'>
         <Head>
           <meta httpEquiv='ScreenOrientation' content='autoRotate:disabled'/>
           <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
