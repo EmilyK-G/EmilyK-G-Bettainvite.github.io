@@ -83,7 +83,7 @@ const AcceptModal= () => {
   
 
   return (
-    <div className='bg-th-primary-medium text-th-primary-light text-4xl p-20 landscape:px-1 landscape:pt-1 landscape:pb-10 flex flex-col rounded-lg border-2 laptop:border-none'>
+    <div className='bg-th-primary-medium text-th-primary-light text-4xl p-20 landscape:px-1 landscape:pt-1 landscape:pb-10 flex flex-col rounded-lg'>
       <div className='flex flex-col landscape:hidden laptop:landscape:contents'>
       {!success && <>
         <h2 className='keyboard_hide text-9xl'>Cool</h2>

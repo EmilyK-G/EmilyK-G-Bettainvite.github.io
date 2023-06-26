@@ -5,11 +5,7 @@ import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax';
 import Header from './Header';
 import { useRef, useState, useEffect } from 'react';
 
-import Image from 'next/image';
-import icon from '../../../../public/light_icon_transparent.png';
-
 import Event from './Event';
-import EventDate from './EventDate';
 import EventAttendance from './EventAttendance';
 import AcceptModal from './AcceptModal';
 import RejectModal from './RejectModal';
@@ -80,7 +76,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
           </ParallaxLayer>
         {/* <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundImage:'linear-gradient(to bottom, midnight,rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,0.3), rgba(47,72,88,0.3), rgba(47,72,88,0.4))'}} /> */}
         <ParallaxLayer offset={0.8} factor={0.2} speed={0} className='bg-th-primary-dark opacity-50 landscape:bg-transparent' />
-        <ParallaxLayer offset={2} speed={3} style={{ backgroundColor: 'var(--primary-medium)', opacity:'0.5'}} />
+        <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: 'var(--primary-dark)', opacity:'0.7'}} />
         <ParallaxLayer offset={3} speed={0.5} style={{ backgroundColor: 'var(--primary-dark)', opacity:'1'}} />
 
         <ParallaxLayer
@@ -120,16 +116,39 @@ export default function Home({ params: {cardId} }: HomeProps) {
 
         <ParallaxLayer 
           offset={2}
-          speed={5}
+          speed={1}
           onClick={() => {parallax.current.scrollTo(3)}}
-          className='flex justify-center items-center'
-          // style={{
-          //   backgroundImage: 'url(/bettainvite_woman.jpg)',
-          //   backgroundSize: 'cover',
-          //   backgroundPosition:'center',
-          // }}
         >
-          <EventDate />
+          <video className=' h-[36rem] w-96 object-cover my-20 mx-10 rounded-lg' muted autoPlay loop>
+            <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
+          </video>
+        </ParallaxLayer>
+        <ParallaxLayer 
+          offset={2.2}
+          speed={2}
+          onClick={() => {parallax.current.scrollTo(3)}}
+        >
+          <video className=' h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg' muted autoPlay loop>
+            <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
+          </video>
+        </ParallaxLayer>
+        <ParallaxLayer 
+          offset={2.4}
+          speed={3}
+          onClick={() => {parallax.current.scrollTo(3)}}
+        >
+          <video className=' h-[36rem] w-96 object-cover my-20 mx-10 rounded-lg' muted autoPlay loop>
+            <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
+          </video>
+        </ParallaxLayer>
+        <ParallaxLayer 
+          offset={2.6}
+          speed={4}
+          onClick={() => {parallax.current.scrollTo(3)}}
+        >
+          <video className=' h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg' muted autoPlay loop>
+            <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
+          </video>
         </ParallaxLayer>
 
         <ParallaxLayer 
@@ -139,30 +158,6 @@ export default function Home({ params: {cardId} }: HomeProps) {
           className='flex flex-col landscape:flex-row justify-center items-center p-20'
         >
           <EventAttendance openRejectModal={()=>setRejectModalShow(true)} openAcceptModal={()=>setAcceptModalShow(true)}/>
-          {/* <Themes defaultTheme={defaultTheme}/> */}
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={0}
-          factor={4}
-          speed={0}
-          className='flex flex-col justify-evenly items-center p-20 pointer-events-none'
-        >
-          <Image
-            src={icon}
-            alt='icon separator'
-            className='hidden h-32 w-auto z-20 landscape:hidden'
-          />
-          <Image
-            src={icon}
-            alt='icon separator'
-            className='hidden h-32 w-auto z-20 landscape:hidden'
-          />
-          <Image
-            src={icon}
-            alt='icon separator'
-            className='hidden h-32 w-auto z-20 landscape:hidden'
-          />
         </ParallaxLayer>
         
         {acceptModalShow || rejectModalShow 
