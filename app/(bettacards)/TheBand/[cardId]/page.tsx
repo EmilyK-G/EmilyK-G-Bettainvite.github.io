@@ -75,7 +75,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
           </ParallaxLayer>
         {/* <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundImage:'linear-gradient(to bottom, midnight,rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,0.3), rgba(47,72,88,0.3), rgba(47,72,88,0.4))'}} /> */}
         <ParallaxLayer offset={0.8} factor={0.2} speed={0} className='bg-th-primary-dark opacity-50 landscape:bg-transparent' />
-        <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: 'var(--primary-medium)', opacity:'0.3'}} />
+        <ParallaxLayer offset={1} factor={3} speed={1} style={{ backgroundColor: 'var(--primary-medium)', opacity:'0.3'}} />
         <ParallaxLayer offset={3} speed={0.5} style={{ backgroundColor: 'var(--primary-dark)', opacity:'1'}} />
 
         <ParallaxLayer
@@ -116,7 +116,6 @@ export default function Home({ params: {cardId} }: HomeProps) {
         <ParallaxLayer 
           offset={2}
           speed={1}
-          onClick={() => {parallax.current.scrollTo(3)}}
         >
           <video className=' h-[36rem] w-96 object-cover my-20 mx-10 rounded-lg' muted autoPlay loop controls onClick={e=>e.stopPropagation()}>
             <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
@@ -124,8 +123,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
         </ParallaxLayer>
         <ParallaxLayer 
           offset={2.2}
-          speed={2}
-          onClick={() => {parallax.current.scrollTo(3)}}
+          speed={1.5}
         >
           <video className=' h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg' muted autoPlay loop controls onClick={e=>e.stopPropagation()}>
             <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
@@ -133,8 +131,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
         </ParallaxLayer>
         <ParallaxLayer 
           offset={2.4}
-          speed={3}
-          onClick={() => {parallax.current.scrollTo(3)}}
+          speed={2}
         >
           <video className=' h-[36rem] w-96 object-cover my-20 mx-10 rounded-lg' muted autoPlay loop controls onClick={e=>e.stopPropagation()}>
             <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
@@ -142,12 +139,21 @@ export default function Home({ params: {cardId} }: HomeProps) {
         </ParallaxLayer>
         <ParallaxLayer 
           offset={2.6}
-          speed={4}
-          onClick={() => {parallax.current.scrollTo(3)}}
+          speed={2.5}
         >
           <video className=' h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg' muted autoPlay loop controls onClick={e=>e.stopPropagation()}>
             <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
           </video>
+        </ParallaxLayer>
+
+        <ParallaxLayer 
+          offset={2}
+          speed={0}
+          className='flex justify-center items-end'
+        >
+          <div 
+            className='mb-10 landscape:mb-[-0.8rem] h-20 w-20 opacity-20 text-whitesmoke' 
+            onClick={() => {parallax.current.scrollTo(3)}}></div>
         </ParallaxLayer>
 
         <ParallaxLayer 
