@@ -150,10 +150,10 @@ export default function Home({ params: {cardId} }: HomeProps) {
         <ParallaxLayer 
           offset={2}
           speed={0}
-          className='flex justify-center items-end'
+          className='flex justify-center items-end pointer-events-none'
         >
           <div 
-            className='mb-10 landscape:mb-[-0.8rem] h-20 w-20 opacity-20 text-whitesmoke' 
+            className='mb-10 landscape:mb-[-0.8rem] h-20 w-20 opacity-20 text-whitesmoke pointer-events-auto' 
             onClick={() => {parallax.current.scrollTo(3)}}></div>
         </ParallaxLayer>
 
