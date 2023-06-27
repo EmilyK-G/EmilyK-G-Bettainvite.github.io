@@ -117,7 +117,8 @@ export default function Home({ params: {cardId} }: HomeProps) {
           offset={2}
           speed={1}
         >
-          <video className=' h-[36rem] w-96 object-cover my-20 mx-10 rounded-lg' muted autoPlay loop controls onClick={e=>e.stopPropagation()}>
+          <div className=' h-[36rem] w-96 object-cover my-20 mx-10 rounded-lg bg-blue bg-opacity-20 absolute hover:hidden'></div>
+          <video className=' h-[36rem] w-96 object-cover my-20 mx-10 rounded-lg hover:border-x-2 border-blue' muted autoPlay loop controls>
             <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
           </video>
         </ParallaxLayer>
@@ -125,23 +126,26 @@ export default function Home({ params: {cardId} }: HomeProps) {
           offset={2.2}
           speed={1.5}
         >
-          <video className=' h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg' muted autoPlay loop controls onClick={e=>e.stopPropagation()}>
-            <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
+          <div className=' h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg bg-blue bg-opacity-20 absolute left-[56%] hover:hidden'></div>
+          <video className=' h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg hover:border-x-2 border-blue' muted autoPlay loop controls>
+            <source src='/media/MissaPianoVideo.mp4' type='video/mp4'/>
           </video>
         </ParallaxLayer>
         <ParallaxLayer 
           offset={2.4}
           speed={2}
         >
-          <video className=' h-[36rem] w-96 object-cover my-20 mx-10 rounded-lg' muted autoPlay loop controls onClick={e=>e.stopPropagation()}>
-            <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
+          <div className=' h-[36rem] w-96 object-cover my-20 mx-10 rounded-lg bg-blue bg-opacity-20 absolute hover:hidden'></div>
+          <video className=' h-[36rem] w-96 object-cover my-20 mx-10 rounded-lg hover:border-x-2 border-blue' muted autoPlay loop controls>
+            <source src='/media/LissVoiceVideo.mp4' type='video/mp4'/>
           </video>
         </ParallaxLayer>
         <ParallaxLayer 
           offset={2.6}
           speed={2.5}
         >
-          <video className=' h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg' muted autoPlay loop controls onClick={e=>e.stopPropagation()}>
+          <div className=' h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg bg-blue bg-opacity-20 absolute left-[56%] hover:hidden'></div>
+          <video className=' h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg hover:border-x-2 border-blue' muted autoPlay loop controls>
             <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
           </video>
         </ParallaxLayer>
