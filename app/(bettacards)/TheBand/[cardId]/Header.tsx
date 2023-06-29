@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface headerProps {
-  lightMode: boolean
+  lightMode: null|boolean
 }
 
 const Header = ({lightMode}:headerProps) => {

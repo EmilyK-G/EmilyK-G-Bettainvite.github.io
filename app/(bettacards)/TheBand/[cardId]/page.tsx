@@ -35,7 +35,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
 
   const [isInvite, setIsInvite] = useState<null|boolean>(null);
   const [eventName, setEventName] = useState<null|string>(null);
-  const [lightMode, setLightMode] = useState<boolean>(false);
+  const [lightMode, setLightMode] = useState<null|boolean>(null);
  
   const [mounted, setMounted] = useState<boolean>(false);
 
@@ -200,8 +200,8 @@ export default function Home({ params: {cardId} }: HomeProps) {
             <Image
               src={stageLight}
               alt='ilumination'
-              className='bg-contain absolute top-1 right-1 pointer-events-auto h-60 w-60'
-              onClick={(e)=>{e.stopPropagation(); setLightMode(!lightMode)}} />
+              className={'bg-contain absolute top-1 right-1 pointer-events-auto h-60 w-60 ' + (lightMode == null ? 'animate-pulse' : '')}
+              onClick={(e)=>{e.stopPropagation(); setLightMode(null ? true : !lightMode)}} />
         </ParallaxLayer>
         
         {acceptModalShow || rejectModalShow 
