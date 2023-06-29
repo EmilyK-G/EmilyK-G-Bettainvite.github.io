@@ -12,11 +12,13 @@ import AcceptModal from './AcceptModal';
 import RejectModal from './RejectModal';
 import MyModal from '../../../MyModal';
 
-import Head from 'next/head';
 import { eventsList } from '../../../Invites/events';
-import Background from './background';
 import LandscapeScreen from '../../../LandscapeScreen';
-import stageLight from '../../../../public/ilumination/stage-light.png'
+import stageLight from '../../../../public/ilumination/stage-light.png';
+
+import bgrDark from '../../../../public/backgrounds/band-bgr.png';
+
+import bgrLight from '../../../../public/backgrounds/band-light.png';
 
 type HomeProps = {
   params: {
@@ -33,6 +35,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
 
   const [isInvite, setIsInvite] = useState<null|boolean>(null);
   const [eventName, setEventName] = useState<null|string>(null);
+  const [lightMode, setLightMode] = useState<boolean>(false);
  
   const [mounted, setMounted] = useState<boolean>(false);
 
@@ -59,10 +62,10 @@ export default function Home({ params: {cardId} }: HomeProps) {
   )
 
   return (
-    <ThemeProvider forcedTheme='band'>
+    <ThemeProvider forcedTheme={lightMode ? 'band-light' : 'band'}>
 
       <div className=' h-screen w-screen hidden landscape:flex'><LandscapeScreen /></div>
-      
+    
       <Parallax ref={parallax} pages={4} className='landscape:hidden'>
         <ParallaxLayer
           offset={0}
@@ -73,11 +76,28 @@ export default function Home({ params: {cardId} }: HomeProps) {
             zIndex:'-1'
           }}
         >
-            <Background />
-          </ParallaxLayer>
+          <Image
+            src={lightMode ? bgrLight : bgrDark}
+            alt='background image'
+            sizes='full'
+            className='bg-contain bg-repeat -z-0'
+          />
+          <Image
+            src={lightMode ? bgrLight : bgrDark}
+            alt='background image'
+            sizes='full'
+            className='bg-contain bg-repeat -z-0'
+          />
+          <Image
+            src={lightMode ? bgrLight : bgrDark}
+            alt='background image'
+            sizes='full'
+            className='bg-contain bg-repeat -z-0'
+          />
+        </ParallaxLayer>
         {/* <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundImage:'linear-gradient(to bottom, midnight,rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,0.3), rgba(47,72,88,0.3), rgba(47,72,88,0.4))'}} /> */}
-        <ParallaxLayer offset={0.8} factor={0.2} speed={0} className='bg-th-primary-dark opacity-50 landscape:bg-transparent' />
-        <ParallaxLayer offset={1} factor={3} speed={1} style={{ backgroundColor: 'var(--primary-medium)', opacity:'0.3'}} />
+        <ParallaxLayer offset={0.8} factor={0.2} speed={0} className='bg-th-primary-dark' />
+        <ParallaxLayer offset={1} factor={3} speed={1} style={{ backgroundColor: 'var(--primary-medium)', opacity:'0.4'}} />
         <ParallaxLayer offset={3} speed={0.5} style={{ backgroundColor: 'var(--primary-dark)', opacity:'1'}} />
 
         <ParallaxLayer
@@ -86,17 +106,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
           onClick={() => {parallax.current.scrollTo(1)}}
           className='flex justify-center items-center px-20 landscape:px-0'
         >
-          <Header />
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={0}
-          speed={-1}
-          className='pointer-events-none'>
-            <Image
-              src={stageLight}
-              alt='ilumination'
-              className='bg-contain absolute top-1 right-1 pointer-events-auto h-60 w-60' />
+          <Header lightMode={lightMode}/>
         </ParallaxLayer>
 
         {/* <ParallaxLayer 
@@ -122,7 +132,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
           onClick={() => {parallax.current.scrollTo(2)}}
           className='flex justify-center items-center'
         >
-          <Event bettacardId={cardId} eventName={eventName}/>
+          <Event bettacardId={cardId} eventName={eventName} lightMode={lightMode}/>
         </ParallaxLayer>
 
         <ParallaxLayer 
@@ -181,6 +191,17 @@ export default function Home({ params: {cardId} }: HomeProps) {
           className='flex flex-col landscape:flex-row justify-center items-center p-20'
         >
           <EventAttendance openRejectModal={()=>setRejectModalShow(true)} openAcceptModal={()=>setAcceptModalShow(true)}/>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={0}
+          speed={-1}
+          className='pointer-events-none'>
+            <Image
+              src={stageLight}
+              alt='ilumination'
+              className='bg-contain absolute top-1 right-1 pointer-events-auto h-60 w-60'
+              onClick={(e)=>{e.stopPropagation(); setLightMode(!lightMode)}} />
         </ParallaxLayer>
         
         {acceptModalShow || rejectModalShow 

@@ -24,7 +24,7 @@ const About = () => {
 
         <button 
           onClick={()=> router.back()}
-          className="text-4xl landscape:text-3xl mt-20 landscape:mt-0 pb-10 font-mono font-bold text-gray underline landscape:self-end">
+          className="text-4xl landscape:text-3xl mt-20 landscape:mt-0 pb-10 font-mono font-bold text-th-accent-light underline landscape:self-end">
           {`back`}
         </button>
         

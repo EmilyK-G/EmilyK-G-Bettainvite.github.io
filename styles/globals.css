@@ -116,13 +116,26 @@
   }
 
   [data-theme='band'] {
-    --background: theme('colors.blue');
+    --background: theme('colors.black');
     --background-image: url(../public/backgrounds/band-bgr.png);
 
     --static-1: url(../public/icons/bettainvite-sphere.png);
 
     --primary-dark: theme('colors.black');
     --primary-medium: theme('colors.blue');
+    --primary-light: theme('colors.lightcyan');
+
+    --accent-dark: theme('colors.darkchocolate');
+    --accent-light: theme('colors.lightgray');
+  }
+  [data-theme='band-light'] {
+    --background: theme('colors.champagne');
+    --background-image: url(../public/backgrounds/band-light.png);
+
+    --static-1: url(../public/icons/bettainvite-sphere.png);
+
+    --primary-dark: theme('colors.gray');
+    --primary-medium: theme('colors.gray');
     --primary-light: theme('colors.lightcyan');
 
     --accent-dark: theme('colors.darkchocolate');
