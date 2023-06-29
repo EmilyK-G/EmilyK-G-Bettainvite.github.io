@@ -4,6 +4,7 @@ import { ThemeProvider } from 'next-themes';
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax';
 import Header from './Header';
 import { useRef, useState, useEffect } from 'react';
+import Image from 'next/image';
 
 import Event from './Event';
 import EventAttendance from './EventAttendance';
@@ -15,6 +16,7 @@ import Head from 'next/head';
 import { eventsList } from '../../../Invites/events';
 import Background from './background';
 import LandscapeScreen from '../../../LandscapeScreen';
+import stageLight from '../../../../public/ilumination/stage-light.png'
 
 type HomeProps = {
   params: {
@@ -87,7 +89,17 @@ export default function Home({ params: {cardId} }: HomeProps) {
           <Header />
         </ParallaxLayer>
 
-        <ParallaxLayer 
+        <ParallaxLayer
+          offset={0}
+          speed={-1}
+          className='pointer-events-none'>
+            <Image
+              src={stageLight}
+              alt='ilumination'
+              className='bg-contain absolute top-1 right-1 pointer-events-auto h-60 w-60' />
+        </ParallaxLayer>
+
+        {/* <ParallaxLayer 
           offset={0}
           speed={-1}
           className='flex justify-center items-end z-10'
@@ -102,7 +114,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
             className='mb-10 landscape:mb-[-0.8rem] h-20 w-20'
             onLoadedData={()=>console.log('loading image')}
           ></div>
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
         <ParallaxLayer 
           offset={1}
