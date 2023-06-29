@@ -188,9 +188,9 @@ export default function Home({ params: {cardId} }: HomeProps) {
           offset={3}
           speed={3}
           onClick={() => {parallax.current.scrollTo(0)}}
-          className='flex flex-col landscape:flex-row justify-center items-center p-20'
+          className='flex flex-col justify-center items-center p-20'
         >
-          <EventAttendance openRejectModal={()=>setRejectModalShow(true)} openAcceptModal={()=>setAcceptModalShow(true)}/>
+          <EventAttendance lightMode={lightMode} openAcceptModal={()=>setAcceptModalShow(true)}/>
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -200,25 +200,19 @@ export default function Home({ params: {cardId} }: HomeProps) {
             <Image
               src={stageLight}
               alt='ilumination'
-              className={'bg-contain absolute top-1 right-1 pointer-events-auto h-60 w-60 ' + (lightMode == null ? 'animate-pulse' : '')}
+              className={'bg-contain absolute top-1 right-1 pointer-events-auto h-60 w-60 animate-pulse'}
               onClick={(e)=>{e.stopPropagation(); setLightMode(null ? true : !lightMode)}} />
         </ParallaxLayer>
         
-        {acceptModalShow || rejectModalShow 
-        ? <ParallaxLayer 
+        {acceptModalShow ? 
+          <ParallaxLayer 
           sticky={{ start: 0, end: 3 }}
           speed={0}
           className='flex justify-start items-end'
         >
-          {acceptModalShow
-          && <MyModal
+          {<MyModal
               onClose={() => setAcceptModalShow(false)}>
                   <AcceptModal />
-          </MyModal>}
-          {rejectModalShow 
-          && <MyModal
-              onClose={() => setRejectModalShow(false)}>
-                  <RejectModal />
           </MyModal>}
         </ParallaxLayer>
         : <></>}

@@ -1,6 +1,11 @@
 import React from 'react';
 
-const EventAttendance = (props: any) => {
+interface eventAttendanceProps {
+    openAcceptModal: any
+    lightMode: null|boolean
+}
+
+const EventAttendance = (props: eventAttendanceProps) => {
 
     const handleAccept = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{
         e.preventDefault();
@@ -8,14 +13,8 @@ const EventAttendance = (props: any) => {
         props.openAcceptModal()
     }
 
-    const handleReject = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{
-        e.preventDefault();
-        e.stopPropagation();
-        props.openRejectModal()
-    }
-
   return (
-    <div className='flex flex-col items-center justify-around text-th-accent-light p-10 text-center h-full'>
+    <div className={'flex flex-col items-center justify-around p-10 text-center h-full text-th-accent-light'}>
         <p className="text-8xl landscape:text-3xl">Contact us</p>
         <div className='h-3/6 flex flex-col justify-evenly font-mono'>
             <p className='text-4xl'>theband_email@gmail.com</p>
@@ -24,7 +23,7 @@ const EventAttendance = (props: any) => {
         </div>
         <div className='hidden text-5xl landscape:flex space-x-2'>...</div>
         <button
-            className='myBtn w-full landscape:w-80 mt-10 m-2 text-5xl landscape:text-xl landscape:h-14'
+            className='myBtn w-full mt-10 m-2 text-5xl'
             onClick={e=>handleAccept(e)}>
             Ask something
         </button>

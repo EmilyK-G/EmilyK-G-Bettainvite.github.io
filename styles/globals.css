@@ -134,7 +134,7 @@
 
     --static-1: url(../public/icons/bettainvite-sphere.png);
 
-    --primary-dark: theme('colors.gray');
+    --primary-dark: theme('colors.midnight');
     --primary-medium: theme('colors.gray');
     --primary-light: theme('colors.lightcyan');
 
