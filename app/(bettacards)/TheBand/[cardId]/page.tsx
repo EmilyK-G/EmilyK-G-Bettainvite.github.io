@@ -96,7 +96,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
           />
         </ParallaxLayer>
         {/* <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundImage:'linear-gradient(to bottom, midnight,rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,0.3), rgba(47,72,88,0.3), rgba(47,72,88,0.4))'}} /> */}
-        <ParallaxLayer offset={0.8} factor={0.2} speed={0} className='bg-th-primary-dark' />
+        {/* <ParallaxLayer offset={0.8} factor={0.2} speed={0} className='bg-th-primary-dark' /> */}
         <ParallaxLayer offset={1} factor={3} speed={1} style={{ backgroundColor: 'var(--primary-medium)', opacity:'0.4'}} />
         <ParallaxLayer offset={3} speed={0.5} style={{ backgroundColor: 'var(--primary-dark)', opacity:'1'}} />
 
