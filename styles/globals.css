@@ -117,7 +117,6 @@
 
   [data-theme='band'] {
     --background: theme('colors.black');
-    --background-image: url(../public/backgrounds/band-bgr.png);
 
     --static-1: url(../public/icons/bettainvite-sphere.png);
 
@@ -130,7 +129,6 @@
   }
   [data-theme='band-light'] {
     --background: theme('colors.champagne');
-    --background-image: url(../public/backgrounds/band-light.png);
 
     --static-1: url(../public/icons/bettainvite-sphere.png);
 
@@ -140,6 +138,30 @@
 
     --accent-dark: theme('colors.darkchocolate');
     --accent-light: theme('colors.lightgray');
+  }
+  [data-theme='garnet'] {
+    --background: theme('colors.garnet');
+
+    --static-1: url(../public/icons/bettainvite-sphere.png);
+
+    --primary-dark: theme('colors.darkchocolate');
+    --primary-medium: theme('colors.garnet');
+    --primary-light: theme('colors.tan');
+
+    --accent-dark: theme('colors.black');
+    --accent-light: theme('colors.whitesmoke');
+  }
+  [data-theme='garnet-light'] {
+    --background: theme('colors.tan');
+
+    --static-1: url(../public/icons/bettainvite-sphere.png);
+
+    --primary-dark: theme('colors.garnet');
+    --primary-medium: theme('colors.ivory');
+    --primary-light: theme('colors.pinkishwhite');
+
+    --accent-dark: theme('colors.black');
+    --accent-light: theme('colors.whitesmoke');
   }
   /* for reference */
   /* [data-theme='pink'] {

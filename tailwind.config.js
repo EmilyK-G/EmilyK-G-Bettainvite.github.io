@@ -15,6 +15,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--dancing-script)', ...fontFamily.sans],
+        cinzel: ['var(--cinzel)', ...fontFamily.serif]
       },
     },
     colors: {
@@ -40,9 +41,11 @@ module.exports = {
       'lightgray':'#D8E5E9',
       'mateblue':'#0052A1',
       'matecherry':'#691c31',
+      'garnet':'#9A2A2A',
       'rose':'#FFD0D0',
       'lightpink':'#edcddd',
       'darkbrown':'#2d1e17',
+      'brown':'#57423F',
       'burntorange':'#673301',
       'mustard':'#D5A418',
       'yellow':'#F9F871',

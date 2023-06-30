@@ -54,5 +54,11 @@ export const eventsList = [
         name: 'TheBand',
         theme: 'band',
         bgr: 'band-bgr.png'
+    },
+    {
+        eventId:'26',
+        name: 'Ingrid&Ricardo',
+        theme: 'garnet',
+        bgr: ''
     }
 ]
