@@ -14,6 +14,7 @@ import MyModal from '../../../MyModal';
 import { eventsList } from '../../../Invites/events';
 import LandscapeScreen from '../../../LandscapeScreen';
 import stageLight from '../../../../public/ilumination/stage-light.png';
+import pingImg from '../../../../public/icons/press-icon.png';
 
 import bgrDark from '../../../../public/backgrounds/band-bgr.png';
 
@@ -30,12 +31,12 @@ export default function Home({ params: {cardId} }: HomeProps) {
   const parallax = useRef<IParallax>(null!);
 
   const [acceptModalShow, setAcceptModalShow] = useState<boolean>(false);
-  const [rejectModalShow, setRejectModalShow] = useState<boolean>(false);
 
   const [isInvite, setIsInvite] = useState<null|boolean>(null);
   const [eventName, setEventName] = useState<null|string>(null);
   const [lightMode, setLightMode] = useState<null|boolean>(null);
- 
+  const [ping, setPing] = useState<boolean>(false);
+
   const [mounted, setMounted] = useState<boolean>(false);
 
   useEffect(()=>{
@@ -52,6 +53,8 @@ export default function Home({ params: {cardId} }: HomeProps) {
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), []);
 
+  useEffect(()=>{setTimeout(()=>setPing(true), 3000)}, [])
+
   if (!mounted) return null
   if (!isInvite) return (
     <div className="flex flex-col justify-center items-center text-3xl h-screen">
@@ -65,7 +68,13 @@ export default function Home({ params: {cardId} }: HomeProps) {
 
       <div className=' h-screen w-screen hidden landscape:flex  overflow-hidden'><LandscapeScreen /></div>
     
-      <Parallax ref={parallax} pages={4} className='landscape:hidden' onTouchMove={()=>parallax.current.scrollTo(parallax.current.offset)}>
+      <Parallax 
+        ref={parallax} 
+        pages={4} 
+        className='landscape:hidden' 
+        onTouchMove={()=>{parallax.current.scrollTo(parallax.current.offset); setPing(true)}} 
+        onClick={()=>setPing(false)}>
+
         <ParallaxLayer
           offset={0}
           speed={0}
@@ -197,14 +206,21 @@ export default function Home({ params: {cardId} }: HomeProps) {
         <ParallaxLayer
           offset={0}
           speed={-1}
-          className='pointer-events-none'>
+          className='pointer-events-none grid grid-cols-3 grid-rows-4'>
             <Image
               src={stageLight}
               alt='ilumination'
-              className={'bg-contain absolute top-1 right-1 pointer-events-auto h-60 w-60 animate-pulse'}
-              onClick={(e)=>{e.stopPropagation(); setLightMode(null ? true : !lightMode)}} />
+              className={'bg-contain absolute top-1 right-1 pointer-events-auto h-60 w-60'}
+              onClick={(e)=>{e.stopPropagation(); setLightMode(null ? true : !lightMode)}} 
+            />
+            <div className={' animate-pulse text-5xl text-th-accent-light absolute top-10 right-24' + (lightMode ? ' hidden' : '')}>{`Change lighting >>`}</div>
+            <Image
+              src={pingImg}
+              alt='ping image'
+              className={'bg-contain animate-pulse text-th-primary-medium h-40 w-40 opacity-10 row-start-3 col-start-2 place-self-center ' + (ping ? '' : ' hidden')}
+            />
         </ParallaxLayer>
-        
+
         {acceptModalShow ? 
           <ParallaxLayer 
           sticky={{ start: 0, end: 3 }}
