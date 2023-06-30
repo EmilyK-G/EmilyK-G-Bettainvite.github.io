@@ -12,7 +12,7 @@ const About = () => {
     <div className='m-20 flex flex-col content-between items-center h-full'>
         <div className='text-th-accent-light p-5 flex-1 flex flex-col items-center justify-evenly'>
             <div>
-              <p className='text-8xl landscape:text-5xl font-thin'>The Band <span className='text-4xl'>-behind scenes</span></p>
+              <p className='text-8xl landscape:text-5xl font-thin'>The Band <span className='text-6xl'>-behind scenes</span></p>
               <hr className='mb-14 mt-24'/>
             </div>
             <div className='font-mono font-thin indent-2 leading-relaxed opacity-70 text-5xl'>

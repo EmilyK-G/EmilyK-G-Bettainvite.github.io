@@ -217,7 +217,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
             <Image
               src={pingImg}
               alt='ping image'
-              className={'bg-contain animate-pulse text-th-primary-medium h-40 w-40 opacity-10 row-start-3 col-start-2 place-self-center ' + (ping ? '' : ' hidden')}
+              className={'bg-contain animate-pulse text-th-primary-medium h-80 w-80 opacity-10 row-start-3 col-start-2 place-self-center brightness-200 ' + (ping ? '' : ' hidden')}
             />
         </ParallaxLayer>
 
