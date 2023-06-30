@@ -9,7 +9,6 @@ import Image from 'next/image';
 import Event from './Event';
 import EventAttendance from './EventAttendance';
 import AcceptModal from './AcceptModal';
-import RejectModal from './RejectModal';
 import MyModal from '../../../MyModal';
 
 import { eventsList } from '../../../Invites/events';
@@ -64,9 +63,9 @@ export default function Home({ params: {cardId} }: HomeProps) {
   return (
     <ThemeProvider forcedTheme={lightMode ? 'band-light' : 'band'}>
 
-      <div className=' h-screen w-screen hidden landscape:flex'><LandscapeScreen /></div>
+      <div className=' h-screen w-screen hidden landscape:flex  overflow-hidden'><LandscapeScreen /></div>
     
-      <Parallax ref={parallax} pages={4} className='landscape:hidden'>
+      <Parallax ref={parallax} pages={4} className='landscape:hidden' onTouchMove={()=>parallax.current.scrollTo(parallax.current.offset)}>
         <ParallaxLayer
           offset={0}
           speed={0}
@@ -80,7 +79,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
             src={lightMode ? bgrLight : bgrDark}
             alt='background image'
             sizes='full'
-            className='bg-contain bg-repeat -z-0'
+            className='bg-contain bg-repeat -z-0 '
           />
           <Image
             src={lightMode ? bgrLight : bgrDark}
@@ -134,13 +133,15 @@ export default function Home({ params: {cardId} }: HomeProps) {
         >
           <Event bettacardId={cardId} eventName={eventName} lightMode={lightMode}/>
         </ParallaxLayer>
+        
+        <ParallaxLayer offset={2} onClick={() => {parallax.current.scrollTo(3)}}/>
 
         <ParallaxLayer 
           offset={2}
           speed={1}
           className={'pointer-events-none'}
         >
-          <video className=' pointer-events-auto h-[36rem] w-96 object-cover my-20 mx-10 rounded-lg hover:border-x-2 border-blue' muted autoPlay loop controls>
+          <video className=' pointer-events-auto h-[36rem] w-96 object-cover my-20 mx-10 rounded-lg hover:border-x-2 border-blue' onClick={e=>e.stopPropagation()} muted autoPlay loop controls>
             <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
           </video>
         </ParallaxLayer>
@@ -149,7 +150,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
           speed={1.5}
           className={'pointer-events-none'}
         >
-          <video className=' pointer-events-auto h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg hover:border-x-2 border-blue' muted autoPlay loop controls>
+          <video className=' pointer-events-auto h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg hover:border-x-2 border-blue' onClick={e=>e.stopPropagation()} muted autoPlay loop controls>
             <source src='/media/MissaPianoVideo.mp4' type='video/mp4'/>
           </video>
         </ParallaxLayer>
@@ -158,7 +159,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
           speed={2}
           className={'pointer-events-none'}
         >
-          <video className=' pointer-events-auto h-[36rem] w-96 object-cover my-20 mx-10 rounded-lg hover:border-x-2 border-blue' muted autoPlay loop controls>
+          <video className=' pointer-events-auto h-[36rem] w-96 object-cover my-20 mx-10 rounded-lg hover:border-x-2 border-blue' onClick={e=>e.stopPropagation()} muted autoPlay loop controls>
             <source src='/media/LissVoiceVideo.mp4' type='video/mp4'/>
           </video>
         </ParallaxLayer>
@@ -168,12 +169,12 @@ export default function Home({ params: {cardId} }: HomeProps) {
           className={'pointer-events-none'}
         >
           {/* <div className=' h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg bg-lightcyan bg-opacity-10 absolute left-[56%] hover:hidden'></div> */}
-          <video className=' pointer-events-auto h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg hover:border-x-2 border-blue' muted autoPlay loop controls>
+          <video className=' pointer-events-auto h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg hover:border-x-2 border-blue' onClick={e=>e.stopPropagation()} muted autoPlay loop controls>
             <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
           </video>
         </ParallaxLayer>
 
-        <ParallaxLayer 
+        {/* <ParallaxLayer 
           offset={2.9}
           speed={0}
           factor={0.1}
@@ -182,7 +183,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
           <div 
             className='mb-10 landscape:mb-[-0.8rem] h-20 w-20 pointer-events-auto'
             onClick={() => {parallax.current.scrollTo(3)}}></div>
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
         <ParallaxLayer 
           offset={3}
