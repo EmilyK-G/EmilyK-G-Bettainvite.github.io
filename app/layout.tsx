@@ -24,7 +24,7 @@ export default function RootLayout({
           <meta httpEquiv='ScreenOrientation' content='autoRotate:disabled'/>
           <title>Lightvite</title>
         </head>
-        <body className='mb-0 bg-th-primary-medium'>
+        <body className='mb-0 bg-th-primary-dark'>
             {children}
         </body>
       </html>
