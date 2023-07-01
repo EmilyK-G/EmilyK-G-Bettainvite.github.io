@@ -26,13 +26,15 @@ type HomeProps = {
 export default function Home({ params: {cardId} }: HomeProps) {
 
   const parallax = useRef<IParallax>(null!);
+  const videoRef = useRef<HTMLVideoElement>(null!);
 
   const [acceptModalShow, setAcceptModalShow] = useState<boolean>(false);
 
   const [isInvite, setIsInvite] = useState<null|boolean>(null);
   const [eventName, setEventName] = useState<null|string>(null);
   const [lightMode, setLightMode] = useState<null|boolean>(null);
-  const [ping, setPing] = useState<boolean>(false);
+  // const [ping, setPing] = useState<boolean>(false);
+  const [isPlaying, setIsPlaying]=useState<boolean>(true)
 
   const [mounted, setMounted] = useState<boolean>(false);
 
@@ -50,8 +52,8 @@ export default function Home({ params: {cardId} }: HomeProps) {
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), []);
 
-  useEffect(()=>{setTimeout(()=>setPing(true), 10000)}, [])
-  useEffect(()=>{setTimeout(()=>setPing(false), 4000)}, [ping])
+  // useEffect(()=>{setTimeout(()=>setPing(true), 10000)}, [])
+  // useEffect(()=>{setTimeout(()=>setPing(false), 4000)}, [ping])
 
   if (!mounted) return null
   if (!isInvite) return (
@@ -70,8 +72,9 @@ export default function Home({ params: {cardId} }: HomeProps) {
         ref={parallax} 
         pages={4} 
         className='landscape:hidden' 
-        onTouchMove={()=>{parallax.current.scrollTo(parallax.current.offset); setPing(true)}} 
-        onClick={()=>setPing(false)}>
+        onTouchMove={()=>{parallax.current.stop()}} //; setPing(true) 
+        // onClick={()=>setPing(false)}
+        >
 
         <ParallaxLayer
           offset={0}
@@ -82,7 +85,15 @@ export default function Home({ params: {cardId} }: HomeProps) {
             zIndex:'-1'
           }}
         >
-          <video className=' h-full w-full object-cover' onClick={e=>e.stopPropagation()} muted autoPlay loop>
+          <video 
+            ref={videoRef} 
+            className=' h-full w-full object-cover' 
+            onClick={e=>{e.currentTarget.pause(); e.stopPropagation()}}
+            onPause={()=>setIsPlaying(false)}
+            onPlay={()=>setIsPlaying(true)} 
+            muted 
+            autoPlay 
+            loop>
             <source src='/media/aniversary-video-bgr.mp4' type='video/mp4'/>
           </video>
         </ParallaxLayer>
@@ -97,6 +108,15 @@ export default function Home({ params: {cardId} }: HomeProps) {
           className='flex justify-center items-center px-20'
         >
           {/* <Header lightMode={lightMode}/> */}
+        </ParallaxLayer>
+          
+        <ParallaxLayer 
+          offset={0} 
+          factor={1} 
+          speed={0} 
+          className='flex justify-center items-end pointer-events-none'
+          onClick={()=>isPlaying ? videoRef.current.pause() : videoRef.current.play()}>
+            <div className=' pb-20 text-6xl text-th-primary-light animate-pulse pointer-events-auto'>{isPlaying ? `Pause ||` : `Play >>`}</div>
         </ParallaxLayer>
 
         <ParallaxLayer 
@@ -125,7 +145,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
           className={'pointer-events-none'}
         >
           <video className=' pointer-events-auto h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg hover:border-x-2 border-blue' onClick={e=>e.stopPropagation()} muted autoPlay loop controls>
-            <source src='/media/MissaPianoVideo.mp4' type='video/mp4'/>
+            <source src='/media/Rigail-video.mp4' type='video/mp4'/>
           </video>
         </ParallaxLayer>
         <ParallaxLayer 
@@ -134,7 +154,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
           className={'pointer-events-none'}
         >
           <video className=' pointer-events-auto h-[36rem] w-96 object-cover my-20 mx-10 rounded-lg hover:border-x-2 border-blue' onClick={e=>e.stopPropagation()} muted autoPlay loop controls>
-            <source src='/media/LissVoiceVideo.mp4' type='video/mp4'/>
+            <source src='/media/Ripalda-video.mp4' type='video/mp4'/>
           </video>
         </ParallaxLayer>
         <ParallaxLayer 
@@ -167,11 +187,11 @@ export default function Home({ params: {cardId} }: HomeProps) {
               onClick={(e)=>{e.stopPropagation(); setLightMode(null ? true : !lightMode)}} 
             />
             <div className={' animate-pulse text-5xl text-th-accent-light absolute top-10 right-24' + (lightMode ? ' hidden' : '')}>{`Change lighting >>`}</div>
-            <Image
+            {/* <Image
               src={pingImg}
               alt='ping image'
               className={'bg-contain animate-pulse text-th-primary-medium h-80 w-80 opacity-10 row-start-3 col-start-2 place-self-center brightness-200 ' + (ping ? '' : ' hidden')}
-            />
+            /> */}
         </ParallaxLayer>
 
         {acceptModalShow ? 

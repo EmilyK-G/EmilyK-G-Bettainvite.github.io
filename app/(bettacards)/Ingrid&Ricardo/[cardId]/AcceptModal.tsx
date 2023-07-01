@@ -83,7 +83,7 @@ const AcceptModal= () => {
   
 
   return (
-    <div className='bg-th-primary-dark text-th-primary-light text-5xl p-20 flex flex-col rounded-lg'>
+    <div className='bg-th-primary-medium text-th-accent-light text-5xl p-20 flex flex-col rounded-lg'>
       <div className='flex flex-col'>
       {!success && <>
         <p className='font-serif mt-8'>Escribe tu mensaje y lo enviaremos por tí</p>

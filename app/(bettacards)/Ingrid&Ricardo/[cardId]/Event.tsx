@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 function Event(props:any) {
   return (
-    <div className={"flex flex-col items-center justify-start h-full w-full text-center font-cinzel" + (props.lightMode ? ' text-th-primary-dark' : ' text-th-accent-light')}>
-      <div className='flex flex-col items-center justify-around p-10 h-full'>
-        <p className='text-7xl leading-normal'>{`"Hay compañeros listos para destrozarse el uno al otro, pero hay un amigo que se apega más que un hermano."`}</p>
+    <div className="flex flex-col items-center justify-start h-full w-full text-center font-cinzel">
+      <div className={'flex flex-col items-center justify-around p-10 h-full' + (props.lightMode ? ' text-th-primary-dark' : ' text-th-accent-light')}>
+        <p className={'text-7xl leading-normal '}>{`"Hay compañeros listos para destrozarse el uno al otro, pero hay un amigo que se apega más que un hermano."`}</p>
         <p className='text-4xl text-right self-end'>-Provervios 18:24</p>
-        <p className={'text-7xl font-sans leading-tight ' +  (props.lightMode ? ' text-th-accent-dark' : '')}>Unas palabras de sus amigos de Ecuador, que aunque están lejos, los recuerdan con cariño ♥ ...</p>
+        <p className={'text-7xl font-sans leading-tight ' +  (props.lightMode ? ' text-th-accent-dark' : ' text-th-primary-light')}>Unas palabras de sus amigos de Ecuador, que aunque están lejos, los recuerdan con cariño ♥ ...</p>
         {/* <Link 
           href={"/" + props.eventName + "/" + props.bettacardId + "/about"}
           onClick={(e)=> e.stopPropagation()}
