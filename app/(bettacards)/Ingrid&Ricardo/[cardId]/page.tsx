@@ -34,7 +34,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
   const [eventName, setEventName] = useState<null|string>(null);
   const [lightMode, setLightMode] = useState<null|boolean>(null);
   // const [ping, setPing] = useState<boolean>(false);
-  const [isPlaying, setIsPlaying]=useState<boolean>(true)
+  const [isPlaying, setIsPlaying]=useState<null|boolean>(null)
 
   const [mounted, setMounted] = useState<boolean>(false);
 
@@ -79,9 +79,8 @@ export default function Home({ params: {cardId} }: HomeProps) {
         <ParallaxLayer
           offset={0}
           speed={0}
-          factor={4}
+          factor={1}
           style={{
-            height: '100vh',
             zIndex:'-1'
           }}
         >
