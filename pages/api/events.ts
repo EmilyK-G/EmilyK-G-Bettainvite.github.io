@@ -59,6 +59,6 @@ export const eventsList = [
         eventId:'26',
         name: 'Ingrid&Ricardo',
         theme: 'garnet',
-        bgr: ''
+        bgr: 'curtain-bgr.jpg'
     }
 ]

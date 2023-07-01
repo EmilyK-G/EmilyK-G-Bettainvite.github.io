@@ -12,11 +12,12 @@ interface eventsListProps {
 const HomePage = () => {
   
   return (
-    <div className='text-5xl h-screen flex flex-col justify-center items-center'>
-        {/* <AblyWs /> */}
+    <div className='text-5xl w-screen h-screen flex flex-col justify-center items-center py-10'>
+      <div className='w-full h-full max-w-[768px]'>
         {eventsList && eventsList.map((event) => (
           <WebsitesList event={event} key={event.eventId}/>
         ))}
+      </div>
     </div>
   )
 }

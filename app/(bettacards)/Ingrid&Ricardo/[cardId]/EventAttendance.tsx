@@ -14,7 +14,7 @@ const EventAttendance = (props: eventAttendanceProps) => {
     }
 
   return (
-    <div className={'flex flex-col items-center justify-around p-10 text-center h-full text-th-accent-light font-cinzel'}>
+    <div className={'flex flex-col items-center justify-around p-10 text-center h-full font-cinzel' + (props.lightMode ? ' text-th-accent-dark' : ' text-th-accent-light')}>
         <p className="text-6xl">Con la participación de:</p>
         <div className='h-3/6 flex flex-col justify-evenly'>
             <p className='text-5xl'>Darlene y Pepe Torres</p>
