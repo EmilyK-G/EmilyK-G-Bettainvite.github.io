@@ -115,7 +115,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
           speed={0} 
           className='flex justify-center items-end pointer-events-none'
           onClick={()=>isPlaying ? videoRef.current.pause() : videoRef.current.play()}>
-            <div className=' pb-20 text-6xl text-th-primary-light animate-pulse pointer-events-auto'>{isPlaying ? `Pause ||` : `Play >>`}</div>
+            <div className=' pb-20 text-8xl text-th-accent-light opacity-90 animate-pulse pointer-events-auto'>{isPlaying ? `Pause ||` : `Play >>`}</div>
         </ParallaxLayer>
 
         <ParallaxLayer 
