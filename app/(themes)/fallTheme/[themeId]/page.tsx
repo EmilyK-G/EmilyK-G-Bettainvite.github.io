@@ -80,7 +80,7 @@ export default function Home({ params: {themeId} }: HomeProps) {
           
         />
         {/* <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundImage:'linear-gradient(to bottom, midnight,rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,0.3), rgba(47,72,88,0.3), rgba(47,72,88,0.4))'}} /> */}
-        <ParallaxLayer offset={0.9} factor={6} speed={2} style={{ backgroundColor: 'var(--accent-dark)', opacity:'0.5'}}/>
+        <ParallaxLayer offset={0.9} factor={6} speed={2} style={{ backgroundColor: 'var(--accent-dark)', opacity:'0.6'}}/>
         <ParallaxLayer offset={0.8} factor={0.2} speed={0} className='bg-th-primary-dark opacity-100' />
         <ParallaxLayer offset={2} speed={0.5} style={{ backgroundColor: 'var(--primary-dark)', opacity:'0'}} />
         <ParallaxLayer offset={3} speed={0.5} style={{ backgroundColor: 'var(--primary-dark)', opacity:'1'}} />
@@ -104,7 +104,7 @@ export default function Home({ params: {themeId} }: HomeProps) {
           onClick={() => {parallax.current.scrollTo(1)}}
           className='flex justify-center items-end pb-48'
         >
-          <p className='text-7xl text-th-accent-light'>- a friends hangout -</p>
+          <p className='text-7xl text-th-primary-light'>- a friends hangout -</p>
         </ParallaxLayer>
 
         <ParallaxLayer 

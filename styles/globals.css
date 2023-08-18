@@ -25,7 +25,7 @@
   
     --primary-dark: theme('colors.leaves-brown');
     --primary-medium: theme('colors.brick');
-    --primary-light: theme('colors.tan');
+    --primary-light: theme('colors.leaves-ivory');
 
     --accent-dark: theme('colors.black');
     --accent-light: theme('colors.whitesmoke');

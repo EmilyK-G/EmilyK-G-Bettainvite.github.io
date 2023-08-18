@@ -51,6 +51,7 @@ module.exports = {
       'mustard':'#D5A418',
       'yellow':'#F9F871',
       'ivory':'#FEEBD6',
+      'leaves-ivory':'#fddec1',
       'pinkishwhite':'#ebe9ed',
       'lightcyan':'#E6EFFF',
       'th-primary-dark': 'var(--primary-dark)',
