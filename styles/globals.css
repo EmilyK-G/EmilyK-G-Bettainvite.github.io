@@ -19,11 +19,11 @@
   
   [data-theme='fall'] {
     --background: theme('colors.brick');
-    --background-image: url(../public/backgrounds/bettainvite-leaves.jpg);
+    --background-image: url(../public/backgrounds/bettainvite-background.png);
 
     --static-1: url(../public/icons/bettainvite-singleapple.png);
   
-    --primary-dark: theme('colors.midnight');
+    --primary-dark: theme('colors.leaves-brown');
     --primary-medium: theme('colors.brick');
     --primary-light: theme('colors.tan');
 

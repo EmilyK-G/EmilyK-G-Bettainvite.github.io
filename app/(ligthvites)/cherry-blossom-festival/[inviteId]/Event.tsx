@@ -17,7 +17,6 @@ function Event(props:any) {
         <p className='text-4xl font-thin mt-0 ml-60'> <small className='text-2xl'>Hosted by</small> New York City</p>
       </div>
     </div>
-    
   )
 }
 

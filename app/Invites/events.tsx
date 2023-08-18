@@ -17,7 +17,7 @@ export const eventsList = [
         eventId:'002',
         name: 'fallTheme',
         theme: 'fall',
-        bgr: 'bettainvite-leaves.jpg'
+        bgr: 'bettainvite-background.png'
     },
     {
         eventId:'003',

@@ -7,6 +7,7 @@ import { useRef, useState, useEffect } from 'react';
 
 import Image from 'next/image';
 import icon from '../../../../public/light_icon_transparent.png';
+import applePicking from '../../../../public/apple-picking.png';
 
 import Event from './Event';
 import EventDate from './EventDate';
@@ -79,17 +80,31 @@ export default function Home({ params: {themeId} }: HomeProps) {
           
         />
         {/* <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundImage:'linear-gradient(to bottom, midnight,rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,0.3), rgba(47,72,88,0.3), rgba(47,72,88,0.4))'}} /> */}
-        <ParallaxLayer offset={0.8} factor={0.2} speed={0.5} className='bg-th-primary-dark opacity-100 landscape:bg-transparent' />
+        <ParallaxLayer offset={0.9} factor={6} speed={2} style={{ backgroundColor: 'var(--accent-dark)', opacity:'0.5'}}/>
+        <ParallaxLayer offset={0.8} factor={0.2} speed={0} className='bg-th-primary-dark opacity-100' />
         <ParallaxLayer offset={2} speed={0.5} style={{ backgroundColor: 'var(--primary-dark)', opacity:'0'}} />
         <ParallaxLayer offset={3} speed={0.5} style={{ backgroundColor: 'var(--primary-dark)', opacity:'1'}} />
 
         <ParallaxLayer
-          offset={0.3}
+          offset={0}
           speed={1}
-          onClick={() => {parallax.current.scrollTo(1)}}
-          className='flex justify-center items-center px-20 landscape:px-0'
+          className='flex flex-col justify-end items-center px-20 text-9xl text-th-accent-dark'
         >
-          <Header />
+          <Image
+            src={applePicking}
+            alt='icon separator'
+            className='h-[500px] w-auto mb-[270px]'
+          />
+          {/* <p className='my-5'>Apple</p>
+          <p className='my-5'>Picking</p> */}
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={0}
+          speed={0}
+          onClick={() => {parallax.current.scrollTo(1)}}
+          className='flex justify-center items-end pb-48'
+        >
+          <p className='text-7xl text-th-accent-light'>- a friends hangout -</p>
         </ParallaxLayer>
 
         <ParallaxLayer 
@@ -111,7 +126,7 @@ export default function Home({ params: {themeId} }: HomeProps) {
 
         <ParallaxLayer 
           offset={1}
-          speed={0.4}
+          speed={1}
           onClick={() => {parallax.current.scrollTo(2)}}
           className='flex justify-center items-center'
         >
@@ -123,11 +138,6 @@ export default function Home({ params: {themeId} }: HomeProps) {
           speed={0.4}
           onClick={() => {parallax.current.scrollTo(3)}}
           className='flex justify-center items-center'
-          // style={{
-          //   backgroundImage: 'url(/bettainvite_woman.jpg)',
-          //   backgroundSize: 'cover',
-          //   backgroundPosition:'center',
-          // }}
         >
           <EventDate />
         </ParallaxLayer>
@@ -139,7 +149,6 @@ export default function Home({ params: {themeId} }: HomeProps) {
           className='flex flex-col landscape:flex-row justify-center items-center p-20'
         >
           <EventAttendance openRejectModal={()=>setRejectModalShow(true)} openAcceptModal={()=>setAcceptModalShow(true)}/>
-          {/* <Themes defaultTheme={defaultTheme}/> */}
         </ParallaxLayer>
 
         <ParallaxLayer
