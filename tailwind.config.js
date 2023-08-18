@@ -40,6 +40,7 @@ module.exports = {
       'intenseviolet':'#422A7C',
       'gray':'#a0a09a',
       'lightgray':'#D8E5E9',
+      'dancer-gray':'#b4b09d',
       'mateblue':'#0052A1',
       'matecherry':'#691c31',
       'garnet':'#9A2A2A',

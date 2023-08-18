@@ -88,15 +88,13 @@ export default function Home({ params: {themeId} }: HomeProps) {
         <ParallaxLayer
           offset={0}
           speed={1}
-          className='flex flex-col justify-end items-center px-20 text-9xl text-th-accent-dark'
+          className='flex flex-col justify-end items-center px-20 text-9xl'
         >
           <Image
             src={applePicking}
-            alt='icon separator'
-            className='h-[500px] w-auto mb-[270px]'
+            alt='Apple Picking Logo'
+            className='h-[500px] w-auto mb-[270px] landscape:mb-10'
           />
-          {/* <p className='my-5'>Apple</p>
-          <p className='my-5'>Picking</p> */}
         </ParallaxLayer>
         <ParallaxLayer
           offset={0}
@@ -104,7 +102,7 @@ export default function Home({ params: {themeId} }: HomeProps) {
           onClick={() => {parallax.current.scrollTo(1)}}
           className='flex justify-center items-end pb-48'
         >
-          <p className='text-7xl text-th-primary-light'>- a friends hangout -</p>
+          <p className='text-7xl text-th-primary-light landscape:hidden'>- a friends hangout -</p>
         </ParallaxLayer>
 
         <ParallaxLayer 
@@ -149,29 +147,6 @@ export default function Home({ params: {themeId} }: HomeProps) {
           className='flex flex-col landscape:flex-row justify-center items-center p-20'
         >
           <EventAttendance openRejectModal={()=>setRejectModalShow(true)} openAcceptModal={()=>setAcceptModalShow(true)}/>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={0}
-          factor={4}
-          speed={0}
-          className='flex flex-col justify-evenly items-center p-20 pointer-events-none'
-        >
-          <Image
-            src={icon}
-            alt='icon separator'
-            className='hidden h-32 w-auto z-20 landscape:hidden'
-          />
-          <Image
-            src={icon}
-            alt='icon separator'
-            className='hidden h-32 w-auto z-20 landscape:hidden'
-          />
-          <Image
-            src={icon}
-            alt='icon separator'
-            className='hidden h-32 w-auto z-20 landscape:hidden'
-          />
         </ParallaxLayer>
         
         {acceptModalShow || rejectModalShow 

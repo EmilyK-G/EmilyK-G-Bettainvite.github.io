@@ -60,5 +60,11 @@ export const eventsList = [
         name: 'Ingrid&Ricardo',
         theme: 'garnet',
         bgr: 'curtain-bgr.jpg'
+    },
+    {
+        eventId:'009',
+        name: 'PersonalTrainer',
+        theme: 'dancer',
+        bgr: 'trainer-bgr.jpg'
     }
 ]
