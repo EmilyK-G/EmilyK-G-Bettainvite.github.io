@@ -48,7 +48,7 @@ const AcceptModal= () => {
 
     setError(null);
 
-    const date = new Date().setDate(new Date().getDate() + 5);
+    const date = new Date().setDate(new Date().getDate() + 1);
 
     if(confirmation.length <= 6 ) return setError('Please enter your full name')
 
