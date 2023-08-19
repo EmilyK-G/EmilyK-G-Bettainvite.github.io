@@ -13,10 +13,9 @@ function Event(props:any) {
             alt='icon separator'
             className='h-48 w-auto my-32 landscape:hidden'
           />
-        <p className='text-5xl'>Join us for a crisp and colorful apple picking adventure <span className='landscape:hidden'>in the scenic orchards. Let's pluck memories together and savor the sweet taste of fall</span>.</p>
+        <p className='text-7xl landscape:text-5xl'>Join us for a crisp and colorful apple picking adventure <span className='landscape:hidden'>in the scenic orchards. Let's pluck memories together and savor the sweet taste of fall</span>.</p>
       </div>
     </div>
-    
   )
 }
 
