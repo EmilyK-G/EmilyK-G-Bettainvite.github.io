@@ -15,6 +15,7 @@ import EventAttendance from './EventAttendance';
 import AcceptModal from './AcceptModal';
 import RejectModal from './RejectModal';
 import MyModal from '../../../MyModal';
+import LandscapeScreen from '../../../LandscapeScreen';
 
 import Head from 'next/head';
 import { eventsList } from '../../../Invites/events';
@@ -61,6 +62,7 @@ export default function Home({ params: {themeId} }: HomeProps) {
 
   return (
     <ThemeProvider forcedTheme='fall'>
+      <div className=' h-screen w-screen hidden landscape:flex  overflow-hidden'><LandscapeScreen /></div>
       <Parallax ref={parallax} pages={4}>
         <Head>
           <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />

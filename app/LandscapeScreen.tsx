@@ -12,7 +12,7 @@ const LandscapeScreen = () => {
             className='mb-10 landscape:mb-[-0.8rem] h-20 w-20 animate-bounce'
             onLoadedData={()=>console.log('loading image')}
             ></div>
-        <p className=' text-th-accent-light text-5xl'>Please rotate your phone</p>
+        <p className=' text-th-accent-light text-6xl'>Please rotate your phone</p>
     </div>
   )
 }
