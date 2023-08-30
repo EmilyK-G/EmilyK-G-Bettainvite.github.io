@@ -14,6 +14,7 @@ import EventAttendance from './EventAttendance';
 import AcceptModal from './AcceptModal';
 import RejectModal from './RejectModal';
 import MyModal from '../../../MyModal';
+import LandscapeScreen from '../../../LandscapeScreen';
 
 import Head from 'next/head';
 import { eventsList } from '../../../Invites/events';
@@ -60,6 +61,7 @@ export default function Home({ params: {themeId} }: HomeProps) {
 
   return (
     <ThemeProvider forcedTheme='delicate'>
+      <div className=' h-screen w-screen hidden landscape:flex  overflow-hidden'><LandscapeScreen /></div>
       <Parallax ref={parallax} pages={4}>
         <Head>
           <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -74,9 +76,8 @@ export default function Home({ params: {themeId} }: HomeProps) {
             backgroundImage: `var(--background-image)`,
             backgroundSize: 'contain',
             backgroundRepeat:'repeat',
-            zIndex: -1 
+            zIndex: -1
           }}
-          
         />
         {/* <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundImage:'linear-gradient(to bottom, midnight,rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,0.3), rgba(47,72,88,0.3), rgba(47,72,88,0.4))'}} /> */}
         <ParallaxLayer offset={0.8} factor={0.2} speed={0.5} className='bg-th-primary-dark opacity-100 landscape:bg-transparent' />
@@ -102,7 +103,8 @@ export default function Home({ params: {themeId} }: HomeProps) {
             style={{
               backgroundImage: 'var(--static-1)',
               backgroundSize: 'cover',
-              backgroundPosition:'center'
+              backgroundPosition:'center',
+              animation: 'spin 5s linear infinite',
             }}
             className='mb-10 landscape:mb-[-0.8rem] h-20 w-20'
             onLoadedData={()=>console.log('loading image')}

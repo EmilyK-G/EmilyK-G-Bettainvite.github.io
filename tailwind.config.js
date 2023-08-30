@@ -22,6 +22,7 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       'rosebrown':'#574141',
+      'oldrose':'#c99593',
       'leaves-brown':'#73210a',
       'chocolate': '#4a1800',
       'darkchocolate': '#190c0a',

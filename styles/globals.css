@@ -37,8 +37,8 @@
 
     --static-1: url(../public/icons/yarn-ball-icon.png);
 
-    --primary-dark: theme('colors.lightolive');
-    --primary-medium: theme('colors.salmon');
+    --primary-dark: theme('colors.oldrose');
+    --primary-medium: theme('colors.leaves-ivory');
     --primary-light: theme('colors.champagne');
 
     --accent-dark: theme('colors.darkchocolate');
