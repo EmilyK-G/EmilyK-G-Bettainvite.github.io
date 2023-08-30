@@ -37,13 +37,11 @@ const EventAttendance = (props: eventAttendanceProps) => {
             <div className='bg-cover h-24 w-24 rounded-full my-5'>
                 <Image
                     src={phone}
-                    onClick={()=>window.open('tel:+15167257543')}
+                    onClick={()=>{window.open('tel:+15167257543', '_self')}}
                     alt='email icon'
                     className='bg-cover'
                 />
             </div>
-            {/* <p className='text-4xl'>theband_email@gmail.com</p> */}
-            {/* <p className='text-5xl'>+1 516 678 2345</p> */}
             <p className='text-9xl'>•</p>
         </div>
         <div className='hidden text-5xl space-x-2'>...</div>
