@@ -19,12 +19,12 @@ export const eventsList = [
         theme: 'fall',
         bgr: 'bettainvite-background.png'
     },
-    {
-        eventId:'003',
-        name: 'lavenderTheme',
-        theme: 'lavander',
-        bgr: 'bettainvite-bgr-lavender-1.jpg'
-    },
+    // {
+    //     eventId:'003',
+    //     name: 'lavenderTheme',
+    //     theme: 'lavander',
+    //     bgr: 'bettainvite-bgr-lavender-1.jpg'
+    // },
     {
         eventId:'004',
         name: 'delicateTheme',
@@ -37,12 +37,12 @@ export const eventsList = [
         theme: 'sage',
         bgr: 'sage-bgr.jpg'
     },
-    {
-        eventId:'006',
-        name: 'elders-party',
-        theme: 'suits',
-        bgr: 'elders-party-bgr-3.png'
-    },
+    // {
+    //     eventId:'006',
+    //     name: 'elders-party',
+    //     theme: 'suits',
+    //     bgr: 'elders-party-bgr-3.png'
+    // },
     {
         eventId:'007',
         name: 'Issa-surprise-party',
@@ -61,10 +61,10 @@ export const eventsList = [
         theme: 'garnet',
         bgr: 'curtain-bgr.jpg'
     },
-    {
-        eventId:'009',
-        name: 'PersonalTrainer',
-        theme: 'dancer',
-        bgr: 'trainer-bgr.jpg'
-    }
+    // {
+    //     eventId:'009',
+    //     name: 'PersonalTrainer',
+    //     theme: 'dancer',
+    //     bgr: 'trainer-bgr.jpg'
+    // }
 ]

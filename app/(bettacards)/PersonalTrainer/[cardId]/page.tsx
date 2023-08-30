@@ -104,23 +104,6 @@ export default function Home({ params: {cardId} }: HomeProps) {
           <Header lightMode={lightMode}/>
         </ParallaxLayer>
 
-        {/* <ParallaxLayer 
-          offset={0}
-          speed={-1}
-          className='flex justify-center items-end z-10'
-          style={{ pointerEvents: 'none' }}
-        >
-          <div
-            style={{
-              backgroundImage: 'var(--static-1)',
-              backgroundSize: 'cover',
-              backgroundPosition:'center'
-            }}
-            className='mb-10 landscape:mb-[-0.8rem] h-20 w-20'
-            onLoadedData={()=>console.log('loading image')}
-          ></div>
-        </ParallaxLayer> */}
-
         <ParallaxLayer 
           offset={1}
           speed={0.4}
@@ -169,17 +152,6 @@ export default function Home({ params: {cardId} }: HomeProps) {
             <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
           </video>
         </ParallaxLayer>
-
-        {/* <ParallaxLayer 
-          offset={2.9}
-          speed={0}
-          factor={0.1}
-          className='flex justify-center items-end z-10 pointer-events-none'
-        >
-          <div 
-            className='mb-10 landscape:mb-[-0.8rem] h-20 w-20 pointer-events-auto'
-            onClick={() => {parallax.current.scrollTo(3)}}></div>
-        </ParallaxLayer> */}
 
         <ParallaxLayer 
           offset={3}

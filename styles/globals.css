@@ -88,16 +88,16 @@
   }
 /* Fix colors for SAGE theme */
   [data-theme='sage'] {
-    --background: theme('colors.chocolate');
+    --background: theme('colors.turquoise-gray');
     --background-image: url(../public/backgrounds/sage-bgr.jpg);
 
     --static-1: url(../public/icons/issa-icon-2.png);
   
-    --primary-dark: theme('colors.burntorange');
-    --primary-medium: theme('colors.chocolate');
-    --primary-light: theme('colors.champagne');
+    --primary-dark: theme('colors.turquoise-gray');
+    --primary-medium: theme('colors.olive');
+    --primary-light: theme('colors.bonewhite');
 
-    --accent-dark: theme('colors.black');
+    --accent-dark: theme('colors.darkchocolate');
     --accent-light: theme('colors.lightcyan');
   }
 
