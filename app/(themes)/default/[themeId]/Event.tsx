@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 function Event(props:any) {
   return (
-    <div className="flex flex-col items-center justify-start h-full w-full text-th-primary-light bg-lightcyan bg-opacity-30 text-center">
+    <div className="flex flex-col items-center justify-start h-full w-full text-th-primary-dark bg-lightsand bg-opacity-30 text-center">
       <div className='flex flex-col items-center justify-center p-10'>
         <p className='text-6xl landscape:text-4xl landscape:m-3'>{`"We don't even have a band yet... just musical group exploring ideas"`}</p>
         <Link 

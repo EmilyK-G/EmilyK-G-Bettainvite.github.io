@@ -103,8 +103,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
             className='bg-contain bg-repeat -z-0'
           />
         </ParallaxLayer>
-        {/* <ParallaxLayer offset={0.7} factor={1.8} speed={0.5} style={{ backgroundImage:'linear-gradient(to bottom, midnight,rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,1), rgba(47,72,88,0.3), rgba(47,72,88,0.3), rgba(47,72,88,0.4))'}} /> */}
-        {/* <ParallaxLayer offset={0.8} factor={0.2} speed={0} className='bg-th-primary-dark' /> */}
+
         <ParallaxLayer offset={1} factor={3} speed={1} style={{ backgroundColor: 'var(--primary-medium)', opacity:'0.4'}} />
         <ParallaxLayer offset={3} speed={0.5} style={{ backgroundColor: 'var(--primary-dark)', opacity:'1'}} />
 
@@ -116,23 +115,6 @@ export default function Home({ params: {cardId} }: HomeProps) {
         >
           <Header lightMode={lightMode}/>
         </ParallaxLayer>
-
-        {/* <ParallaxLayer 
-          offset={0}
-          speed={-1}
-          className='flex justify-center items-end z-10'
-          style={{ pointerEvents: 'none' }}
-        >
-          <div
-            style={{
-              backgroundImage: 'var(--static-1)',
-              backgroundSize: 'cover',
-              backgroundPosition:'center'
-            }}
-            className='mb-10 landscape:mb-[-0.8rem] h-20 w-20'
-            onLoadedData={()=>console.log('loading image')}
-          ></div>
-        </ParallaxLayer> */}
 
         <ParallaxLayer 
           offset={1}
@@ -177,22 +159,10 @@ export default function Home({ params: {cardId} }: HomeProps) {
           speed={2.5}
           className={'pointer-events-none'}
         >
-          {/* <div className=' h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg bg-lightcyan bg-opacity-10 absolute left-[56%] hover:hidden'></div> */}
           <video className=' pointer-events-auto h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg hover:border-x-2 border-blue' onClick={e=>e.stopPropagation()} muted autoPlay loop controls>
             <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
           </video>
         </ParallaxLayer>
-
-        {/* <ParallaxLayer 
-          offset={2.9}
-          speed={0}
-          factor={0.1}
-          className='flex justify-center items-end z-10 pointer-events-none'
-        >
-          <div 
-            className='mb-10 landscape:mb-[-0.8rem] h-20 w-20 pointer-events-auto'
-            onClick={() => {parallax.current.scrollTo(3)}}></div>
-        </ParallaxLayer> */}
 
         <ParallaxLayer 
           offset={3}

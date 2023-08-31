@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 :root {
-    --background: theme('colors.whitesmoke');
-    --background-secondary: theme('colors.darkchocolate');
+    --background: theme('colors.darkchocolate');
+    --background-secondary: theme('colors.oceanevening');
     --background-image: url(../public/backgrounds/default-bgr-photoshop.png);
 
     --static-1: url(../public/icons/bettainvite-flower-icon.png);
   
-    --primary-dark: theme('colors.darkchocolate');
-    --primary-medium: theme('colors.darknavy');
-    --primary-light: theme('colors.whitesmoke');
+    --primary-dark: theme('colors.darkolive');
+    --primary-medium: theme('colors.oceanevening');
+    --primary-light: theme('colors.lightsand');
 
-    --accent-dark: theme('colors.brick');
+    --accent-dark: theme('colors.black');
     --accent-light: theme('colors.whitesmoke');
   }
   
