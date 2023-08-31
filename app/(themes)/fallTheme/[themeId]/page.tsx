@@ -95,7 +95,7 @@ export default function Home({ params: {themeId} }: HomeProps) {
           <Image
             src={applePicking}
             alt='Apple Picking Logo'
-            className='h-[500px] w-auto mb-[270px] landscape:mb-10'
+            className='h-[500px] w-auto mb-52 landscape:mb-10'
           />
         </ParallaxLayer>
         <ParallaxLayer
