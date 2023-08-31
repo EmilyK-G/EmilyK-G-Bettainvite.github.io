@@ -9,10 +9,10 @@ const EventAttendance = (props: any) => {
         //the following code replaces 'props.openAcceptModal()' wich will be used again for desktop layouts
 
         if(navigator.userAgent.match(/Android/i)){
-            window.open('sms://+15167257543/?body=encodeURIComponent(`Hey! I am comming to the apple picking`)', '_self')
+            window.open('sms://+15167257543/?body=Hey! I am comming to the apple picking', '_self')
         }
         if(navigator.userAgent.match(/iPhone/i)){
-            window.open('sms://+15167257543/&body=encodeURIComponent(`Hey! I am comming to the apple picking`)', '_self')
+            window.open('sms://+15167257543/&body=Hey! I am comming to the apple picking', '_self')
         }
     }
 
@@ -23,10 +23,10 @@ const EventAttendance = (props: any) => {
         //the following code replaces 'props.openRejectModal()' wich will be used again for desktop layouts
 
         if(navigator.userAgent.match(/Android/i)){
-            window.open('sms://+15167257543/?body=encodeURIComponent(`Hey! Sorry, I won be able to make it to the apple picking. Have fun tho!`)', '_self')
+            window.open('sms://+15167257543/?body=Hey! Sorry, I won be able to make it to the apple picking. Have fun tho!', '_self')
         }
         if(navigator.userAgent.match(/iPhone/i)){
-            window.open('sms://+15167257543/&body=encodeURIComponent(`Hey! Sorry, I won be able to make it to the apple picking. Have fun tho!`)', '_self')
+            window.open('sms://+15167257543/&body=Hey! Sorry, I won be able to make it to the apple picking. Have fun tho!', '_self')
         }
     }
 
