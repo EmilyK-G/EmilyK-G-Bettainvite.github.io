@@ -140,31 +140,6 @@
     --accent-light: theme('colors.lightgray');
   }
 
-  [data-theme='dancer'] {
-    --background: theme('colors.black');
-
-    --static-1: url(../public/icons/bettainvite-sphere.png);
-
-    --primary-dark: theme('colors.black');
-    --primary-medium: theme('colors.gray');
-    --primary-light: theme('colors.lightgray');
-
-    --accent-dark: theme('colors.black');
-    --accent-light: theme('colors.lightgray');
-  }
-  [data-theme='dancer-light'] {
-    --background: theme('colors.champagne');
-
-    --static-1: url(../public/icons/bettainvite-sphere.png);
-
-    --primary-dark: theme('colors.dancer-gray');
-    --primary-medium: theme('colors.tan');
-    --primary-light: theme('colors.whitesmoke');
-
-    --accent-dark: theme('colors.darkchocolate');
-    --accent-light: theme('colors.lightgray');
-  }
-
   [data-theme='garnet'] {
     --background: theme('colors.garnet');
 

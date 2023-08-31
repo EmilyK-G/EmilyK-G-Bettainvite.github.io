@@ -103,7 +103,6 @@ export default function Home({ params: {cardId} }: HomeProps) {
             className='bg-contain bg-repeat -z-0'
           />
         </ParallaxLayer>
-
         <ParallaxLayer offset={1} factor={3} speed={1} style={{ backgroundColor: 'var(--primary-medium)', opacity:'0.4'}} />
         <ParallaxLayer offset={3} speed={0.5} style={{ backgroundColor: 'var(--primary-dark)', opacity:'1'}} />
 
@@ -159,6 +158,7 @@ export default function Home({ params: {cardId} }: HomeProps) {
           speed={2.5}
           className={'pointer-events-none'}
         >
+          {/* <div className=' h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg bg-lightcyan bg-opacity-10 absolute left-[56%] hover:hidden'></div> */}
           <video className=' pointer-events-auto h-[36rem] w-96 object-cover ml-auto mr-10 rounded-lg hover:border-x-2 border-blue' onClick={e=>e.stopPropagation()} muted autoPlay loop controls>
             <source src='/media/DomsGuitarVideo.mp4' type='video/mp4'/>
           </video>
