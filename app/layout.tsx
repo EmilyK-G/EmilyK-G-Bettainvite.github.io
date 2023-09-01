@@ -22,7 +22,7 @@ export default function RootLayout({
       <html lang="en" className={`${dancingScript.variable} ${cinzel.variable} font-sans`}>
         <head>
           <meta httpEquiv='ScreenOrientation' content='autoRotate:disabled'/>
-          <title>Lightvite</title>
+          <title>Betalite Example Cards</title>
         </head>
         <body className='mb-0 bg-th-primary-dark'>
             {children}
