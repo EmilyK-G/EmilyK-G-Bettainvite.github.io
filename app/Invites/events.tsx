@@ -1,4 +1,3 @@
-"use client"
 
 export const eventsList = [
     {
@@ -14,7 +13,7 @@ export const eventsList = [
         bgr: 'blossom-bgr-bettainvite-edit.png'
     },
     {
-        eventId:'002',
+        eventId:'e4h4mulPPLV84MvCFbxBWRdxROhzXv7CijCjRSrJLYg4NuVLWyR0m19ig1DZbVf3HoJJAnuTTIXjjNkR0SoRAerZA78kJ5mVt7Jo',
         name: 'fallTheme',
         theme: 'fall',
         bgr: 'bettainvite-background.png'
