@@ -3,6 +3,7 @@ import Image from 'next/image';
 import bgrPic from '../../../../public/backgrounds/curtain-bgr.jpg';
 import email from '../../../../public/icons/email-icon.png';
 import phone from '../../../../public/icons/phone-icon.png';
+import insta from '../../../../public/icons/instagram-icon.png';
 
 interface eventAttendanceProps {
     openAcceptModal: any
@@ -42,7 +43,14 @@ const EventAttendance = (props: eventAttendanceProps) => {
                     className='bg-cover'
                 />
             </div>
-            <p className='text-9xl'>•</p>
+            <div className='bg-cover h-24 w-24 rounded-full my-5'>
+                <Image
+                    src={insta}
+                    // onClick={()=>{window.open('tel:+15167257543', '_self')}}
+                    alt='email icon'
+                    className='bg-cover'
+                />
+            </div>
         </div>
         <div className='hidden text-5xl space-x-2'>...</div>
         {/* <button
