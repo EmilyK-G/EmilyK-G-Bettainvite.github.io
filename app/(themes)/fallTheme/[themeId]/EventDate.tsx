@@ -9,7 +9,7 @@ function EventDate() {
           <p className='landscape:flex-1 text-8xl landscape:text-5xl m-10 landscape:m-5 leading-snug'> Saturday 30th, September 2023</p>
           <p className='text-5xl landscape:text-xl landscape:mb-5 font-mono landscape:font-sans'><span className='text-6xl landscape:text-4xl'>9AM - 5PM</span></p>
         </div>
-        <p className="text-5xl landscape:text-3xl font-mono font-thin">Betalite fields, NY</p>
+        <p><a href="https://www.maskers.com/dates.html" className="text-5xl landscape:text-3xl font-mono font-thin">Masker Orchads, Warwick, NY</a></p>
       </div>
     </div>
   )
