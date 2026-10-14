@@ -1,27 +1,50 @@
-# Next.js + Tailwind CSS Example
+BettaInvite
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+BettaInvite is a personal web development project designed to make creating and sharing online event invitations simple, attractive, and convenient.
 
-## Deploy your own
+The goal is to provide an alternative to traditional invitation platforms by allowing users to enter their event details, choose a design, and generate a personalized invitation website that they can share with guests.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+Project Overview
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+BettaInvite is part of a larger project that includes Lightvite, an invitation creation interface.
 
-## How to use
+The intended workflow is:
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+1. Users enter their event information through Lightvite.
+2. Users select an invitation design and customize their details.
+3. BettaInvite generates a personalized invitation webpage.
+4. Users share the invitation link with their guests.
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
+The integration between these applications is part of the project’s ongoing development.
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+Technologies
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* JavaScript
+* Git and GitHub
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Development Status
+
+Work in progress
+
+BettaInvite was independently developed as a personal project. After a period of inactivity, development is being revisited to improve the application and complete its original vision.
+
+Planned Improvements
+
+* Connect Lightvite and BettaInvite.
+* Automate the creation of personalized invitation pages.
+* Improve the user interface and responsive design.
+* Refine event customization and RSVP functionality.
+* Fix existing bugs and improve overall performance.
+* Expand invitation themes and customization options.
+
+Project Goals
+
+The main goal is to create a straightforward invitation platform that focuses on ease of use, attractive design, and a smooth experience for event organizers and their guests.
+
+Author
+
+Developed independently by EmilyK-G as a personal software development project.
